@@ -10,6 +10,7 @@ const Navbar = () => {
     { label: "Why Digital", href: "#why-digital" },
     { label: "Why Us", href: "#why-us" },
     { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
