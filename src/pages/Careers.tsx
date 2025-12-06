@@ -1,0 +1,181 @@
+import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import { Button } from "@/components/ui/button";
+import { Briefcase, MapPin, Clock, ArrowRight, Heart, Zap, Users, GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const openings = [
+  {
+    title: "Senior Digital Marketing Manager",
+    department: "Marketing",
+    location: "Mumbai",
+    type: "Full-time",
+    description: "Lead digital marketing strategies for our healthcare clients. 5+ years experience in digital marketing required."
+  },
+  {
+    title: "Medical Content Writer",
+    department: "Content",
+    location: "Remote",
+    type: "Full-time",
+    description: "Create compelling medical content that educates patients and builds trust. Healthcare background preferred."
+  },
+  {
+    title: "Video Producer",
+    department: "Creative",
+    location: "Mumbai",
+    type: "Full-time",
+    description: "Produce high-quality medical videos including doctor introductions, patient education, and testimonials."
+  },
+  {
+    title: "Social Media Specialist",
+    department: "Marketing",
+    location: "Delhi",
+    type: "Full-time",
+    description: "Manage social media accounts for healthcare clients. Experience in healthcare marketing is a plus."
+  },
+  {
+    title: "SEO Specialist",
+    department: "Marketing",
+    location: "Remote",
+    type: "Full-time",
+    description: "Optimize medical websites for search engines. Experience with local SEO and healthcare industry preferred."
+  },
+  {
+    title: "Graphic Designer",
+    department: "Creative",
+    location: "Mumbai",
+    type: "Full-time",
+    description: "Create branded visuals for medical practices. Experience in healthcare design guidelines is a plus."
+  }
+];
+
+const benefits = [
+  {
+    icon: Heart,
+    title: "Health Insurance",
+    description: "Comprehensive health coverage for you and your family"
+  },
+  {
+    icon: GraduationCap,
+    title: "Learning Budget",
+    description: "Annual budget for courses, certifications, and conferences"
+  },
+  {
+    icon: Zap,
+    title: "Flexible Work",
+    description: "Hybrid work options with flexible hours"
+  },
+  {
+    icon: Users,
+    title: "Team Culture",
+    description: "Collaborative environment with regular team events"
+  }
+];
+
+const Careers = () => {
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+              Careers
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Join Our Mission to Transform Healthcare Marketing
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Be part of a team that's helping healthcare professionals reach more patients and save more lives through effective digital marketing.
+            </p>
+            <Button variant="cta" size="xl" asChild>
+              <a href="#openings">View Open Positions</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join Us */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Join Us?</h2>
+            <p className="text-lg text-muted-foreground">More than a job—a chance to make a difference in healthcare.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center p-6 bg-card rounded-xl border border-border">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Open Positions */}
+      <section id="openings" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Open Positions</h2>
+            <p className="text-lg text-muted-foreground">Find your next opportunity with us.</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {openings.map((job, index) => (
+              <div key={index} className="p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-shadow">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{job.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-3">{job.description}</p>
+                    <div className="flex flex-wrap gap-3">
+                      <span className="inline-flex items-center gap-1 text-sm text-muted-foreground">
+                        <Briefcase className="w-4 h-4" /> {job.department}
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-sm text-muted-foreground">
+                        <MapPin className="w-4 h-4" /> {job.location}
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-sm text-muted-foreground">
+                        <Clock className="w-4 h-4" /> {job.type}
+                      </span>
+                    </div>
+                  </div>
+                  <Button variant="outline" asChild className="flex-shrink-0">
+                    <Link to="/contact">
+                      Apply Now <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            Don't See Your Role?
+          </h2>
+          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+            We're always looking for talented people. Send us your resume and we'll keep you in mind for future opportunities.
+          </p>
+          <Button variant="secondary" size="xl" asChild>
+            <Link to="/contact">Send Your Resume</Link>
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+};
+
+export default Careers;
