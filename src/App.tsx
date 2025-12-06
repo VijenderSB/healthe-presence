@@ -5,6 +5,21 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Services from "./pages/Services";
+import WebsiteDesign from "./pages/services/WebsiteDesign";
+import SocialMedia from "./pages/services/SocialMedia";
+import VideoProduction from "./pages/services/VideoProduction";
+import YouTubeManagement from "./pages/services/YouTubeManagement";
+import SEO from "./pages/services/SEO";
+import Branding from "./pages/services/Branding";
+import PatientEngagement from "./pages/services/PatientEngagement";
+import AboutUs from "./pages/AboutUs";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import CaseStudies from "./pages/CaseStudies";
+import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
+import FAQ from "./pages/FAQ";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +31,21 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/website-design" element={<WebsiteDesign />} />
+          <Route path="/services/social-media" element={<SocialMedia />} />
+          <Route path="/services/video-production" element={<VideoProduction />} />
+          <Route path="/services/youtube-management" element={<YouTubeManagement />} />
+          <Route path="/services/seo" element={<SEO />} />
+          <Route path="/services/branding" element={<Branding />} />
+          <Route path="/services/patient-engagement" element={<PatientEngagement />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

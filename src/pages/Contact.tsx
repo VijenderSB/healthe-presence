@@ -1,0 +1,218 @@
+import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import { useState } from "react";
+
+const contactInfo = [
+  {
+    icon: Phone,
+    title: "Phone",
+    details: ["+91 98765 43210", "+91 12345 67890"],
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    details: ["hello@medicaldigital.com", "support@medicaldigital.com"],
+  },
+  {
+    icon: MapPin,
+    title: "Address",
+    details: ["123 Healthcare Hub, Sector 5", "Mumbai, Maharashtra 400001"],
+  },
+  {
+    icon: Clock,
+    title: "Business Hours",
+    details: ["Monday - Friday: 9AM - 6PM", "Saturday: 10AM - 4PM"],
+  },
+];
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    clinic: "",
+    service: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Handle form submission
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+              Contact Us
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Let's Grow Your Practice Together
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Ready to transform your digital presence? Get in touch with our team for a free consultation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Form */}
+            <div className="bg-card p-8 rounded-2xl border border-border">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Dr. John Smith"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+                    <Input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="doctor@clinic.com"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
+                    <Input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+91 98765 43210"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Clinic/Hospital Name</label>
+                    <Input
+                      name="clinic"
+                      value={formData.clinic}
+                      onChange={handleChange}
+                      placeholder="Your clinic name"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Service Interested In</label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="website">Medical Website Design</option>
+                    <option value="social">Social Media Management</option>
+                    <option value="video">Video Production</option>
+                    <option value="youtube">YouTube Management</option>
+                    <option value="seo">SEO & Google Visibility</option>
+                    <option value="branding">Branding & Creatives</option>
+                    <option value="engagement">Patient Engagement</option>
+                    <option value="complete">Complete 360° Solution</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Your Message</label>
+                  <Textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your practice and goals..."
+                    rows={5}
+                  />
+                </div>
+                
+                <Button type="submit" variant="cta" size="xl" className="w-full">
+                  Send Message
+                </Button>
+              </form>
+              
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>We typically respond within 24 hours</span>
+              </div>
+            </div>
+            
+            {/* Contact Info */}
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
+              
+              <div className="space-y-8">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
+                      {info.details.map((detail, i) => (
+                        <p key={i} className="text-muted-foreground">{detail}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Why Contact Us */}
+              <div className="mt-12 p-6 bg-muted/30 rounded-xl">
+                <h3 className="font-semibold text-foreground mb-4">What Happens Next?</h3>
+                <ul className="space-y-3">
+                  {[
+                    "We'll schedule a free 30-minute consultation",
+                    "Discuss your goals and current digital presence",
+                    "Provide a customized strategy recommendation",
+                    "Share a detailed proposal with pricing"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+};
+
+export default Contact;

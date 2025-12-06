@@ -1,0 +1,138 @@
+import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import { Button } from "@/components/ui/button";
+import { Users, TrendingUp, Calendar, MessageCircle, BarChart, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const features = [
+  {
+    icon: Calendar,
+    title: "Content Calendar",
+    description: "Strategic content planning with consistent posting schedules tailored to your practice."
+  },
+  {
+    icon: Users,
+    title: "Community Management",
+    description: "Engage with your audience, respond to comments, and build a loyal patient community."
+  },
+  {
+    icon: TrendingUp,
+    title: "Growth Strategy",
+    description: "Proven strategies to increase followers, engagement, and ultimately patient inquiries."
+  },
+  {
+    icon: MessageCircle,
+    title: "Patient Engagement",
+    description: "Create meaningful connections with patients through interactive content and stories."
+  },
+  {
+    icon: BarChart,
+    title: "Analytics & Reporting",
+    description: "Monthly reports on performance metrics, insights, and optimization recommendations."
+  },
+  {
+    icon: Heart,
+    title: "Brand Building",
+    description: "Establish your unique voice and build trust with your target patient demographic."
+  }
+];
+
+const platforms = [
+  { name: "Instagram", description: "Visual storytelling and patient education" },
+  { name: "Facebook", description: "Community building and patient testimonials" },
+  { name: "LinkedIn", description: "Professional networking and thought leadership" },
+  { name: "Twitter/X", description: "Real-time updates and healthcare news" }
+];
+
+const SocialMedia = () => {
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-accent/10 via-background to-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium mb-6">
+              Social Media Management
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Build Your Medical Brand on Social Media
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              End-to-end social media management for doctors, clinics, and hospitals. Connect with patients where they spend their time online.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <Link to="/contact">Start Growing</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/case-studies">See Results</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platforms */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-foreground mb-10">Platforms We Manage</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {platforms.map((platform, index) => (
+              <div key={index} className="text-center p-6 bg-background rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground mb-2">{platform.name}</h3>
+                <p className="text-sm text-muted-foreground">{platform.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Complete Social Media Management
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From content creation to community management, we handle everything for your practice.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            Ready to Dominate Social Media?
+          </h2>
+          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+            Let's create a social media strategy that brings patients to your practice.
+          </p>
+          <Button variant="secondary" size="xl" asChild>
+            <Link to="/contact">Get Your Strategy</Link>
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+};
+
+export default SocialMedia;
