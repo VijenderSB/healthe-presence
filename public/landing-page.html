@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals. Build trust before the first consultation.">
+  <title>MedDigital - 360° Medical Digital Marketing Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --secondary: #1e293b;
+      --background: #ffffff;
+      --foreground: #0f172a;
+      --muted: #f1f5f9;
+      --muted-foreground: #64748b;
+      --border: #e2e8f0;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--foreground);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted-foreground);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--foreground);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--foreground);
+    }
+
+    .btn-outline:hover {
+      background: var(--muted);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 24px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-secondary {
+      color: var(--secondary);
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted-foreground);
+      margin-bottom: 24px;
+      max-width: 540px;
+    }
+
+    .highlights {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted-foreground);
+      font-size: 14px;
+    }
+
+    .highlight-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .avatar-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--muted);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 80%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 4px;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: var(--muted);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 64px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: var(--muted-foreground);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--muted-foreground);
+      margin-bottom: 16px;
+    }
+
+    .service-benefits {
+      list-style: none;
+    }
+
+    .service-benefits li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .service-benefits li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      text-align: center;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .cta .btn-primary:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 64px 0 32px;
+      background: var(--secondary);
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      margin: 16px 0 24px;
+      max-width: 320px;
+    }
+
+    .footer-contact {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    .footer-contact div {
+      margin-bottom: 8px;
+    }
+
+    .footer h4 {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section-header h2 {
+        font-size: 32px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">M</div>
+        <span class="logo-text">MedDigital</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#" class="btn btn-primary">Book Free Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">360° Medical Digital Marketing</div>
+        <h1>
+          Your Patients Are <span class="text-gradient">Searching Online.</span> 
+          Are They Finding <span class="text-secondary">You?</span>
+        </h1>
+        <p>
+          Build trust before the first consultation. We help doctors, clinics & hospitals 
+          create a powerful digital presence that attracts, converts, and retains patients.
+        </p>
+        <div class="highlights">
+          <div class="highlight-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Website & Social Media
+          </div>
+          <div class="highlight-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Video Production
+          </div>
+          <div class="highlight-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Patient Acquisition
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Book Free Demo →</a>
+          <a href="#" class="btn btn-outline">▶ Watch How It Works</a>
+        </div>
+        <div class="trust-badge" style="display: flex; align-items: center; gap: 16px; font-size: 14px;">
+          <span><strong>500+</strong> doctors trust us</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="avatar-icon">🩺</div>
+          <div>
+            <h3 style="font-size: 16px; margin-bottom: 4px;">Dr. Sarah Mitchell</h3>
+            <p style="font-size: 14px; color: var(--muted-foreground); margin: 0;">Cardiologist • New York</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">New Patients (This Month)</span>
+          <span class="stat-value">+127</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Online Rating</span>
+          <span style="font-weight: 600;">⭐ 4.9/5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Services</span>
+        <h2>Everything Your Practice Needs to <span class="text-gradient">Thrive Online</span></h2>
+        <p>Comprehensive digital marketing solutions tailored specifically for healthcare professionals.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3>Medical Website Design</h3>
+          <p>Fast, mobile-responsive, HIPAA-aware websites that convert visitors into patients.</p>
+          <ul class="service-benefits">
+            <li>Modern, aesthetically designed layouts</li>
+            <li>Mobile-first responsive design</li>
+            <li>SEO-optimized structure</li>
+            <li>Appointment booking integration</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          </div>
+          <h3>Social Media Management</h3>
+          <p>End-to-end social media strategy that builds your authority and attracts patients.</p>
+          <ul class="service-benefits">
+            <li>Content planning & scheduling</li>
+            <li>Specialty-focused creatives</li>
+            <li>Community engagement</li>
+            <li>Performance analytics</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          </div>
+          <h3>Medical Video Production</h3>
+          <p>Professional videos that humanize your practice and educate patients.</p>
+          <ul class="service-benefits">
+            <li>Doctor introduction videos</li>
+            <li>Patient education content</li>
+            <li>Procedure explainers</li>
+            <li>Trending reels & shorts</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </div>
+          <h3>YouTube Channel Management</h3>
+          <p>Complete YouTube strategy to establish thought leadership and grow subscribers.</p>
+          <ul class="service-benefits">
+            <li>Channel setup & optimization</li>
+            <li>Content strategy & scripting</li>
+            <li>SEO & thumbnail design</li>
+            <li>Subscriber growth campaigns</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3>SEO & Google Visibility</h3>
+          <p>Dominate local search results so patients find you first.</p>
+          <ul class="service-benefits">
+            <li>Google My Business optimization</li>
+            <li>Local SEO strategy</li>
+            <li>Review management</li>
+            <li>Search ranking improvement</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h3>Patient Engagement Tools</h3>
+          <p>Systems to acquire new patients and retain existing ones through trust.</p>
+          <ul class="service-benefits">
+            <li>Patient acquisition funnels</li>
+            <li>Automated follow-ups</li>
+            <li>Review collection system</li>
+            <li>Loyalty & referral programs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Practice?</h2>
+      <p>Join 500+ healthcare professionals who trust MedDigital to grow their digital presence.</p>
+      <a href="#" class="btn btn-primary">Book Your Free Strategy Call →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+            <div class="logo-icon">M</div>
+            <span class="logo-text" style="color: white;">MedDigital</span>
+          </a>
+          <p>360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals. Building powerful digital presence since 2018.</p>
+          <div class="footer-contact">
+            <div>📧 hello@meddigital.com</div>
+            <div>📞 +91 98765 43210</div>
+            <div>📍 Mumbai, India</div>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Website Design</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Video Production</a></li>
+            <li><a href="#">YouTube Management</a></li>
+            <li><a href="#">SEO & Visibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 MedDigital. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
