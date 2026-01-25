@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Search, MapPin, Globe, FileText, Link2, BarChart3 } from "lucide-react";
+import { Search, MapPin, Globe, FileText, Link2, BarChart3, ArrowRight, Smartphone, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -126,6 +126,84 @@ const SEO = () => {
         </div>
       </section>
 
+      {/* Our Process */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our SEO Process
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A proven methodology that delivers sustainable results.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Audit", desc: "Comprehensive analysis of your current SEO status" },
+              { step: "02", title: "Strategy", desc: "Custom SEO roadmap based on your goals" },
+              { step: "03", title: "Optimize", desc: "On-page, technical, and content optimization" },
+              { step: "04", title: "Grow", desc: "Continuous monitoring and improvement" }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl font-bold text-primary/20 mb-4">{item.step}</div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Maximize Your SEO Results
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              SEO works best when combined with these services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services/website-design" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Smartphone className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Website Design</h3>
+              <p className="text-muted-foreground mb-4">SEO-optimized websites built for rankings.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/branding" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Palette className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Branding</h3>
+              <p className="text-muted-foreground mb-4">Build brand authority that supports SEO.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/patient-engagement" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="w-6 h-6 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Patient Engagement</h3>
+              <p className="text-muted-foreground mb-4">Convert SEO traffic into loyal patients.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
@@ -135,9 +213,14 @@ const SEO = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Get a free SEO audit and discover opportunities to improve your search visibility.
           </p>
-          <Button variant="secondary" size="xl" asChild>
-            <Link to="/contact">Get Free SEO Audit</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl" asChild>
+              <Link to="/contact">Get Free SEO Audit</Link>
+            </Button>
+            <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Link to="/testimonials">Client Results</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

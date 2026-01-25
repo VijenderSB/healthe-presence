@@ -3,8 +3,9 @@ import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const contactInfo = [
   {
@@ -204,6 +205,29 @@ const Contact = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Quick Links */}
+              <div className="mt-8 p-6 bg-card rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+                <div className="space-y-3">
+                  <Link to="/services" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
+                    <span>View All Services</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link to="/case-studies" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
+                    <span>Case Studies</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link to="/faq" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
+                    <span>Frequently Asked Questions</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link to="/testimonials" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
+                    <span>Client Testimonials</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

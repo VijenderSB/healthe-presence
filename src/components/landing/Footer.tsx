@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -6,16 +7,15 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-heading font-bold text-lg">M</span>
               </div>
               <span className="font-heading font-semibold text-lg text-secondary-foreground">MedDigital</span>
-            </div>
-            <p className="text-secondary-foreground/70 mb-6 max-w-sm">
-              360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals. 
-              Building powerful digital presence since 2018.
+            </Link>
+            <p className="text-secondary-foreground/70 mb-6 text-sm">
+              360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals.
             </p>
             <div className="space-y-2 text-sm text-secondary-foreground/70">
               <div className="flex items-center gap-2">
@@ -37,11 +37,13 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Website Design</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Social Media</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Video Production</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">YouTube Management</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">SEO & Visibility</a></li>
+              <li><Link to="/services/website-design" className="hover:text-secondary-foreground transition-colors">Website Design</Link></li>
+              <li><Link to="/services/social-media" className="hover:text-secondary-foreground transition-colors">Social Media</Link></li>
+              <li><Link to="/services/video-production" className="hover:text-secondary-foreground transition-colors">Video Production</Link></li>
+              <li><Link to="/services/youtube-management" className="hover:text-secondary-foreground transition-colors">YouTube Management</Link></li>
+              <li><Link to="/services/seo" className="hover:text-secondary-foreground transition-colors">SEO & Visibility</Link></li>
+              <li><Link to="/services/branding" className="hover:text-secondary-foreground transition-colors">Branding & Creatives</Link></li>
+              <li><Link to="/services/patient-engagement" className="hover:text-secondary-foreground transition-colors">Patient Engagement</Link></li>
             </ul>
           </div>
 
@@ -49,11 +51,23 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-secondary-foreground transition-colors">Contact</a></li>
+              <li><Link to="/about" className="hover:text-secondary-foreground transition-colors">About Us</Link></li>
+              <li><Link to="/testimonials" className="hover:text-secondary-foreground transition-colors">Testimonials</Link></li>
+              <li><Link to="/case-studies" className="hover:text-secondary-foreground transition-colors">Case Studies</Link></li>
+              <li><Link to="/blog" className="hover:text-secondary-foreground transition-colors">Blog</Link></li>
+              <li><Link to="/careers" className="hover:text-secondary-foreground transition-colors">Careers</Link></li>
+              <li><Link to="/faq" className="hover:text-secondary-foreground transition-colors">FAQ</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Get Started</h4>
+            <ul className="space-y-2 text-sm text-secondary-foreground/70">
+              <li><Link to="/contact" className="hover:text-secondary-foreground transition-colors">Contact Us</Link></li>
+              <li><Link to="/services" className="hover:text-secondary-foreground transition-colors">All Services</Link></li>
+              <li><Link to="/case-studies" className="hover:text-secondary-foreground transition-colors">View Our Work</Link></li>
+              <li><Link to="/faq" className="hover:text-secondary-foreground transition-colors">Common Questions</Link></li>
             </ul>
           </div>
         </div>

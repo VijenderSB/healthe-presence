@@ -90,9 +90,14 @@ const Careers = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Be part of a team that's helping healthcare professionals reach more patients and save more lives through effective digital marketing.
             </p>
-            <Button variant="cta" size="xl" asChild>
-              <a href="#openings">View Open Positions</a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <a href="#openings">View Open Positions</a>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/about">Learn About Us</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -119,8 +124,38 @@ const Careers = () => {
         </div>
       </section>
 
+      {/* Our Culture */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Culture</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-6 bg-background rounded-xl border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-3">Mission-Driven Work</h3>
+                <p className="text-muted-foreground">Every campaign we run, every website we build, helps doctors reach patients who need them. Your work directly impacts healthcare outcomes.</p>
+              </div>
+              <div className="p-6 bg-background rounded-xl border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-3">Continuous Learning</h3>
+                <p className="text-muted-foreground">Healthcare and digital marketing are always evolving. We invest in your growth with training, conferences, and certification opportunities.</p>
+              </div>
+              <div className="p-6 bg-background rounded-xl border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-3">Collaborative Spirit</h3>
+                <p className="text-muted-foreground">We believe the best ideas come from diverse perspectives. Cross-functional collaboration is encouraged at every level.</p>
+              </div>
+              <div className="p-6 bg-background rounded-xl border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-3">Work-Life Balance</h3>
+                <p className="text-muted-foreground">Flexible hours, remote work options, and a focus on results over hours. We trust you to deliver great work on your schedule.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Open Positions */}
-      <section id="openings" className="py-20 bg-muted/30">
+      <section id="openings" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Open Positions</h2>
@@ -129,7 +164,7 @@ const Careers = () => {
           
           <div className="max-w-4xl mx-auto space-y-6">
             {openings.map((job, index) => (
-              <div key={index} className="p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">{job.title}</h3>
@@ -154,6 +189,43 @@ const Careers = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Learn More About Us
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/about" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">About Us</h3>
+              <p className="text-muted-foreground mb-4">Our story, values, and mission.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/case-studies" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Work</h3>
+              <p className="text-muted-foreground mb-4">See the projects you'd work on.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Cases <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/testimonials" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Client Impact</h3>
+              <p className="text-muted-foreground mb-4">Hear from the doctors we help.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Read Stories <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

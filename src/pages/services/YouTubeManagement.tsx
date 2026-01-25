@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Youtube, Settings, TrendingUp, Users, FileVideo, BarChart } from "lucide-react";
+import { Youtube, Settings, TrendingUp, Users, FileVideo, BarChart, ArrowRight, Video, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -112,6 +112,88 @@ const YouTubeManagement = () => {
         </div>
       </section>
 
+      {/* Why YouTube */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              Why YouTube for Doctors?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-6 bg-card rounded-xl border border-border">
+                <div className="text-4xl font-bold text-primary mb-2">2nd</div>
+                <h3 className="font-semibold text-foreground mb-2">Largest Search Engine</h3>
+                <p className="text-muted-foreground">YouTube is the second-largest search engine after Google. Patients are actively searching for health information.</p>
+              </div>
+              <div className="p-6 bg-card rounded-xl border border-border">
+                <div className="text-4xl font-bold text-primary mb-2">85%</div>
+                <h3 className="font-semibold text-foreground mb-2">Trust Factor</h3>
+                <p className="text-muted-foreground">Patients who watch a doctor's video before visiting report 85% higher trust in that healthcare provider.</p>
+              </div>
+              <div className="p-6 bg-card rounded-xl border border-border">
+                <div className="text-4xl font-bold text-primary mb-2">500M+</div>
+                <h3 className="font-semibold text-foreground mb-2">Health Searches Daily</h3>
+                <p className="text-muted-foreground">Over 500 million health-related searches happen on YouTube every day. Are you capturing that audience?</p>
+              </div>
+              <div className="p-6 bg-card rounded-xl border border-border">
+                <div className="text-4xl font-bold text-primary mb-2">Forever</div>
+                <h3 className="font-semibold text-foreground mb-2">Evergreen Content</h3>
+                <p className="text-muted-foreground">Unlike social media posts, YouTube videos continue generating views and patients for years after publishing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Complete Your Video Strategy
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Pair YouTube management with these services for maximum reach.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services/video-production" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4">
+                <Video className="w-6 h-6 text-secondary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Video Production</h3>
+              <p className="text-muted-foreground mb-4">Professional videos to populate your channel.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/seo" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Search className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">SEO Optimization</h3>
+              <p className="text-muted-foreground mb-4">Integrate YouTube with your overall SEO strategy.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/social-media" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Social Media</h3>
+              <p className="text-muted-foreground mb-4">Repurpose YouTube content across all platforms.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
@@ -121,9 +203,14 @@ const YouTubeManagement = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Let's build a YouTube channel that establishes you as a leader in your specialty.
           </p>
-          <Button variant="secondary" size="xl" asChild>
-            <Link to="/contact">Get Started Today</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl" asChild>
+              <Link to="/contact">Get Started Today</Link>
+            </Button>
+            <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Link to="/testimonials">Read Success Stories</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
