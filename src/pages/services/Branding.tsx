@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Palette, Image, FileImage, BookOpen, Layers, PenTool } from "lucide-react";
+import { Palette, Image, FileImage, BookOpen, Layers, PenTool, ArrowRight, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -101,19 +101,94 @@ const Branding = () => {
               Why Strong Branding Matters
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-6">
+              <div className="p-6 bg-background rounded-xl border border-border">
                 <div className="text-4xl font-bold text-primary mb-4">First Impressions</div>
                 <p className="text-muted-foreground">Patients judge your credibility within seconds. Professional branding builds instant trust.</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 bg-background rounded-xl border border-border">
                 <div className="text-4xl font-bold text-primary mb-4">Recognition</div>
                 <p className="text-muted-foreground">Consistent branding makes your practice memorable and easily recognizable.</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 bg-background rounded-xl border border-border">
                 <div className="text-4xl font-bold text-primary mb-4">Differentiation</div>
                 <p className="text-muted-foreground">Stand out from competitors with a unique visual identity that reflects your values.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Branding Process
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Discovery", desc: "Understand your practice, values, and vision" },
+              { step: "02", title: "Strategy", desc: "Define your brand positioning and voice" },
+              { step: "03", title: "Design", desc: "Create visual identity and brand assets" },
+              { step: "04", title: "Deploy", desc: "Implement branding across all touchpoints" }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl font-bold text-purple-500/20 mb-4">{item.step}</div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Apply Your Brand Everywhere
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Ensure brand consistency across all your digital channels.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services/website-design" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Globe className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Website Design</h3>
+              <p className="text-muted-foreground mb-4">A branded website that represents your practice.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/social-media" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Social Media</h3>
+              <p className="text-muted-foreground mb-4">Branded content that stands out in feeds.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/video-production" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4">
+                <Image className="w-6 h-6 text-secondary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Video Production</h3>
+              <p className="text-muted-foreground mb-4">Videos with consistent brand elements.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -127,9 +202,14 @@ const Branding = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Let's create a brand identity that patients remember and trust.
           </p>
-          <Button variant="secondary" size="xl" asChild>
-            <Link to="/contact">Start Your Brand Journey</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl" asChild>
+              <Link to="/contact">Start Your Brand Journey</Link>
+            </Button>
+            <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Link to="/testimonials">See Brand Transformations</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

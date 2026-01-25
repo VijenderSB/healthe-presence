@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Video, Clapperboard, Mic, Film, Play, Sparkles } from "lucide-react";
+import { Video, Clapperboard, Mic, Film, Play, Sparkles, ArrowRight, Users, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const videoTypes = [
@@ -119,6 +119,74 @@ const VideoProduction = () => {
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "500+", label: "Videos Produced" },
+              { value: "85%", label: "Increase in Trust" },
+              { value: "10M+", label: "Views Generated" },
+              { value: "4K", label: "Ultra HD Quality" }
+            ].map((stat, index) => (
+              <div key={index}>
+                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Maximize Your Video Content
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Get more value from your videos with these services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services/youtube-management" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Youtube className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">YouTube Management</h3>
+              <p className="text-muted-foreground mb-4">Build a YouTube channel that grows your authority.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/social-media" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Social Media</h3>
+              <p className="text-muted-foreground mb-4">Share your videos across all social platforms.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/website-design" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Video className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Website Integration</h3>
+              <p className="text-muted-foreground mb-4">Embed videos on your website for maximum impact.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
@@ -128,9 +196,14 @@ const VideoProduction = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Let's create videos that showcase your expertise and connect with patients.
           </p>
-          <Button variant="secondary" size="xl" asChild>
-            <Link to="/contact">Book a Consultation</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl" asChild>
+              <Link to="/contact">Book a Consultation</Link>
+            </Button>
+            <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Link to="/testimonials">View Testimonials</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

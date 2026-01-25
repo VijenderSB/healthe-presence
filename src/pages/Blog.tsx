@@ -11,6 +11,7 @@ const featuredPost = {
   date: "December 1, 2024",
   readTime: "12 min read",
   category: "SEO",
+  service: "seo",
   image: "bg-gradient-to-br from-primary/30 to-secondary/30"
 };
 
@@ -21,7 +22,8 @@ const blogPosts = [
     author: "Social Media Team",
     date: "November 28, 2024",
     readTime: "8 min read",
-    category: "Social Media"
+    category: "Social Media",
+    service: "social-media"
   },
   {
     title: "Why Video Content is Essential for Medical Practices",
@@ -29,7 +31,8 @@ const blogPosts = [
     author: "Video Production Team",
     date: "November 25, 2024",
     readTime: "6 min read",
-    category: "Video Marketing"
+    category: "Video Marketing",
+    service: "video-production"
   },
   {
     title: "Building Patient Trust Through Online Reviews",
@@ -37,7 +40,8 @@ const blogPosts = [
     author: "Reputation Team",
     date: "November 22, 2024",
     readTime: "7 min read",
-    category: "Reputation"
+    category: "Reputation",
+    service: "patient-engagement"
   },
   {
     title: "The ROI of Digital Marketing for Healthcare",
@@ -45,7 +49,8 @@ const blogPosts = [
     author: "Analytics Team",
     date: "November 18, 2024",
     readTime: "10 min read",
-    category: "Strategy"
+    category: "Strategy",
+    service: null
   },
   {
     title: "Creating Patient Education Content That Works",
@@ -53,7 +58,8 @@ const blogPosts = [
     author: "Content Team",
     date: "November 15, 2024",
     readTime: "9 min read",
-    category: "Content"
+    category: "Content",
+    service: "video-production"
   },
   {
     title: "Local SEO for Multi-Location Medical Practices",
@@ -61,7 +67,8 @@ const blogPosts = [
     author: "SEO Team",
     date: "November 12, 2024",
     readTime: "11 min read",
-    category: "SEO"
+    category: "SEO",
+    service: "seo"
   }
 ];
 
@@ -115,9 +122,19 @@ const Blog = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className={`h-80 rounded-2xl ${featuredPost.image}`}></div>
             <div>
-              <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                {featuredPost.category}
-              </span>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  {featuredPost.category}
+                </span>
+                {featuredPost.service && (
+                  <Link 
+                    to={`/services/${featuredPost.service}`}
+                    className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm font-medium hover:bg-muted/80 transition-colors"
+                  >
+                    Related Service →
+                  </Link>
+                )}
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 {featuredPost.title}
               </h2>
@@ -155,9 +172,19 @@ const Blog = () => {
               <article key={index} className="bg-background rounded-xl border border-border overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium mb-3">
-                    {post.category}
-                  </span>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
+                    {post.service && (
+                      <Link 
+                        to={`/services/${post.service}`}
+                        className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium hover:bg-muted/80 transition-colors"
+                      >
+                        Learn More
+                      </Link>
+                    )}
+                  </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2 line-clamp-2">
                     {post.title}
                   </h3>
@@ -177,6 +204,43 @@ const Blog = () => {
             <Button variant="outline" size="lg">
               Load More Articles
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Ready to Implement These Strategies?
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Services</h3>
+              <p className="text-muted-foreground mb-4">Let us implement these strategies for you.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Services <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/case-studies" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Case Studies</h3>
+              <p className="text-muted-foreground mb-4">See real results from our clients.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Cases <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/contact" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Get Started</h3>
+              <p className="text-muted-foreground mb-4">Schedule a free consultation today.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Contact Us <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

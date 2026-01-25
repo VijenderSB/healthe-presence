@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Globe, Smartphone, Zap, Shield, Search, Clock } from "lucide-react";
+import { Globe, Smartphone, Zap, Shield, Search, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const features = [
@@ -35,6 +35,13 @@ const features = [
     title: "Multi-location Support",
     description: "Manage multiple clinic locations from a single, easy-to-update website."
   }
+];
+
+const processSteps = [
+  { step: "01", title: "Discovery", desc: "We learn about your practice, goals, and target patients" },
+  { step: "02", title: "Design", desc: "Custom designs tailored to your specialty and brand" },
+  { step: "03", title: "Development", desc: "Build your site with the latest web technologies" },
+  { step: "04", title: "Launch", desc: "Go live with ongoing support and optimization" }
 ];
 
 const WebsiteDesign = () => {
@@ -93,6 +100,79 @@ const WebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Website Development Process
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A streamlined process that respects your time while delivering exceptional results.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {processSteps.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl font-bold text-primary/20 mb-4">{item.step}</div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Enhance Your Website With
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Maximize your website's impact with these complementary services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services/seo" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Search className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">SEO Optimization</h3>
+              <p className="text-muted-foreground mb-4">Get found on Google by patients searching for your services.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/branding" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                <Globe className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Branding & Design</h3>
+              <p className="text-muted-foreground mb-4">Create a cohesive brand identity across all touchpoints.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/patient-engagement" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircle className="w-6 h-6 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Patient Engagement</h3>
+              <p className="text-muted-foreground mb-4">Convert website visitors into loyal patients.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
@@ -102,9 +182,14 @@ const WebsiteDesign = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Get a free consultation and discover how we can transform your online presence.
           </p>
-          <Button variant="secondary" size="xl" asChild>
-            <Link to="/contact">Schedule Free Consultation</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="secondary" size="xl" asChild>
+              <Link to="/contact">Schedule Free Consultation</Link>
+            </Button>
+            <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Link to="/testimonials">Read Success Stories</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const testimonials = [
@@ -11,7 +11,8 @@ const testimonials = [
     location: "Mumbai",
     image: "RS",
     quote: "Since partnering with them, my patient inquiries have increased by 300%. Their understanding of medical marketing is exceptional—they know exactly how to communicate complex cardiac procedures in a way that builds patient trust.",
-    result: "300% increase in patient inquiries"
+    result: "300% increase in patient inquiries",
+    service: "website-design"
   },
   {
     name: "Dr. Priya Patel",
@@ -19,7 +20,8 @@ const testimonials = [
     location: "Delhi",
     image: "PP",
     quote: "The video content they created for my clinic has been transformative. Patients now come in already familiar with our procedures and more confident in their decision to choose us.",
-    result: "2x increase in procedure bookings"
+    result: "2x increase in procedure bookings",
+    service: "video-production"
   },
   {
     name: "Dr. Arun Kumar",
@@ -27,7 +29,8 @@ const testimonials = [
     location: "Bangalore",
     image: "AK",
     quote: "Their SEO work put us on the first page of Google for 'orthopedic surgeon Bangalore.' The quality of patient leads has improved dramatically—we're seeing more surgical cases.",
-    result: "First page Google ranking"
+    result: "First page Google ranking",
+    service: "seo"
   },
   {
     name: "Dr. Meera Reddy",
@@ -35,7 +38,8 @@ const testimonials = [
     location: "Hyderabad",
     image: "MR",
     quote: "As a pediatrician, trust is everything. Their social media strategy has helped me build a community of parents who actively engage with health content and recommend our clinic.",
-    result: "50K+ engaged social followers"
+    result: "50K+ engaged social followers",
+    service: "social-media"
   },
   {
     name: "Dr. Vikram Singh",
@@ -43,7 +47,8 @@ const testimonials = [
     location: "Chennai",
     image: "VS",
     quote: "The before-after content strategy and YouTube channel they built for my practice has become my primary source of new patients. The production quality rivals the best in the industry.",
-    result: "100K+ YouTube subscribers"
+    result: "100K+ YouTube subscribers",
+    service: "youtube-management"
   },
   {
     name: "Dr. Anita Desai",
@@ -51,7 +56,8 @@ const testimonials = [
     location: "Pune",
     image: "AD",
     quote: "They transformed our online presence completely. Our website now ranks for dozens of women's health keywords, and the patient education content has positioned me as a thought leader.",
-    result: "5x increase in website traffic"
+    result: "5x increase in website traffic",
+    service: "seo"
   },
   {
     name: "Apollo Multispecialty Hospital",
@@ -59,7 +65,8 @@ const testimonials = [
     location: "Mumbai",
     image: "AH",
     quote: "Managing digital marketing for a multispecialty hospital is complex, but they handled everything—from department-specific content to reputation management across all our doctors.",
-    result: "40% increase in appointments"
+    result: "40% increase in appointments",
+    service: "patient-engagement"
   },
   {
     name: "Dr. Suresh Menon",
@@ -67,9 +74,19 @@ const testimonials = [
     location: "Kochi",
     image: "SM",
     quote: "The patient engagement system they implemented reduced our no-shows by 60% and increased our review ratings. Patients feel more connected to our practice than ever.",
-    result: "60% reduction in no-shows"
+    result: "60% reduction in no-shows",
+    service: "patient-engagement"
   }
 ];
+
+const serviceLabels: Record<string, string> = {
+  "website-design": "Website Design",
+  "video-production": "Video Production",
+  "seo": "SEO & Google",
+  "social-media": "Social Media",
+  "youtube-management": "YouTube Management",
+  "patient-engagement": "Patient Engagement"
+};
 
 const Testimonials = () => {
   return (
@@ -89,6 +106,14 @@ const Testimonials = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Hear directly from doctors and healthcare providers who have transformed their practices with our digital marketing solutions.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <Link to="/contact">Join Our Success Stories</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/case-studies">View Detailed Case Studies</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -109,8 +134,16 @@ const Testimonials = () => {
                 
                 <p className="text-lg text-foreground mb-6 italic">"{testimonial.quote}"</p>
                 
-                <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                  {testimonial.result}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                    {testimonial.result}
+                  </span>
+                  <Link 
+                    to={`/services/${testimonial.service}`}
+                    className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-medium hover:bg-muted/80 transition-colors"
+                  >
+                    {serviceLabels[testimonial.service]}
+                  </Link>
                 </div>
                 
                 <div className="flex items-center gap-4">
@@ -144,6 +177,43 @@ const Testimonials = () => {
                 <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Learn More About Our Work
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/case-studies" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Case Studies</h3>
+              <p className="text-muted-foreground mb-4">Detailed breakdowns of our successful projects.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Cases <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Services</h3>
+              <p className="text-muted-foreground mb-4">Explore our complete range of digital marketing solutions.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Services <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/about" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">About Us</h3>
+              <p className="text-muted-foreground mb-4">Learn about our team and values.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

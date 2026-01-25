@@ -15,6 +15,7 @@ const caseStudies = [
       { metric: "1st", label: "Page ranking for 'cardiologist Mumbai'" },
       { metric: "50K", label: "YouTube subscribers in 6 months" }
     ],
+    services: ["website-design", "social-media", "youtube-management"],
     image: "bg-gradient-to-br from-primary/20 to-secondary/20"
   },
   {
@@ -27,6 +28,7 @@ const caseStudies = [
       { metric: "45%", label: "Reduction in no-shows" },
       { metric: "4.8/5", label: "Average Google rating" }
     ],
+    services: ["branding", "seo", "patient-engagement"],
     image: "bg-gradient-to-br from-accent/20 to-primary/20"
   },
   {
@@ -39,6 +41,7 @@ const caseStudies = [
       { metric: "500+", label: "Video testimonials" },
       { metric: "40%", label: "Increase in OPD footfall" }
     ],
+    services: ["website-design", "video-production", "social-media"],
     image: "bg-gradient-to-br from-secondary/20 to-accent/20"
   },
   {
@@ -51,6 +54,7 @@ const caseStudies = [
       { metric: "100K+", label: "Instagram followers" },
       { metric: "60%", label: "Patients from social media" }
     ],
+    services: ["branding", "video-production", "social-media"],
     image: "bg-gradient-to-br from-purple-500/20 to-primary/20"
   },
   {
@@ -63,6 +67,7 @@ const caseStudies = [
       { metric: "2M+", label: "Views on athlete content" },
       { metric: "35", label: "Professional athlete endorsements" }
     ],
+    services: ["youtube-management", "social-media", "branding"],
     image: "bg-gradient-to-br from-green-500/20 to-primary/20"
   },
   {
@@ -75,9 +80,20 @@ const caseStudies = [
       { metric: "5M+", label: "Mental health content reach" },
       { metric: "92%", label: "Patient retention rate" }
     ],
+    services: ["social-media", "video-production", "patient-engagement"],
     image: "bg-gradient-to-br from-orange-500/20 to-secondary/20"
   }
 ];
+
+const serviceLabels: Record<string, string> = {
+  "website-design": "Website Design",
+  "video-production": "Video Production",
+  "seo": "SEO",
+  "social-media": "Social Media",
+  "youtube-management": "YouTube",
+  "patient-engagement": "Patient Engagement",
+  "branding": "Branding"
+};
 
 const CaseStudies = () => {
   return (
@@ -97,6 +113,14 @@ const CaseStudies = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Explore how we've helped healthcare professionals across specialties grow their practices through strategic digital marketing.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <Link to="/contact">Get Similar Results</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/testimonials">Read Testimonials</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -145,6 +169,18 @@ const CaseStudies = () => {
                     <p className="text-muted-foreground text-sm">{study.solution}</p>
                   </div>
                   
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {study.services.map((service, i) => (
+                      <Link 
+                        key={i}
+                        to={`/services/${service}`}
+                        className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium hover:bg-muted/80 transition-colors"
+                      >
+                        {serviceLabels[service]}
+                      </Link>
+                    ))}
+                  </div>
+                  
                   <div className="grid grid-cols-3 gap-4 p-4 bg-muted/30 rounded-xl">
                     {study.results.map((result, i) => (
                       <div key={i} className="text-center">
@@ -160,8 +196,45 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Related Links */}
       <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Explore Our Solutions
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/services" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">All Services</h3>
+              <p className="text-muted-foreground mb-4">See our complete range of solutions.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Services <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/testimonials" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Client Testimonials</h3>
+              <p className="text-muted-foreground mb-4">Hear from our satisfied clients.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Read Testimonials <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/about" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">About Us</h3>
+              <p className="text-muted-foreground mb-4">Learn about our approach and values.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ready to Be Our Next Success Story?

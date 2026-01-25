@@ -1,7 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart } from "lucide-react";
+import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const values = [
@@ -95,6 +95,14 @@ const AboutUs = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               We help healthcare professionals build powerful digital presences that attract patients and grow practices.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="xl" asChild>
+                <Link to="/contact">Work With Us</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/services">Explore Services</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -215,8 +223,45 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Quick Links */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Explore More
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Link to="/testimonials" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Client Testimonials</h3>
+              <p className="text-muted-foreground mb-4">Hear from healthcare professionals who've worked with us.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Read Stories <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/case-studies" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Case Studies</h3>
+              <p className="text-muted-foreground mb-4">Detailed breakdowns of our successful projects.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Cases <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/careers" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Join Our Team</h3>
+              <p className="text-muted-foreground mb-4">Explore career opportunities with us.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                View Openings <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ready to Transform Your Digital Presence?
