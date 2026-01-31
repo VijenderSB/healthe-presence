@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
 import heroBg from "@/assets/hero-doctor.jpg";
+import ConsultationDialog from "./ConsultationDialog";
 
 const HeroSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  
   const highlights = [
     "Website & Social Media",
     "Video Production",
@@ -54,7 +58,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <Button variant="cta" size="xl" className="group">
+              <Button variant="cta" size="xl" className="group" onClick={() => setDialogOpen(true)}>
                 Book Free Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -139,6 +143,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <ConsultationDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 };
