@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import { Button } from "@/components/ui/button";
 import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -245,6 +246,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <ConsultationFormBox />
 
       {/* CTA Section */}
       <section className="py-20 bg-muted/30">

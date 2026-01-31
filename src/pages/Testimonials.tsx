@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import { Button } from "@/components/ui/button";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -203,6 +204,8 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
+
+      <ConsultationFormBox />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">
