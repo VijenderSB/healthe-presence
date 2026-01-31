@@ -1,4 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -11,6 +12,8 @@ import {
   Stethoscope, Heart, Camera, Share2
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const services = [
   {
@@ -100,10 +103,41 @@ const CityPage = () => {
     ? cities.filter(c => c.id !== city.id && c.tier === city.tier).slice(0, 6 - relatedCities.length)
     : [];
 
+  const canonicalUrl = `${BASE_URL}/${city.slug}`;
+
   return (
     <main className="min-h-screen">
-      <Navbar />
+      <Helmet>
+        <title>{city.h1} | Transess - Healthcare Marketing</title>
+        <meta name="description" content={city.metaDescription} />
+        <meta name="keywords" content={city.keywords.join(", ")} />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${city.h1} | Transess`} />
+        <meta property="og:description" content={city.metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${city.h1} | Transess`} />
+        <meta name="twitter:description" content={city.metaDescription} />
+        <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
+        
+        {/* Geo Tags */}
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content={`${city.name}, ${city.state}`} />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Transess" />
+      </Helmet>
       
+      <Navbar />
       <PageHero
         badge={`${city.name}, ${city.state}`}
         title={city.h1}
