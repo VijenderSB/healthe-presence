@@ -116,23 +116,16 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 md:py-28 bg-muted">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             Our Services
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            Everything Your Practice Needs to{" "}
-            <span className="text-gradient">Thrive Online</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive digital marketing solutions tailored specifically for healthcare professionals.
-          </p>
         </div>
 
-        {/* Featured Service - Influencer Marketing */}
+        {/* Featured Service - Influencer Marketing (At Top) */}
         <Link 
           to={featuredService.href}
-          className="block mb-8 group"
+          className="block mb-12 group"
         >
           <div className="relative overflow-hidden rounded-2xl bg-gradient-primary p-8 md:p-10 shadow-elevated">
             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
@@ -164,6 +157,16 @@ const ServicesSection = () => {
             <div className="absolute bottom-0 left-1/4 w-48 h-48 bg-primary-foreground/5 rounded-full blur-2xl" />
           </div>
         </Link>
+
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+            Everything Your Practice Needs to{" "}
+            <span className="text-gradient">Thrive Online</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Comprehensive digital marketing solutions tailored specifically for healthcare professionals.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
