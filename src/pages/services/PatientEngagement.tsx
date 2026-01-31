@@ -59,6 +59,27 @@ const PatientEngagement = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Patient Engagement | Transess" />
         <meta name="twitter:description" content="Patient retention & engagement solutions for doctors." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Patient Engagement Solutions",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Patient engagement solutions: WhatsApp marketing, appointment reminders, follow-ups & loyalty programs.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Patient Engagement" }]} />

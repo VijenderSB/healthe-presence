@@ -110,6 +110,34 @@ const Testimonials = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Testimonials | Transess" />
         <meta name="twitter:description" content="Real success stories from 500+ doctors & hospitals." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Transess",
+            "url": SITE_CONFIG.BASE_URL,
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": testimonials.map(t => ({
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": t.name
+              },
+              "reviewBody": t.quote,
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Testimonials" }]} />
