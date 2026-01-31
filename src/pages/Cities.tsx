@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { cities, getStates, getCitiesByState, getCitiesByTier } from "@/data/cities";
 import { ArrowRight, MapPin, Building2, TrendingUp } from "lucide-react";
@@ -44,7 +45,7 @@ const Cities = () => {
       </Helmet>
       
       <Navbar />
-      
+      <Breadcrumbs items={[{ label: "Cities" }]} />
       <PageHero
         badge="200+ Cities"
         title="Medical Digital Marketing Across India"

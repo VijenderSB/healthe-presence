@@ -4,6 +4,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { getCityBySlug, cities } from "@/data/cities";
 import { 
@@ -197,6 +198,7 @@ const CityPage = () => {
       </Helmet>
       
       <Navbar />
+      <Breadcrumbs items={[{ label: "Cities", href: "/cities" }, { label: city.name }]} />
       <PageHero
         badge={`${city.name}, ${city.state}`}
         title={city.h1}

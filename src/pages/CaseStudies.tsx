@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, Eye, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -119,6 +120,7 @@ const CaseStudies = () => {
         <meta name="twitter:description" content="Real success stories of healthcare professionals." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Case Studies" }]} />
       
       <PageHero
         badge="Case Studies"

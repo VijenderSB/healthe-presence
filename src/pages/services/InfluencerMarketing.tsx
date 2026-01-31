@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { 
   Star, 
@@ -18,6 +19,7 @@ import {
   Play
 } from "lucide-react";
 import heroImage from "@/assets/hero-influencer.jpg";
+import { Link } from "react-router-dom";
 
 const BASE_URL = "https://healthe-presence.lovable.app";
 
@@ -102,6 +104,7 @@ const InfluencerMarketing = () => {
         <meta name="twitter:description" content="Become a medical influencer with professional support." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Influencer Marketing" }]} />
       <PageHero
         badge="Featured Service"
         title="Medical Influencer Marketing"

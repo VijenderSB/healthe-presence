@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Users, TrendingUp, Calendar, MessageCircle, BarChart, Heart, ArrowRight, Video, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -68,6 +69,7 @@ const SocialMedia = () => {
         <meta name="twitter:description" content="Social media management for healthcare professionals." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Social Media" }]} />
       
       <PageHero
         badge="Social Media Management"

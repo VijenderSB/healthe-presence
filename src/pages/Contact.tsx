@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -72,6 +73,7 @@ const Contact = () => {
         <meta name="twitter:description" content="Get a free consultation for your medical practice." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Contact Us" }]} />
       
       <PageHero
         badge="Contact Us"

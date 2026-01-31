@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Globe, FileText, Link2, BarChart3, ArrowRight, Smartphone, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -61,6 +62,7 @@ const SEO = () => {
         <meta name="twitter:description" content="Healthcare SEO to help patients find you." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "SEO" }]} />
       
       <PageHero
         badge="SEO & Google Visibility"

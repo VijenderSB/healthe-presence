@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Palette, Image, FileImage, BookOpen, Layers, PenTool, ArrowRight, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -61,6 +62,7 @@ const Branding = () => {
         <meta name="twitter:description" content="Healthcare branding and creative design services." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Branding" }]} />
       
       <PageHero
         badge="Branding & Creatives"
