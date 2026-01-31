@@ -83,18 +83,18 @@ const Careers = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Careers at Transess | Join India's Leading Medical Marketing Agency</title>
-        <meta name="description" content="Join Transess and help healthcare professionals reach more patients. Explore career opportunities in digital marketing, content, video production, and more." />
-        <meta name="keywords" content="Transess careers, medical marketing jobs, healthcare digital marketing careers, marketing agency jobs India" />
+        <title>Careers at Transess | Medical Marketing Jobs India | Join Our Team</title>
+        <meta name="description" content="Join India's #1 medical marketing agency! Explore careers in digital marketing, content writing, video production, SEO & more. Flexible work, learning budget & meaningful impact." />
+        <meta name="keywords" content="Transess careers, medical marketing jobs India, healthcare digital marketing careers, marketing agency jobs, content writer jobs, SEO jobs India" />
         <link rel="canonical" href={`${BASE_URL}/careers`} />
-        <meta property="og:title" content="Careers at Transess | Medical Marketing Agency" />
-        <meta property="og:description" content="Join India's leading medical marketing agency and make an impact in healthcare." />
+        <meta property="og:title" content="Careers at Transess | Medical Marketing Jobs" />
+        <meta property="og:description" content="Join India's leading medical marketing agency. Meaningful work, great culture!" />
         <meta property="og:url" content={`${BASE_URL}/careers`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Careers at Transess" />
-        <meta name="twitter:description" content="Join India's leading medical marketing agency." />
+        <meta name="twitter:description" content="Join our medical marketing team in India." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Careers" }]} />

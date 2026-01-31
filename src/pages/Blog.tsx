@@ -85,18 +85,18 @@ const Blog = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Marketing Blog | Transess - Healthcare Digital Marketing Insights</title>
-        <meta name="description" content="Expert tips, strategies, and insights on medical digital marketing. Learn SEO, social media, video marketing and patient engagement for doctors and hospitals." />
-        <meta name="keywords" content="medical marketing blog, healthcare digital marketing tips, doctor SEO guide, hospital social media strategy" />
+        <title>Medical Marketing Blog | Expert Tips for Doctors & Hospitals | Transess</title>
+        <meta name="description" content="Expert healthcare marketing tips, SEO guides, social media strategies & patient acquisition insights for doctors, clinics & hospitals. Free knowledge from industry experts!" />
+        <meta name="keywords" content="medical marketing blog, healthcare marketing tips, doctor SEO guide, hospital social media strategy, patient acquisition tips, clinic marketing ideas" />
         <link rel="canonical" href={`${BASE_URL}/blog`} />
         <meta property="og:title" content="Medical Marketing Blog | Transess" />
-        <meta property="og:description" content="Expert tips and strategies on medical digital marketing for healthcare professionals." />
+        <meta property="og:description" content="Expert tips on healthcare SEO, social media & patient acquisition for doctors." />
         <meta property="og:url" content={`${BASE_URL}/blog`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Marketing Blog | Transess" />
-        <meta name="twitter:description" content="Expert tips on medical digital marketing for healthcare professionals." />
+        <meta name="twitter:description" content="Expert healthcare marketing tips for doctors & hospitals." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Blog" }]} />

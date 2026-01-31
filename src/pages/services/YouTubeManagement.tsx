@@ -48,18 +48,18 @@ const YouTubeManagement = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Doctor YouTube Channel Management | Transess - Medical YouTube India</title>
-        <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, content strategy, SEO, subscriber growth & analytics. Become a medical thought leader on YouTube." />
-        <meta name="keywords" content="doctor YouTube channel, medical YouTube management, hospital YouTube marketing, healthcare video channel, doctor content creator" />
+        <title>Doctor YouTube Management India | Grow Medical YouTube Channel | Transess</title>
+        <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, SEO, content strategy, subscriber growth. 50+ channels managed, 10M+ views, 500K+ subscribers gained!" />
+        <meta name="keywords" content="doctor YouTube channel management, medical YouTube marketing, hospital YouTube SEO, healthcare video channel, doctor content creator, medical thought leader" />
         <link rel="canonical" href={`${BASE_URL}/services/youtube-management`} />
-        <meta property="og:title" content="Doctor YouTube Management | Transess" />
-        <meta property="og:description" content="Grow your medical YouTube channel with professional management and content strategy." />
+        <meta property="og:title" content="Doctor YouTube Management | Transess India" />
+        <meta property="og:description" content="Grow your medical YouTube channel. 50+ doctors trust us. 500K+ subscribers gained!" />
         <meta property="og:url" content={`${BASE_URL}/services/youtube-management`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Doctor YouTube Management | Transess" />
-        <meta name="twitter:description" content="YouTube channel management for healthcare professionals." />
+        <meta name="twitter:description" content="YouTube growth for healthcare professionals in India." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "YouTube Management" }]} />

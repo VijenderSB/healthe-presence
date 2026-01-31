@@ -59,18 +59,18 @@ const Contact = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Contact Us | Transess - Medical Digital Marketing Agency India</title>
-        <meta name="description" content="Get a free consultation for your medical practice. Contact Transess - India's leading healthcare marketing agency. Call +91 8447314061 or fill our contact form." />
-        <meta name="keywords" content="contact Transess, medical marketing consultation, healthcare digital marketing contact, doctor marketing agency" />
+        <title>Contact Transess | Free Medical Marketing Consultation | Call +91 8447314061</title>
+        <meta name="description" content="Get FREE consultation for your medical practice! Contact India's leading healthcare marketing agency. Call +91 8447314061, email info@transess.com or fill our form. We respond within 24 hours." />
+        <meta name="keywords" content="contact Transess, medical marketing consultation, free healthcare consultation, doctor marketing agency contact, hospital marketing quote" />
         <link rel="canonical" href={`${BASE_URL}/contact`} />
-        <meta property="og:title" content="Contact Transess - Medical Digital Marketing" />
-        <meta property="og:description" content="Get a free consultation for your medical practice. India's leading healthcare marketing agency." />
+        <meta property="og:title" content="Contact Transess | Free Medical Marketing Consultation" />
+        <meta property="og:description" content="Get free consultation for your practice. Call +91 8447314061 or fill our form!" />
         <meta property="og:url" content={`${BASE_URL}/contact`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Transess" />
-        <meta name="twitter:description" content="Get a free consultation for your medical practice." />
+        <meta name="twitter:title" content="Contact Transess | Free Consultation" />
+        <meta name="twitter:description" content="Get free medical marketing consultation. We respond in 24 hours!" />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Contact Us" }]} />

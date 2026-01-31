@@ -15,15 +15,15 @@ const Specialties = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Digital Marketing for 33+ Specialties | Transess India</title>
-        <meta name="description" content="Specialized digital marketing for every medical specialty - Eye Care, Dental, Cardiology, IVF, Dermatology & more. Expert healthcare SEO, social media & branding." />
-        <meta name="keywords" content="medical specialty marketing, healthcare digital marketing, doctor marketing india, hospital marketing, specialty clinic marketing" />
+        <title>Medical Marketing for 33+ Specialties | Eye Care, Dental, IVF & More | Transess</title>
+        <meta name="description" content="Specialized healthcare marketing for 33+ medical specialties: Eye Care, Dental, Cardiology, IVF, Dermatology, Orthopedics & more. Expert SEO, social media & branding tailored to your specialty!" />
+        <meta name="keywords" content="medical specialty marketing, eye care marketing, dental marketing India, cardiology marketing, IVF clinic marketing, dermatology digital marketing, orthopedic surgeon marketing" />
         <link rel="canonical" href={`${BASE_URL}/specialties`} />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Medical Digital Marketing for 33+ Specialties | Transess" />
-        <meta property="og:description" content="Specialized healthcare marketing for every medical specialty in India. Expert SEO, social media & branding." />
+        <meta property="og:title" content="Medical Marketing for 33+ Specialties | Transess" />
+        <meta property="og:description" content="Specialized healthcare marketing for every medical specialty in India." />
         <meta property="og:url" content={`${BASE_URL}/specialties`} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
@@ -31,8 +31,8 @@ const Specialties = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medical Marketing for 33+ Specialties" />
-        <meta name="twitter:description" content="Specialized healthcare marketing for every medical specialty in India." />
+        <meta name="twitter:title" content="Marketing for 33+ Medical Specialties" />
+        <meta name="twitter:description" content="Specialized healthcare marketing for every specialty in India." />
         
         <meta name="robots" content="index, follow" />
       </Helmet>

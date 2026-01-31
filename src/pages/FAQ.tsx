@@ -129,18 +129,18 @@ const FAQ = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>FAQ | Transess - Medical Digital Marketing Questions Answered</title>
-        <meta name="description" content="Frequently asked questions about medical digital marketing services. Learn about pricing, process, timeline, and compliance for doctor and hospital marketing." />
-        <meta name="keywords" content="medical marketing FAQ, healthcare digital marketing questions, doctor marketing pricing, hospital SEO FAQ" />
+        <title>Medical Marketing FAQ | Pricing, Process & Compliance Questions | Transess</title>
+        <meta name="description" content="Get answers to all your medical marketing questions! Learn about pricing, timeline, process, HIPAA compliance & ROI. Free consultation available for doctors & hospitals." />
+        <meta name="keywords" content="medical marketing FAQ, healthcare marketing pricing, doctor marketing questions, hospital SEO cost, medical advertising compliance, marketing timeline" />
         <link rel="canonical" href={`${BASE_URL}/faq`} />
-        <meta property="og:title" content="FAQ | Transess - Medical Digital Marketing" />
-        <meta property="og:description" content="Find answers to common questions about our medical digital marketing services." />
+        <meta property="og:title" content="Medical Marketing FAQ | Transess" />
+        <meta property="og:description" content="Common questions about healthcare marketing answered. Pricing, process & more." />
         <meta property="og:url" content={`${BASE_URL}/faq`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="FAQ | Transess" />
-        <meta name="twitter:description" content="Answers to common medical marketing questions." />
+        <meta name="twitter:title" content="FAQ | Transess Medical Marketing" />
+        <meta name="twitter:description" content="Answers to your medical marketing questions." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "FAQ" }]} />

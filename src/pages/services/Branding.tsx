@@ -48,18 +48,18 @@ const Branding = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Branding & Creatives | Transess - Healthcare Brand Design India</title>
-        <meta name="description" content="Medical branding and creative design for doctors, clinics & hospitals. Logo design, brand identity, social media creatives & marketing collateral that builds trust." />
-        <meta name="keywords" content="medical branding India, doctor logo design, hospital brand identity, healthcare creative design, clinic branding" />
+        <title>Medical Branding India | Doctor Logo & Brand Identity Design | Transess</title>
+        <meta name="description" content="Medical branding & creative design: doctor logo design, clinic brand identity, social media creatives & marketing collateral. Build a memorable medical brand that patients trust!" />
+        <meta name="keywords" content="medical branding India, doctor logo design, hospital brand identity, healthcare creative design, clinic branding, medical marketing collateral" />
         <link rel="canonical" href={`${BASE_URL}/services/branding`} />
-        <meta property="og:title" content="Medical Branding & Creatives | Transess" />
-        <meta property="og:description" content="Build a memorable medical brand with professional design and creatives." />
+        <meta property="og:title" content="Medical Branding & Creatives | Transess India" />
+        <meta property="og:description" content="Build a memorable medical brand. Logo design, brand identity & creatives." />
         <meta property="og:url" content={`${BASE_URL}/services/branding`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Branding | Transess" />
-        <meta name="twitter:description" content="Healthcare branding and creative design services." />
+        <meta name="twitter:description" content="Healthcare branding and creative design services in India." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Branding" }]} />

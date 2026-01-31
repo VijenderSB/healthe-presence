@@ -99,18 +99,18 @@ const Testimonials = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Client Testimonials | Transess - Doctors Trust Us for Digital Marketing</title>
-        <meta name="description" content="Read success stories from 500+ doctors and hospitals. 98% client satisfaction rate. See how healthcare professionals grew their practice with Transess." />
-        <meta name="keywords" content="medical marketing testimonials, doctor reviews, hospital marketing success, healthcare client reviews" />
+        <title>Client Testimonials | 500+ Doctors Trust Transess | 98% Satisfaction Rate</title>
+        <meta name="description" content="Read real success stories from 500+ doctors & hospitals. 300% patient growth, first-page Google rankings, 100K+ YouTube subscribers. See why 98% clients recommend Transess!" />
+        <meta name="keywords" content="medical marketing testimonials, doctor reviews Transess, hospital marketing success stories, healthcare client reviews, medical SEO results" />
         <link rel="canonical" href={`${BASE_URL}/testimonials`} />
-        <meta property="og:title" content="Client Testimonials | Transess" />
-        <meta property="og:description" content="Read success stories from 500+ doctors and hospitals who trust Transess." />
+        <meta property="og:title" content="Client Testimonials | Transess Medical Marketing" />
+        <meta property="og:description" content="500+ doctors trust us. See real results - 300% patient growth & more!" />
         <meta property="og:url" content={`${BASE_URL}/testimonials`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Client Testimonials | Transess" />
-        <meta name="twitter:description" content="Success stories from doctors and hospitals." />
+        <meta name="twitter:title" content="Testimonials | Transess" />
+        <meta name="twitter:description" content="Real success stories from 500+ doctors & hospitals." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Testimonials" }]} />
