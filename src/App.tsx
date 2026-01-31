@@ -23,6 +23,10 @@ import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import Specialties from "./pages/Specialties";
 import SpecialtyPage from "./pages/specialties/SpecialtyPage";
+import Cities from "./pages/Cities";
+import CityPage from "./pages/cities/CityPage";
+import { cities } from "./data/cities";
+import { specialties } from "./data/specialties";
 
 const queryClient = new QueryClient();
 
@@ -51,44 +55,17 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/specialties" element={<Specialties />} />
+          <Route path="/cities" element={<Cities />} />
           
-          {/* Medical Specialty Pages */}
-          <Route path="/eyecare-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/dental-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/cosmetic-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/dermatology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/hair-transplant-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/ivf-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/gynaecology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/cardiology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/orthopaedic-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/neurology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/mental-health-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/psychology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/oncology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/diagnostic-lab-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/radiology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/physician-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/pediatric-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/ent-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/urology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/gastroenterology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/pulmonology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/nephrology-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/diabetes-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/pain-management-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/physiotherapy-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/homeopathy-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/ayurveda-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/alternative-medicine-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/naturopathy-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/hospital-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/doctor-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/telemedicine-digital-marketing-agency-india" element={<SpecialtyPage />} />
-          <Route path="/home-healthcare-digital-marketing-agency-india" element={<SpecialtyPage />} />
+          {/* Medical Specialty Pages - Dynamic */}
+          {specialties.map((specialty) => (
+            <Route key={specialty.id} path={`/${specialty.slug}`} element={<SpecialtyPage />} />
+          ))}
           
-          {/* Dynamic specialty route as fallback */}
-          <Route path="/:slug" element={<SpecialtyPage />} />
+          {/* City Landing Pages - Dynamic */}
+          {cities.map((city) => (
+            <Route key={city.id} path={`/${city.slug}`} element={<CityPage />} />
+          ))}
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

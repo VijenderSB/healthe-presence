@@ -2,15 +2,18 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import transessLogo from "@/assets/transess-footer-logo.png";
 import { specialties } from "@/data/specialties";
+import { cities } from "@/data/cities";
 
 const Footer = () => {
-  // Select key specialties to display in footer (first 8)
-  const featuredSpecialties = specialties.slice(0, 8);
+  // Select key specialties to display in footer (first 6)
+  const featuredSpecialties = specialties.slice(0, 6);
+  // Select top cities (Tier 1)
+  const topCities = cities.filter(c => c.tier === 1).slice(0, 6);
   
   return (
     <footer className="py-12 md:py-16 bg-secondary border-t border-secondary-foreground/10">
       <div className="container">
-        <div className="grid md:grid-cols-5 gap-8 mb-12">
+        <div className="grid md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4">
@@ -67,7 +70,26 @@ const Footer = () => {
               ))}
               <li>
                 <Link to="/specialties" className="text-primary hover:text-primary/80 transition-colors font-medium">
-                  View All 33 Specialties →
+                  View All 33 →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Cities */}
+          <div>
+            <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Top Cities</h4>
+            <ul className="space-y-2 text-sm text-secondary-foreground/70">
+              {topCities.map((city) => (
+                <li key={city.id}>
+                  <Link to={`/${city.slug}`} className="hover:text-secondary-foreground transition-colors">
+                    {city.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/cities" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                  View All 200 →
                 </Link>
               </li>
             </ul>
