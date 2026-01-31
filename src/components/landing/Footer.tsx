@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4">
-              <img src={transessLogo} alt="Transess" className="h-28 w-auto" />
+              <img src={transessLogo} alt="Transess" className="h-56 w-auto" />
             </Link>
             <p className="text-secondary-foreground/70 mb-6 text-sm">
               360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals.
