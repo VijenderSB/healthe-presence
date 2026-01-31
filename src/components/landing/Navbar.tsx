@@ -3,10 +3,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import transessLogo from "@/assets/transess-header-logo.png";
+import { specialties } from "@/data/specialties";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [specialtiesOpen, setSpecialtiesOpen] = useState(false);
 
   const services = [
     { label: "Medical Influencer Marketing", href: "/services/influencer-marketing", featured: true },
@@ -65,8 +67,28 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+
+          {/* Specialties Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium">
+              Specialties <ChevronDown className="w-4 h-4" />
+            </button>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[280px] max-h-[400px] overflow-y-auto">
+                {specialties.map((specialty) => (
+                  <Link 
+                    key={specialty.id} 
+                    to={`/${specialty.slug}`}
+                    className="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  >
+                    {specialty.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           
-          {navLinks.slice(0, 4).map((link) => (
+          {navLinks.slice(0, 3).map((link) => (
             <Link key={link.label} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               {link.label}
             </Link>
@@ -111,6 +133,25 @@ const Navbar = () => {
                 ))}
               </div>
             )}
+            
+            <button onClick={() => setSpecialtiesOpen(!specialtiesOpen)} className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors font-medium py-2">
+              Specialties <ChevronDown className={`w-4 h-4 transition-transform ${specialtiesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {specialtiesOpen && (
+              <div className="pl-4 flex flex-col gap-2 max-h-[200px] overflow-y-auto">
+                {specialties.map((specialty) => (
+                  <Link 
+                    key={specialty.id} 
+                    to={`/${specialty.slug}`}
+                    className="transition-colors py-1 text-muted-foreground hover:text-foreground"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {specialty.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+            
             {navLinks.map((link) => (
               <Link key={link.label} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2" onClick={() => setIsOpen(false)}>
                 {link.label}
