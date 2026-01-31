@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Users, TrendingUp, Calendar, MessageCircle, BarChart, Heart, ArrowRight, Video, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroSocial from "@/assets/hero-social.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const features = [
   {
@@ -50,6 +53,20 @@ const platforms = [
 const SocialMedia = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Social Media Marketing | Transess - Healthcare Social Media India</title>
+        <meta name="description" content="Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management. Build patient trust and grow your medical practice online." />
+        <meta name="keywords" content="medical social media marketing, doctor social media, hospital Instagram, healthcare Facebook marketing, clinic social media management" />
+        <link rel="canonical" href={`${BASE_URL}/services/social-media`} />
+        <meta property="og:title" content="Medical Social Media Marketing | Transess" />
+        <meta property="og:description" content="Build your medical brand on social media and connect with patients." />
+        <meta property="og:url" content={`${BASE_URL}/services/social-media`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Social Media Marketing | Transess" />
+        <meta name="twitter:description" content="Social media management for healthcare professionals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

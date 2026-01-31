@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Youtube, Settings, TrendingUp, Users, FileVideo, BarChart, ArrowRight, Video, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroYoutube from "@/assets/hero-youtube.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const services = [
   {
@@ -43,6 +46,20 @@ const services = [
 const YouTubeManagement = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Doctor YouTube Channel Management | Transess - Medical YouTube India</title>
+        <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, content strategy, SEO, subscriber growth & analytics. Become a medical thought leader on YouTube." />
+        <meta name="keywords" content="doctor YouTube channel, medical YouTube management, hospital YouTube marketing, healthcare video channel, doctor content creator" />
+        <link rel="canonical" href={`${BASE_URL}/services/youtube-management`} />
+        <meta property="og:title" content="Doctor YouTube Management | Transess" />
+        <meta property="og:description" content="Grow your medical YouTube channel with professional management and content strategy." />
+        <meta property="og:url" content={`${BASE_URL}/services/youtube-management`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Doctor YouTube Management | Transess" />
+        <meta name="twitter:description" content="YouTube channel management for healthcare professionals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Video, Clapperboard, Mic, Film, Play, Sparkles, ArrowRight, Users, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroVideo from "@/assets/hero-video.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const videoTypes = [
   {
@@ -43,6 +46,20 @@ const videoTypes = [
 const VideoProduction = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Video Production | Transess - Doctor Video Content India</title>
+        <meta name="description" content="Professional medical video production for doctors & hospitals. Doctor introductions, patient testimonials, explainer videos, reels & facility tours that build trust." />
+        <meta name="keywords" content="medical video production India, doctor video content, hospital video marketing, healthcare video, patient testimonial videos" />
+        <link rel="canonical" href={`${BASE_URL}/services/video-production`} />
+        <meta property="og:title" content="Medical Video Production | Transess" />
+        <meta property="og:description" content="Professional video content for doctors and hospitals that connects with patients." />
+        <meta property="og:url" content={`${BASE_URL}/services/video-production`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Video Production | Transess" />
+        <meta name="twitter:description" content="Professional video production for healthcare." />
+      </Helmet>
       <Navbar />
       
       <PageHero

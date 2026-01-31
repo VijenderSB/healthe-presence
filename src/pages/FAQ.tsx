@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -12,6 +13,8 @@ import {
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroFaq from "@/assets/hero-faq.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const faqs = [
   {
@@ -124,6 +127,20 @@ const faqs = [
 const FAQ = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>FAQ | Transess - Medical Digital Marketing Questions Answered</title>
+        <meta name="description" content="Frequently asked questions about medical digital marketing services. Learn about pricing, process, timeline, and compliance for doctor and hospital marketing." />
+        <meta name="keywords" content="medical marketing FAQ, healthcare digital marketing questions, doctor marketing pricing, hospital SEO FAQ" />
+        <link rel="canonical" href={`${BASE_URL}/faq`} />
+        <meta property="og:title" content="FAQ | Transess - Medical Digital Marketing" />
+        <meta property="og:description" content="Find answers to common questions about our medical digital marketing services." />
+        <meta property="og:url" content={`${BASE_URL}/faq`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FAQ | Transess" />
+        <meta name="twitter:description" content="Answers to common medical marketing questions." />
+      </Helmet>
       <Navbar />
       
       <PageHero
