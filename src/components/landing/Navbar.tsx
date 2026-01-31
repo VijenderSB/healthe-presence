@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import transessLogo from "@/assets/transess-logo.png";
+import transessLogo from "@/assets/transess-header-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
