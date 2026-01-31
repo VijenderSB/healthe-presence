@@ -14,8 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroFaq from "@/assets/hero-faq.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const faqs = [
   {
@@ -132,12 +131,12 @@ const FAQ = () => {
         <title>Medical Marketing FAQ | Pricing, Process & Compliance Questions | Transess</title>
         <meta name="description" content="Get answers to all your medical marketing questions! Learn about pricing, timeline, process, HIPAA compliance & ROI. Free consultation available for doctors & hospitals." />
         <meta name="keywords" content="medical marketing FAQ, healthcare marketing pricing, doctor marketing questions, hospital SEO cost, medical advertising compliance, marketing timeline" />
-        <link rel="canonical" href={`${BASE_URL}/faq`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/faq`} />
         <meta property="og:title" content="Medical Marketing FAQ | Transess" />
         <meta property="og:description" content="Common questions about healthcare marketing answered. Pricing, process & more." />
-        <meta property="og:url" content={`${BASE_URL}/faq`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/faq`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="FAQ | Transess Medical Marketing" />
         <meta name="twitter:description" content="Answers to your medical marketing questions." />

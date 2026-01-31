@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Globe, Smartphone, Zap, Shield, Search, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroWebsite from "@/assets/hero-website.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const features = [
   {
@@ -58,12 +57,12 @@ const WebsiteDesign = () => {
         <title>Medical Website Design India | Doctor & Hospital Websites | Transess</title>
         <meta name="description" content="Professional medical website design for doctors, clinics & hospitals. HIPAA-compliant, mobile-responsive, SEO-optimized websites that convert visitors to patients. Free consultation!" />
         <meta name="keywords" content="medical website design India, doctor website development, hospital website design, healthcare web design, clinic website, HIPAA compliant website" />
-        <link rel="canonical" href={`${BASE_URL}/services/website-design`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/website-design`} />
         <meta property="og:title" content="Medical Website Design | Transess India" />
         <meta property="og:description" content="Professional doctor & hospital websites that convert visitors to patients." />
-        <meta property="og:url" content={`${BASE_URL}/services/website-design`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/website-design`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Website Design | Transess" />
         <meta name="twitter:description" content="HIPAA-compliant websites for healthcare professionals." />

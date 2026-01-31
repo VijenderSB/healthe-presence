@@ -20,8 +20,7 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/hero-influencer.jpg";
 import { Link } from "react-router-dom";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const InfluencerMarketing = () => {
   const features = [
@@ -93,12 +92,12 @@ const InfluencerMarketing = () => {
         <title>Doctor Influencer Marketing India | Become a Medical Influencer | 200+ Created</title>
         <meta name="description" content="Become a medical influencer! Personal brand building, content creation, social media growth. 200+ doctor influencers created, 500K+ followers generated, 50M+ views delivered!" />
         <meta name="keywords" content="doctor influencer marketing India, medical influencer agency, healthcare content creator, physician personal branding, doctor social media growth, medical thought leader" />
-        <link rel="canonical" href={`${BASE_URL}/services/influencer-marketing`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/influencer-marketing`} />
         <meta property="og:title" content="Doctor Influencer Marketing | Transess India" />
         <meta property="og:description" content="Become a medical influencer. 200+ doctors transformed. 500K+ followers generated!" />
-        <meta property="og:url" content={`${BASE_URL}/services/influencer-marketing`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/influencer-marketing`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Doctor Influencer Marketing | Transess" />
         <meta name="twitter:description" content="Become a medical influencer with professional support." />

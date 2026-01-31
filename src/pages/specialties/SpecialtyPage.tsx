@@ -12,8 +12,7 @@ import {
   Video, Users, Megaphone, ArrowRight, CheckCircle, Star
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -83,7 +82,7 @@ const SpecialtyPage = () => {
     .filter(s => s.id !== specialty.id)
     .slice(0, 6);
 
-  const canonicalUrl = `${BASE_URL}/${specialty.slug}`;
+  const canonicalUrl = `${SITE_CONFIG.BASE_URL}/${specialty.slug}`;
   const metaDescription = `${specialty.h1}. ${specialty.h2}. Expert SEO, social media, video production & branding for ${specialty.name.toLowerCase()} in India.`;
 
   return (
@@ -101,13 +100,13 @@ const SpecialtyPage = () => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${specialty.h1} | Transess`} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
@@ -123,7 +122,7 @@ const SpecialtyPage = () => {
             "description": metaDescription,
             "url": canonicalUrl,
             "telephone": "+91-8447314061",
-            "image": `${BASE_URL}/og-image.png`,
+            "image": `${SITE_CONFIG.BASE_URL}/og-image.png`,
             "priceRange": "₹₹₹",
             "address": {
               "@type": "PostalAddress",

@@ -13,8 +13,7 @@ import {
   Stethoscope, Heart, Camera, Share2
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -104,7 +103,7 @@ const CityPage = () => {
     ? cities.filter(c => c.id !== city.id && c.tier === city.tier).slice(0, 6 - relatedCities.length)
     : [];
 
-  const canonicalUrl = `${BASE_URL}/${city.slug}`;
+  const canonicalUrl = `${SITE_CONFIG.BASE_URL}/${city.slug}`;
 
   return (
     <main className="min-h-screen">
@@ -121,13 +120,13 @@ const CityPage = () => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${city.h1} | Transess`} />
         <meta name="twitter:description" content={city.metaDescription} />
-        <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Geo Tags */}
         <meta name="geo.region" content="IN" />
@@ -147,7 +146,7 @@ const CityPage = () => {
             "description": city.metaDescription,
             "url": canonicalUrl,
             "telephone": "+91-8447314061",
-            "image": `${BASE_URL}/og-image.png`,
+            "image": `${SITE_CONFIG.BASE_URL}/og-image.png`,
             "priceRange": "₹₹₹",
             "address": {
               "@type": "PostalAddress",

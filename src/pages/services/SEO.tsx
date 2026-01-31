@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Search, MapPin, Globe, FileText, Link2, BarChart3, ArrowRight, Smartphone, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroSeo from "@/assets/hero-seo.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -51,12 +50,12 @@ const SEO = () => {
         <title>Medical SEO Services India | Doctor & Hospital SEO | Get First Page Rankings</title>
         <meta name="description" content="Healthcare SEO services for doctors, clinics & hospitals. Local SEO, first-page Google rankings, keyword optimization. 77% patients search online - get found by them!" />
         <meta name="keywords" content="medical SEO India, doctor SEO services, hospital SEO, healthcare search engine optimization, local SEO for doctors, Google My Business optimization" />
-        <link rel="canonical" href={`${BASE_URL}/services/seo`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/seo`} />
         <meta property="og:title" content="Medical SEO Services | Transess India" />
         <meta property="og:description" content="Get first-page Google rankings. Healthcare SEO for doctors & hospitals." />
-        <meta property="og:url" content={`${BASE_URL}/services/seo`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/seo`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical SEO Services | Transess" />
         <meta name="twitter:description" content="Get found by patients on Google. Healthcare SEO experts." />

@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Video, Clapperboard, Mic, Film, Play, Sparkles, ArrowRight, Users, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroVideo from "@/assets/hero-video.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const videoTypes = [
   {
@@ -51,12 +50,12 @@ const VideoProduction = () => {
         <title>Medical Video Production India | Doctor Videos & Reels | 500+ Videos Created</title>
         <meta name="description" content="Professional medical video production: doctor introductions, patient testimonials, explainers, reels & facility tours. 500+ videos produced, 10M+ views generated. 4K quality!" />
         <meta name="keywords" content="medical video production India, doctor video content, hospital video marketing, healthcare reels, patient testimonial videos, medical explainer videos" />
-        <link rel="canonical" href={`${BASE_URL}/services/video-production`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/video-production`} />
         <meta property="og:title" content="Medical Video Production | Transess India" />
         <meta property="og:description" content="Professional medical videos. 500+ produced, 10M+ views. Build patient trust!" />
-        <meta property="og:url" content={`${BASE_URL}/services/video-production`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/video-production`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Video Production | Transess" />
         <meta name="twitter:description" content="Professional video content for doctors & hospitals." />

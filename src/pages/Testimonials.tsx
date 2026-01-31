@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroTestimonials from "@/assets/hero-testimonials.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const testimonials = [
   {
@@ -102,12 +101,12 @@ const Testimonials = () => {
         <title>Client Testimonials | 500+ Doctors Trust Transess | 98% Satisfaction Rate</title>
         <meta name="description" content="Read real success stories from 500+ doctors & hospitals. 300% patient growth, first-page Google rankings, 100K+ YouTube subscribers. See why 98% clients recommend Transess!" />
         <meta name="keywords" content="medical marketing testimonials, doctor reviews Transess, hospital marketing success stories, healthcare client reviews, medical SEO results" />
-        <link rel="canonical" href={`${BASE_URL}/testimonials`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/testimonials`} />
         <meta property="og:title" content="Client Testimonials | Transess Medical Marketing" />
         <meta property="og:description" content="500+ doctors trust us. See real results - 300% patient growth & more!" />
-        <meta property="og:url" content={`${BASE_URL}/testimonials`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/testimonials`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Testimonials | Transess" />
         <meta name="twitter:description" content="Real success stories from 500+ doctors & hospitals." />
