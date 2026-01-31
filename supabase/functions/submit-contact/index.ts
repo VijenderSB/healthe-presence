@@ -27,6 +27,114 @@ function normalizePhone(phone: string): string {
   return phone.replace(/\D/g, "").slice(-10);
 }
 
+// Get service label from value
+function getServiceLabel(value: string): string {
+  const services: Record<string, string> = {
+    website: "Medical Website Design",
+    social: "Social Media Management",
+    video: "Video Production",
+    youtube: "YouTube Management",
+    seo: "SEO & Google Visibility",
+    branding: "Branding & Creatives",
+    engagement: "Patient Engagement",
+    complete: "Complete 360° Solution",
+  };
+  return services[value] || value || "Not specified";
+}
+
+// Send email notification via Resend
+async function sendEmailNotification(data: {
+  name: string;
+  email: string;
+  phone: string;
+  clinic: string;
+  service: string;
+  message: string;
+}): Promise<void> {
+  const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+  
+  if (!RESEND_API_KEY) {
+    console.warn("RESEND_API_KEY not configured, skipping email notification");
+    return;
+  }
+
+  const emailHtml = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+      <h2 style="color: #0A9396; border-bottom: 2px solid #0A9396; padding-bottom: 10px;">
+        🏥 New Lead from Transess Website
+      </h2>
+      
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <tr>
+          <td style="padding: 12px; background: #f8f9fa; font-weight: bold; width: 140px;">Name:</td>
+          <td style="padding: 12px; background: #f8f9fa;">${data.name}</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; font-weight: bold;">Email:</td>
+          <td style="padding: 12px;"><a href="mailto:${data.email}">${data.email}</a></td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; background: #f8f9fa; font-weight: bold;">Phone:</td>
+          <td style="padding: 12px; background: #f8f9fa;">
+            <a href="tel:+91${data.phone}">+91 ${data.phone}</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; font-weight: bold;">Clinic/Hospital:</td>
+          <td style="padding: 12px;">${data.clinic || "Not provided"}</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; background: #f8f9fa; font-weight: bold;">Service Interest:</td>
+          <td style="padding: 12px; background: #f8f9fa;">${getServiceLabel(data.service)}</td>
+        </tr>
+      </table>
+      
+      ${data.message ? `
+        <div style="margin: 20px 0;">
+          <h3 style="color: #333; margin-bottom: 10px;">Message:</h3>
+          <div style="background: #f8f9fa; padding: 15px; border-left: 4px solid #0A9396; white-space: pre-wrap;">
+            ${data.message}
+          </div>
+        </div>
+      ` : ""}
+      
+      <div style="margin-top: 30px; padding: 15px; background: #e8f5e9; border-radius: 8px;">
+        <strong>⏰ Submitted:</strong> ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST
+      </div>
+      
+      <p style="color: #666; font-size: 12px; margin-top: 20px;">
+        This lead was submitted through the Transess website contact form.
+      </p>
+    </div>
+  `;
+
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Transess Leads <leads@transess.com>",
+        to: ["info@transess.com"],
+        subject: `🏥 New Lead: ${data.name} - ${getServiceLabel(data.service)}`,
+        html: emailHtml,
+        reply_to: data.email,
+      }),
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error("Resend API error:", error);
+    } else {
+      console.log("Email notification sent successfully");
+    }
+  } catch (error) {
+    console.error("Failed to send email notification:", error);
+  }
+}
+
 Deno.serve(async (req) => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
@@ -145,6 +253,11 @@ Deno.serve(async (req) => {
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    // Send email notification (don't block response on email)
+    sendEmailNotification(sanitizedData).catch((err) => {
+      console.error("Email notification failed:", err);
+    });
 
     console.log("Contact form submitted successfully:", sanitizedData.email);
 
