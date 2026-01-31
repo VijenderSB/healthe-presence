@@ -135,6 +135,65 @@ const CityPage = () => {
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Transess" />
+        
+        {/* JSON-LD LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": canonicalUrl,
+            "name": `Transess - Medical Digital Marketing Agency in ${city.name}`,
+            "description": city.metaDescription,
+            "url": canonicalUrl,
+            "telephone": "+91-8447314061",
+            "image": `${BASE_URL}/og-image.png`,
+            "priceRange": "₹₹₹",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": city.name,
+              "addressRegion": city.state,
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "addressCountry": "IN"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": city.name,
+              "containedInPlace": {
+                "@type": "State",
+                "name": city.state
+              }
+            },
+            "serviceType": [
+              "Medical SEO",
+              "Healthcare Website Design",
+              "Medical Social Media Marketing",
+              "Healthcare Video Production",
+              "Doctor Google Ads",
+              "Hospital Digital Marketing"
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.facebook.com/transess",
+              "https://www.instagram.com/transess",
+              "https://www.linkedin.com/company/transess"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
       </Helmet>
       
       <Navbar />

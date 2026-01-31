@@ -111,6 +111,74 @@ const SpecialtyPage = () => {
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Transess" />
+        
+        {/* JSON-LD ProfessionalService Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": canonicalUrl,
+            "name": `Transess - ${specialty.name} Digital Marketing Agency India`,
+            "description": metaDescription,
+            "url": canonicalUrl,
+            "telephone": "+91-8447314061",
+            "image": `${BASE_URL}/og-image.png`,
+            "priceRange": "₹₹₹",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "serviceType": [
+              `${specialty.name} Marketing`,
+              `${specialty.name} SEO`,
+              `${specialty.name} Website Design`,
+              `${specialty.name} Social Media Marketing`,
+              "Medical Video Production",
+              "Healthcare Branding"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": `${specialty.name} Marketing Services`,
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": `${specialty.name} SEO`,
+                    "description": `Search engine optimization for ${specialty.name.toLowerCase()} practices`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": `${specialty.name} Website Design`,
+                    "description": `Conversion-focused websites for ${specialty.name.toLowerCase()} clinics`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": `${specialty.name} Social Media`,
+                    "description": `Social media marketing for ${specialty.name.toLowerCase()} practices`
+                  }
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
       </Helmet>
       
       <Navbar />
