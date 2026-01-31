@@ -21,6 +21,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
+import Specialties from "./pages/Specialties";
 import SpecialtyPage from "./pages/specialties/SpecialtyPage";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/specialties" element={<Specialties />} />
           
           {/* Medical Specialty Pages */}
           <Route path="/eyecare-digital-marketing-agency-india" element={<SpecialtyPage />} />

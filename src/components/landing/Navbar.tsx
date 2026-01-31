@@ -70,12 +70,12 @@ const Navbar = () => {
 
           {/* Specialties Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium">
+            <Link to="/specialties" className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium">
               Specialties <ChevronDown className="w-4 h-4" />
-            </button>
+            </Link>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
               <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[280px] max-h-[400px] overflow-y-auto">
-                {specialties.map((specialty) => (
+                {specialties.slice(0, 12).map((specialty) => (
                   <Link 
                     key={specialty.id} 
                     to={`/${specialty.slug}`}
@@ -84,6 +84,12 @@ const Navbar = () => {
                     {specialty.name}
                   </Link>
                 ))}
+                <Link 
+                  to="/specialties"
+                  className="block px-4 py-2 text-primary font-semibold hover:bg-primary/10 transition-colors border-t border-border mt-2"
+                >
+                  View All 33 Specialties →
+                </Link>
               </div>
             </div>
           </div>
@@ -139,7 +145,7 @@ const Navbar = () => {
             </button>
             {specialtiesOpen && (
               <div className="pl-4 flex flex-col gap-2 max-h-[200px] overflow-y-auto">
-                {specialties.map((specialty) => (
+                {specialties.slice(0, 12).map((specialty) => (
                   <Link 
                     key={specialty.id} 
                     to={`/${specialty.slug}`}
@@ -149,6 +155,13 @@ const Navbar = () => {
                     {specialty.name}
                   </Link>
                 ))}
+                <Link 
+                  to="/specialties"
+                  className="transition-colors py-1 text-primary font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  View All 33 Specialties →
+                </Link>
               </div>
             )}
             
