@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import transessLogo from "@/assets/transess-logo.png";
+import transessLogo from "@/assets/transess-footer-logo.png";
 
 const Footer = () => {
   return (
