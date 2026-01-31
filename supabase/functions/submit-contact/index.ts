@@ -1,10 +1,38 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-};
+// Allowed origins for CORS - restrict to known domains
+const allowedOrigins = [
+  "https://healthe-presence.lovable.app",
+  "https://transess.com",
+  "https://www.transess.com",
+  "http://localhost:8080",
+  "http://localhost:5173",
+];
+
+// Get CORS headers based on request origin
+function getCorsHeaders(req: Request): Record<string, string> {
+  const origin = req.headers.get("origin") || "";
+  const allowedOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Headers":
+      "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
+}
+
+// HTML entity encoding for safe email content
+function escapeHtml(text: string): string {
+  if (!text) return "";
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m] || m);
+}
 
 // Sanitize input to prevent XSS and injection
 function sanitizeInput(input: string): string {
@@ -58,6 +86,14 @@ async function sendEmailNotification(data: {
     return;
   }
 
+  // Apply HTML entity encoding to all user-controlled data
+  const safeName = escapeHtml(data.name);
+  const safeEmail = escapeHtml(data.email);
+  const safePhone = escapeHtml(data.phone);
+  const safeClinic = escapeHtml(data.clinic || "Not provided");
+  const safeService = escapeHtml(getServiceLabel(data.service));
+  const safeMessage = escapeHtml(data.message);
+
   const emailHtml = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <h2 style="color: #0A9396; border-bottom: 2px solid #0A9396; padding-bottom: 10px;">
@@ -67,33 +103,33 @@ async function sendEmailNotification(data: {
       <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
         <tr>
           <td style="padding: 12px; background: #f8f9fa; font-weight: bold; width: 140px;">Name:</td>
-          <td style="padding: 12px; background: #f8f9fa;">${data.name}</td>
+          <td style="padding: 12px; background: #f8f9fa;">${safeName}</td>
         </tr>
         <tr>
           <td style="padding: 12px; font-weight: bold;">Email:</td>
-          <td style="padding: 12px;"><a href="mailto:${data.email}">${data.email}</a></td>
+          <td style="padding: 12px;"><a href="mailto:${safeEmail}">${safeEmail}</a></td>
         </tr>
         <tr>
           <td style="padding: 12px; background: #f8f9fa; font-weight: bold;">Phone:</td>
           <td style="padding: 12px; background: #f8f9fa;">
-            <a href="tel:+91${data.phone}">+91 ${data.phone}</a>
+            <a href="tel:+91${safePhone}">+91 ${safePhone}</a>
           </td>
         </tr>
         <tr>
           <td style="padding: 12px; font-weight: bold;">Clinic/Hospital:</td>
-          <td style="padding: 12px;">${data.clinic || "Not provided"}</td>
+          <td style="padding: 12px;">${safeClinic}</td>
         </tr>
         <tr>
           <td style="padding: 12px; background: #f8f9fa; font-weight: bold;">Service Interest:</td>
-          <td style="padding: 12px; background: #f8f9fa;">${getServiceLabel(data.service)}</td>
+          <td style="padding: 12px; background: #f8f9fa;">${safeService}</td>
         </tr>
       </table>
       
-      ${data.message ? `
+      ${safeMessage ? `
         <div style="margin: 20px 0;">
           <h3 style="color: #333; margin-bottom: 10px;">Message:</h3>
           <div style="background: #f8f9fa; padding: 15px; border-left: 4px solid #0A9396; white-space: pre-wrap;">
-            ${data.message}
+            ${safeMessage}
           </div>
         </div>
       ` : ""}
@@ -118,7 +154,7 @@ async function sendEmailNotification(data: {
       body: JSON.stringify({
         from: "Transess Leads <leads@transess.com>",
         to: ["info@transess.com"],
-        subject: `🏥 New Lead: ${data.name} - ${getServiceLabel(data.service)}`,
+        subject: `🏥 New Lead: ${safeName} - ${safeService}`,
         html: emailHtml,
         reply_to: data.email,
       }),
@@ -136,6 +172,8 @@ async function sendEmailNotification(data: {
 }
 
 Deno.serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+  
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
