@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -17,6 +18,8 @@ import {
   Play
 } from "lucide-react";
 import heroImage from "@/assets/hero-influencer.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const InfluencerMarketing = () => {
   const features = [
@@ -84,6 +87,20 @@ const InfluencerMarketing = () => {
 
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Doctor Influencer Marketing | Transess - Medical Influencer Agency India</title>
+        <meta name="description" content="Become a medical influencer with Transess. Personal brand building, content creation, social media growth & patient acquisition for doctors. 200+ doctor influencers created." />
+        <meta name="keywords" content="doctor influencer marketing, medical influencer agency India, healthcare content creator, physician personal branding, doctor social media growth" />
+        <link rel="canonical" href={`${BASE_URL}/services/influencer-marketing`} />
+        <meta property="og:title" content="Doctor Influencer Marketing | Transess" />
+        <meta property="og:description" content="Transform from a doctor to a trusted medical influencer. Build your personal brand online." />
+        <meta property="og:url" content={`${BASE_URL}/services/influencer-marketing`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Doctor Influencer Marketing | Transess" />
+        <meta name="twitter:description" content="Become a medical influencer with professional support." />
+      </Helmet>
       <Navbar />
       <PageHero
         badge="Featured Service"

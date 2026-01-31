@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroAbout from "@/assets/hero-about.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const values = [
   {
@@ -83,6 +86,20 @@ const differentiators = [
 const AboutUs = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>About Us | Transess - India's Leading Medical Digital Marketing Agency</title>
+        <meta name="description" content="Learn about Transess - India's premier medical digital marketing agency. 500+ healthcare clients, 8+ years experience helping doctors and hospitals grow their practice." />
+        <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, doctor marketing experts" />
+        <link rel="canonical" href={`${BASE_URL}/about`} />
+        <meta property="og:title" content="About Us | Transess - Medical Digital Marketing" />
+        <meta property="og:description" content="India's leading medical marketing agency with 500+ healthcare clients and 8+ years experience." />
+        <meta property="og:url" content={`${BASE_URL}/about`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Transess" />
+        <meta name="twitter:description" content="India's leading medical marketing agency with 500+ healthcare clients." />
+      </Helmet>
       <Navbar />
       
       <PageHero

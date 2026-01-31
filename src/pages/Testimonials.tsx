@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroTestimonials from "@/assets/hero-testimonials.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const testimonials = [
   {
@@ -94,6 +97,20 @@ const serviceLabels: Record<string, string> = {
 const Testimonials = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Client Testimonials | Transess - Doctors Trust Us for Digital Marketing</title>
+        <meta name="description" content="Read success stories from 500+ doctors and hospitals. 98% client satisfaction rate. See how healthcare professionals grew their practice with Transess." />
+        <meta name="keywords" content="medical marketing testimonials, doctor reviews, hospital marketing success, healthcare client reviews" />
+        <link rel="canonical" href={`${BASE_URL}/testimonials`} />
+        <meta property="og:title" content="Client Testimonials | Transess" />
+        <meta property="og:description" content="Read success stories from 500+ doctors and hospitals who trust Transess." />
+        <meta property="og:url" content={`${BASE_URL}/testimonials`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Client Testimonials | Transess" />
+        <meta name="twitter:description" content="Success stories from doctors and hospitals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroServices from "@/assets/hero-services.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const services = [
   {
@@ -62,6 +65,20 @@ const services = [
 const Services = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Digital Marketing Services | Transess - Healthcare Marketing India</title>
+        <meta name="description" content="360° medical digital marketing services: website design, SEO, social media, video production, YouTube management & patient engagement for doctors & hospitals in India." />
+        <meta name="keywords" content="medical marketing services, doctor website design, healthcare SEO, medical video production, hospital social media, patient engagement" />
+        <link rel="canonical" href={`${BASE_URL}/services`} />
+        <meta property="og:title" content="Medical Digital Marketing Services | Transess" />
+        <meta property="og:description" content="Complete 360° digital marketing solutions for healthcare professionals in India." />
+        <meta property="og:url" content={`${BASE_URL}/services`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Digital Marketing Services | Transess" />
+        <meta name="twitter:description" content="Complete 360° digital marketing solutions for healthcare professionals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Globe, Smartphone, Zap, Shield, Search, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroWebsite from "@/assets/hero-website.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const features = [
   {
@@ -50,6 +53,20 @@ const processSteps = [
 const WebsiteDesign = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Website Design | Transess - Doctor & Hospital Websites India</title>
+        <meta name="description" content="Professional medical website design for doctors, clinics & hospitals in India. HIPAA-compliant, mobile-responsive, SEO-optimized websites that convert visitors to patients." />
+        <meta name="keywords" content="medical website design India, doctor website development, hospital website design, healthcare web design, clinic website" />
+        <link rel="canonical" href={`${BASE_URL}/services/website-design`} />
+        <meta property="og:title" content="Medical Website Design | Transess" />
+        <meta property="og:description" content="Professional websites for doctors and hospitals that convert visitors to patients." />
+        <meta property="og:url" content={`${BASE_URL}/services/website-design`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Website Design | Transess" />
+        <meta name="twitter:description" content="Professional websites for doctors and hospitals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBlog from "@/assets/hero-blog.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const featuredPost = {
   title: "The Complete Guide to Medical SEO in 2024",
@@ -80,6 +83,20 @@ const categories = ["All", "SEO", "Social Media", "Video Marketing", "Content", 
 const Blog = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Marketing Blog | Transess - Healthcare Digital Marketing Insights</title>
+        <meta name="description" content="Expert tips, strategies, and insights on medical digital marketing. Learn SEO, social media, video marketing and patient engagement for doctors and hospitals." />
+        <meta name="keywords" content="medical marketing blog, healthcare digital marketing tips, doctor SEO guide, hospital social media strategy" />
+        <link rel="canonical" href={`${BASE_URL}/blog`} />
+        <meta property="og:title" content="Medical Marketing Blog | Transess" />
+        <meta property="og:description" content="Expert tips and strategies on medical digital marketing for healthcare professionals." />
+        <meta property="og:url" content={`${BASE_URL}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Marketing Blog | Transess" />
+        <meta name="twitter:description" content="Expert tips on medical digital marketing for healthcare professionals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

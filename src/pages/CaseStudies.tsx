@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, Eye, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroCasestudies from "@/assets/hero-casestudies.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const caseStudies = [
   {
@@ -101,6 +104,20 @@ const serviceLabels: Record<string, string> = {
 const CaseStudies = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical Marketing Case Studies | Transess - Healthcare Success Stories</title>
+        <meta name="description" content="Explore real case studies of doctors and hospitals who achieved 300%+ growth with Transess. See proven results in patient acquisition, SEO rankings, and social media." />
+        <meta name="keywords" content="medical marketing case studies, healthcare success stories, doctor marketing results, hospital digital marketing ROI" />
+        <link rel="canonical" href={`${BASE_URL}/case-studies`} />
+        <meta property="og:title" content="Medical Marketing Case Studies | Transess" />
+        <meta property="og:description" content="Real success stories of healthcare professionals who transformed their practices with our digital marketing." />
+        <meta property="og:url" content={`${BASE_URL}/case-studies`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Marketing Case Studies | Transess" />
+        <meta name="twitter:description" content="Real success stories of healthcare professionals." />
+      </Helmet>
       <Navbar />
       
       <PageHero

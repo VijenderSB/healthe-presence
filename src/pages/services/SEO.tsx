@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Search, MapPin, Globe, FileText, Link2, BarChart3, ArrowRight, Smartphone, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroSeo from "@/assets/hero-seo.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const services = [
   {
@@ -43,6 +46,20 @@ const services = [
 const SEO = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Medical SEO Services | Transess - Healthcare SEO India</title>
+        <meta name="description" content="SEO services for doctors, clinics & hospitals. Local SEO, Google rankings, keyword optimization & organic patient acquisition. Get found by patients on Google." />
+        <meta name="keywords" content="medical SEO India, doctor SEO services, hospital SEO, healthcare search engine optimization, local SEO for doctors" />
+        <link rel="canonical" href={`${BASE_URL}/services/seo`} />
+        <meta property="og:title" content="Medical SEO Services | Transess" />
+        <meta property="og:description" content="Get found by patients on Google with our healthcare SEO services." />
+        <meta property="og:url" content={`${BASE_URL}/services/seo`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical SEO Services | Transess" />
+        <meta name="twitter:description" content="Healthcare SEO to help patients find you." />
+      </Helmet>
       <Navbar />
       
       <PageHero

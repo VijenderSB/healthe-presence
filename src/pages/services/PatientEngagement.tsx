@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Users, MessageSquare, Bell, Heart, Calendar, Shield, ArrowRight, Globe, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroEngagement from "@/assets/hero-engagement.jpg";
+
+const BASE_URL = "https://healthe-presence.lovable.app";
 
 const services = [
   {
@@ -43,6 +46,20 @@ const services = [
 const PatientEngagement = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Patient Engagement Solutions | Transess - Healthcare Retention India</title>
+        <meta name="description" content="Patient engagement & retention solutions for doctors & hospitals. WhatsApp marketing, appointment reminders, follow-ups & loyalty programs that reduce no-shows by 60%." />
+        <meta name="keywords" content="patient engagement India, healthcare retention, WhatsApp marketing doctors, appointment reminders, patient loyalty programs" />
+        <link rel="canonical" href={`${BASE_URL}/services/patient-engagement`} />
+        <meta property="og:title" content="Patient Engagement Solutions | Transess" />
+        <meta property="og:description" content="Retain patients and build lasting relationships with our engagement tools." />
+        <meta property="og:url" content={`${BASE_URL}/services/patient-engagement`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Patient Engagement | Transess" />
+        <meta name="twitter:description" content="Patient retention and engagement solutions." />
+      </Helmet>
       <Navbar />
       
       <PageHero
