@@ -8,6 +8,7 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
+    { label: "Medical Influencer Marketing", href: "/services/influencer-marketing", featured: true },
     { label: "Website Design", href: "/services/website-design" },
     { label: "Social Media", href: "/services/social-media" },
     { label: "Video Production", href: "/services/video-production" },
@@ -44,9 +45,18 @@ const Navbar = () => {
               Services <ChevronDown className="w-4 h-4" />
             </Link>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-              <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px]">
+              <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[240px]">
                 {services.map((service) => (
-                  <Link key={service.label} to={service.href} className="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                  <Link 
+                    key={service.label} 
+                    to={service.href} 
+                    className={`block px-4 py-2 transition-colors ${
+                      service.featured 
+                        ? 'bg-primary/10 text-primary font-semibold hover:bg-primary/20' 
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    }`}
+                  >
+                    {service.featured && <span className="mr-2">⭐</span>}
                     {service.label}
                   </Link>
                 ))}
@@ -83,7 +93,17 @@ const Navbar = () => {
             {servicesOpen && (
               <div className="pl-4 flex flex-col gap-2">
                 {services.map((service) => (
-                  <Link key={service.label} to={service.href} className="text-muted-foreground hover:text-foreground transition-colors py-1" onClick={() => setIsOpen(false)}>
+                  <Link 
+                    key={service.label} 
+                    to={service.href} 
+                    className={`transition-colors py-1 ${
+                      service.featured 
+                        ? 'text-primary font-semibold' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`} 
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {service.featured && <span className="mr-2">⭐</span>}
                     {service.label}
                   </Link>
                 ))}

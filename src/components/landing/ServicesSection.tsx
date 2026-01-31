@@ -6,11 +6,26 @@ import {
   Search, 
   Palette, 
   MessageCircle,
-  ArrowRight
+  ArrowRight,
+  Star
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
+  const featuredService = {
+    icon: Star,
+    title: "Medical Influencer Marketing",
+    description: "Build your personal brand, attract more footfalls, and become the go-to doctor in your city with our end-to-end content creation and growth strategy.",
+    benefits: [
+      "Personal brand building",
+      "End-to-end content support",
+      "Unique engaging content",
+      "Multi-platform growth",
+    ],
+    href: "/services/influencer-marketing",
+  };
+
   const services = [
     {
       icon: Globe,
@@ -22,6 +37,7 @@ const ServicesSection = () => {
         "SEO-optimized structure",
         "Appointment booking integration",
       ],
+      href: "/services/website-design",
     },
     {
       icon: Smartphone,
@@ -33,6 +49,7 @@ const ServicesSection = () => {
         "Community engagement",
         "Performance analytics",
       ],
+      href: "/services/social-media",
     },
     {
       icon: Video,
@@ -44,6 +61,7 @@ const ServicesSection = () => {
         "Procedure explainers",
         "Trending reels & shorts",
       ],
+      href: "/services/video-production",
     },
     {
       icon: Youtube,
@@ -55,6 +73,7 @@ const ServicesSection = () => {
         "SEO & thumbnail design",
         "Subscriber growth campaigns",
       ],
+      href: "/services/youtube-management",
     },
     {
       icon: Search,
@@ -66,6 +85,7 @@ const ServicesSection = () => {
         "Review management",
         "Search ranking improvement",
       ],
+      href: "/services/seo",
     },
     {
       icon: Palette,
@@ -77,6 +97,7 @@ const ServicesSection = () => {
         "Print & digital collateral",
         "Consistent visual language",
       ],
+      href: "/services/branding",
     },
     {
       icon: MessageCircle,
@@ -88,6 +109,7 @@ const ServicesSection = () => {
         "Review collection system",
         "Loyalty & referral programs",
       ],
+      href: "/services/patient-engagement",
     },
   ];
 
@@ -107,10 +129,47 @@ const ServicesSection = () => {
           </p>
         </div>
 
+        {/* Featured Service - Influencer Marketing */}
+        <Link 
+          to={featuredService.href}
+          className="block mb-8 group"
+        >
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-primary p-8 md:p-10 shadow-elevated">
+            <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/20 text-primary-foreground text-sm font-medium mb-4">
+                  <Star className="w-4 h-4" />
+                  Featured Service
+                </div>
+                <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-4">
+                  {featuredService.title}
+                </h3>
+                <p className="text-primary-foreground/80 mb-6">
+                  {featuredService.description}
+                </p>
+                <div className="flex items-center gap-2 text-primary-foreground font-medium group-hover:gap-3 transition-all">
+                  Learn More <ArrowRight className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {featuredService.benefits.map((benefit, i) => (
+                  <div key={i} className="flex items-center gap-2 p-3 rounded-xl bg-primary-foreground/10 text-primary-foreground text-sm">
+                    <div className="w-2 h-2 rounded-full bg-primary-foreground flex-shrink-0" />
+                    {benefit}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-1/4 w-48 h-48 bg-primary-foreground/5 rounded-full blur-2xl" />
+          </div>
+        </Link>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div
+            <Link
               key={service.title}
+              to={service.href}
               className="group bg-card rounded-2xl p-6 shadow-card border border-border hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
@@ -130,7 +189,7 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Link>
           ))}
         </div>
 

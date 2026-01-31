@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
+import InfluencerMarketing from "./pages/services/InfluencerMarketing";
 import WebsiteDesign from "./pages/services/WebsiteDesign";
 import SocialMedia from "./pages/services/SocialMedia";
 import VideoProduction from "./pages/services/VideoProduction";
@@ -32,6 +33,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/influencer-marketing" element={<InfluencerMarketing />} />
           <Route path="/services/website-design" element={<WebsiteDesign />} />
           <Route path="/services/social-media" element={<SocialMedia />} />
           <Route path="/services/video-production" element={<VideoProduction />} />
