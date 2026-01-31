@@ -35,7 +35,7 @@ const Navbar = () => {
           <img
             src={transessLogo}
             alt="Transess - Medical Digital Marketing Agency"
-            className="h-28 md:h-32 w-auto max-w-[200px] md:max-w-[250px] object-contain"
+            className="h-24 md:h-28 w-auto max-w-[180px] md:max-w-[220px] object-contain"
           />
         </Link>
 
