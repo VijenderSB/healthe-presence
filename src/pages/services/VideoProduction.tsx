@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import { Button } from "@/components/ui/button";
 import { Video, Clapperboard, Mic, Film, Play, Sparkles, ArrowRight, Users, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -172,6 +173,8 @@ const VideoProduction = () => {
           </div>
         </div>
       </section>
+
+      <ConsultationFormBox />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">

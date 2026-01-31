@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -236,6 +237,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      <ConsultationFormBox />
 
       {/* Newsletter */}
       <section className="py-20 bg-primary">

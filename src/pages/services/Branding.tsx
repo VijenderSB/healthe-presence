@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
+import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import { Button } from "@/components/ui/button";
 import { Palette, Image, FileImage, BookOpen, Layers, PenTool, ArrowRight, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -178,6 +179,8 @@ const Branding = () => {
           </div>
         </div>
       </section>
+
+      <ConsultationFormBox />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">
