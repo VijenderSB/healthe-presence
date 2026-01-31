@@ -13,17 +13,17 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 98765 43210", "+91 12345 67890"],
+    details: ["+91 8447314061", "+91 8826134489"],
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["hello@medicaldigital.com", "support@medicaldigital.com"],
+    details: ["info@transess.com"],
   },
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Healthcare Hub, Sector 5", "Mumbai, Maharashtra 400001"],
+    details: ["Noida, India"],
   },
   {
     icon: Clock,

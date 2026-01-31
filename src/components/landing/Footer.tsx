@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import transessLogo from "@/assets/transess-logo.png";
 
 const Footer = () => {
   return (
@@ -9,10 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-lg">M</span>
-              </div>
-              <span className="font-heading font-semibold text-lg text-secondary-foreground">MedDigital</span>
+              <img src={transessLogo} alt="Transess" className="h-10 w-auto" />
             </Link>
             <p className="text-secondary-foreground/70 mb-6 text-sm">
               360° Medical Digital Marketing Solutions for doctors, clinics, and hospitals.
@@ -20,15 +18,19 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-secondary-foreground/70">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                hello@meddigital.com
+                info@transess.com
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                +91 98765 43210
+                +91 8447314061
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                +91 8826134489
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                Mumbai, India
+                Noida, India
               </div>
             </div>
           </div>
@@ -73,7 +75,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-secondary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60">
-          <p>© 2024 MedDigital. All rights reserved.</p>
+          <p>© 2024 Transess. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-secondary-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-secondary-foreground transition-colors">Terms of Service</a>

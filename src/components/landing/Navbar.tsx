@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import transessLogo from "@/assets/transess-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,10 +32,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-lg">M</span>
-          </div>
-          <span className="font-heading font-semibold text-lg text-foreground">MedDigital</span>
+          <img src={transessLogo} alt="Transess" className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
