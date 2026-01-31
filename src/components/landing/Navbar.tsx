@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center">
-          <img src={transessLogo} alt="Transess" className="h-28 md:h-32 w-auto" />
+          <img src={transessLogo} alt="Transess" className="h-56 md:h-64 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
