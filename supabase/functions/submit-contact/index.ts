@@ -7,12 +7,25 @@ const allowedOrigins = [
   "https://www.transess.com",
   "http://localhost:8080",
   "http://localhost:5173",
+  /^https:\/\/[a-z0-9-]+\.lovableproject\.com$/, // Lovable preview URLs
+  /^https:\/\/id-preview--[a-z0-9-]+\.lovable\.app$/, // Lovable ID preview URLs
 ];
+
+// Check if origin matches allowed origins (supports both strings and RegExp)
+function isAllowedOrigin(origin: string): boolean {
+  return allowedOrigins.some((allowed) => {
+    if (typeof allowed === "string") {
+      return allowed === origin;
+    }
+    return allowed.test(origin);
+  });
+}
 
 // Get CORS headers based on request origin
 function getCorsHeaders(req: Request): Record<string, string> {
   const origin = req.headers.get("origin") || "";
-  const allowedOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  // Use the origin if it's allowed, otherwise fall back to the first string origin
+  const allowedOrigin = isAllowedOrigin(origin) ? origin : "https://healthe-presence.lovable.app";
   
   return {
     "Access-Control-Allow-Origin": allowedOrigin,
