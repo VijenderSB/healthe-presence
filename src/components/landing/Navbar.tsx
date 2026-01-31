@@ -31,8 +31,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={transessLogo} alt="Transess" className="h-10 md:h-12 w-auto" />
+        <Link to="/" className="flex items-center">
+          <img src={transessLogo} alt="Transess" className="h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
