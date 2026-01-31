@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export interface BreadcrumbItem {
   label: string;
@@ -28,7 +27,7 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": item.href ? `${BASE_URL}${item.href}` : undefined
+      "item": item.href ? `${SITE_CONFIG.BASE_URL}${item.href}` : undefined
     }))
   };
 

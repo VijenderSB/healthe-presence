@@ -2,9 +2,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 // Allowed origins for CORS - restrict to known domains
 const allowedOrigins = [
-  "https://healthe-presence.lovable.app",
-  "https://transess.com",
   "https://www.transess.com",
+  "https://transess.com",
+  "https://healthe-presence.lovable.app", // Keep for staging
   "http://localhost:8080",
   "http://localhost:5173",
   /^https:\/\/[a-z0-9-]+\.lovableproject\.com$/, // Lovable preview URLs
@@ -24,8 +24,8 @@ function isAllowedOrigin(origin: string): boolean {
 // Get CORS headers based on request origin
 function getCorsHeaders(req: Request): Record<string, string> {
   const origin = req.headers.get("origin") || "";
-  // Use the origin if it's allowed, otherwise fall back to the first string origin
-  const allowedOrigin = isAllowedOrigin(origin) ? origin : "https://healthe-presence.lovable.app";
+  // Use the origin if it's allowed, otherwise fall back to the primary domain
+  const allowedOrigin = isAllowedOrigin(origin) ? origin : "https://www.transess.com";
   
   return {
     "Access-Control-Allow-Origin": allowedOrigin,

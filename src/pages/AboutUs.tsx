@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroAbout from "@/assets/hero-about.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const values = [
   {
@@ -91,12 +90,12 @@ const AboutUs = () => {
         <title>About Transess | India's #1 Medical Digital Marketing Agency | 500+ Doctors Trust Us</title>
         <meta name="description" content="Transess is India's premier healthcare marketing agency with 500+ satisfied clients & 8+ years experience. We help doctors, clinics & hospitals grow their practice with proven digital strategies." />
         <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, doctor marketing experts, hospital marketing team, best medical marketing agency" />
-        <link rel="canonical" href={`${BASE_URL}/about`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/about`} />
         <meta property="og:title" content="About Transess - India's Leading Medical Marketing Agency" />
         <meta property="og:description" content="500+ healthcare clients trust Transess for digital marketing. 8+ years helping doctors & hospitals grow." />
-        <meta property="og:url" content={`${BASE_URL}/about`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/about`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Transess | Medical Marketing Agency" />
         <meta name="twitter:description" content="India's top medical marketing agency. 500+ doctors trust us." />
