@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -80,6 +81,7 @@ const Services = () => {
         <meta name="twitter:description" content="Complete 360° digital marketing solutions for healthcare professionals." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "Services" }]} />
       
       <PageHero
         badge="Our Services"

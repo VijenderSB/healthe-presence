@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -101,6 +102,7 @@ const AboutUs = () => {
         <meta name="twitter:description" content="India's leading medical marketing agency with 500+ healthcare clients." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "About Us" }]} />
       
       <PageHero
         badge="About Us"

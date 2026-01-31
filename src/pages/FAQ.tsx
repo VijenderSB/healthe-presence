@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -142,6 +143,7 @@ const FAQ = () => {
         <meta name="twitter:description" content="Answers to common medical marketing questions." />
       </Helmet>
       <Navbar />
+      <Breadcrumbs items={[{ label: "FAQ" }]} />
       
       <PageHero
         badge="FAQ"

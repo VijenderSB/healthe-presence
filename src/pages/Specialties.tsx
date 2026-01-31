@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { specialties } from "@/data/specialties";
 import { ArrowRight, Stethoscope } from "lucide-react";
@@ -37,6 +38,7 @@ const Specialties = () => {
       </Helmet>
       
       <Navbar />
+      <Breadcrumbs items={[{ label: "Medical Specialties" }]} />
       
       <PageHero
         badge="Medical Specialties"
