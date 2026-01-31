@@ -3,13 +3,10 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import heroContact from "@/assets/hero-contact.jpg";
+import ContactForm from "@/components/contact/ContactForm";
 
 const BASE_URL = "https://healthe-presence.lovable.app";
 
@@ -37,25 +34,6 @@ const contactInfo = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    clinic: "",
-    service: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <main className="min-h-screen">
       <Helmet>
@@ -87,98 +65,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Dr. John Smith"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="doctor@clinic.com"
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
-                    <Input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+91 98765 43210"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Clinic/Hospital Name</label>
-                    <Input
-                      name="clinic"
-                      value={formData.clinic}
-                      onChange={handleChange}
-                      placeholder="Your clinic name"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Service Interested In</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="website">Medical Website Design</option>
-                    <option value="social">Social Media Management</option>
-                    <option value="video">Video Production</option>
-                    <option value="youtube">YouTube Management</option>
-                    <option value="seo">SEO & Google Visibility</option>
-                    <option value="branding">Branding & Creatives</option>
-                    <option value="engagement">Patient Engagement</option>
-                    <option value="complete">Complete 360° Solution</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Your Message</label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your practice and goals..."
-                    rows={5}
-                  />
-                </div>
-                
-                <Button type="submit" variant="cta" size="xl" className="w-full">
-                  Send Message
-                </Button>
-              </form>
-              
-              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                <span>We typically respond within 24 hours</span>
-              </div>
-            </div>
+            <ContactForm />
             
             {/* Contact Info */}
             <div>
