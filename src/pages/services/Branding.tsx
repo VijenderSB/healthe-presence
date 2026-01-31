@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Palette, Image, FileImage, BookOpen, Layers, PenTool, ArrowRight, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBranding from "@/assets/hero-branding.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -51,12 +50,12 @@ const Branding = () => {
         <title>Medical Branding India | Doctor Logo & Brand Identity Design | Transess</title>
         <meta name="description" content="Medical branding & creative design: doctor logo design, clinic brand identity, social media creatives & marketing collateral. Build a memorable medical brand that patients trust!" />
         <meta name="keywords" content="medical branding India, doctor logo design, hospital brand identity, healthcare creative design, clinic branding, medical marketing collateral" />
-        <link rel="canonical" href={`${BASE_URL}/services/branding`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/branding`} />
         <meta property="og:title" content="Medical Branding & Creatives | Transess India" />
         <meta property="og:description" content="Build a memorable medical brand. Logo design, brand identity & creatives." />
-        <meta property="og:url" content={`${BASE_URL}/services/branding`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/branding`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Branding | Transess" />
         <meta name="twitter:description" content="Healthcare branding and creative design services in India." />

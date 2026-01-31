@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBlog from "@/assets/hero-blog.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const featuredPost = {
   title: "The Complete Guide to Medical SEO in 2024",
@@ -88,12 +87,12 @@ const Blog = () => {
         <title>Medical Marketing Blog | Expert Tips for Doctors & Hospitals | Transess</title>
         <meta name="description" content="Expert healthcare marketing tips, SEO guides, social media strategies & patient acquisition insights for doctors, clinics & hospitals. Free knowledge from industry experts!" />
         <meta name="keywords" content="medical marketing blog, healthcare marketing tips, doctor SEO guide, hospital social media strategy, patient acquisition tips, clinic marketing ideas" />
-        <link rel="canonical" href={`${BASE_URL}/blog`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/blog`} />
         <meta property="og:title" content="Medical Marketing Blog | Transess" />
         <meta property="og:description" content="Expert tips on healthcare SEO, social media & patient acquisition for doctors." />
-        <meta property="og:url" content={`${BASE_URL}/blog`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/blog`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Marketing Blog | Transess" />
         <meta name="twitter:description" content="Expert healthcare marketing tips for doctors & hospitals." />

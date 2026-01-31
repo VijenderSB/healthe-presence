@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Users, TrendingUp, Calendar, MessageCircle, BarChart, Heart, ArrowRight, Video, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroSocial from "@/assets/hero-social.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const features = [
   {
@@ -58,12 +57,12 @@ const SocialMedia = () => {
         <title>Medical Social Media Marketing India | Doctor Instagram & Facebook | Transess</title>
         <meta name="description" content="Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management. Build patient trust, 200% average growth rate. 100+ healthcare accounts managed!" />
         <meta name="keywords" content="medical social media marketing India, doctor social media, hospital Instagram marketing, healthcare Facebook, clinic social media management, doctor LinkedIn" />
-        <link rel="canonical" href={`${BASE_URL}/services/social-media`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/social-media`} />
         <meta property="og:title" content="Medical Social Media Marketing | Transess India" />
         <meta property="og:description" content="Social media management for doctors & hospitals. 200% average growth!" />
-        <meta property="og:url" content={`${BASE_URL}/services/social-media`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/social-media`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Social Media Marketing | Transess" />
         <meta name="twitter:description" content="Instagram & Facebook marketing for healthcare professionals." />

@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Youtube, Settings, TrendingUp, Users, FileVideo, BarChart, ArrowRight, Video, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroYoutube from "@/assets/hero-youtube.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -51,12 +50,12 @@ const YouTubeManagement = () => {
         <title>Doctor YouTube Management India | Grow Medical YouTube Channel | Transess</title>
         <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, SEO, content strategy, subscriber growth. 50+ channels managed, 10M+ views, 500K+ subscribers gained!" />
         <meta name="keywords" content="doctor YouTube channel management, medical YouTube marketing, hospital YouTube SEO, healthcare video channel, doctor content creator, medical thought leader" />
-        <link rel="canonical" href={`${BASE_URL}/services/youtube-management`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/youtube-management`} />
         <meta property="og:title" content="Doctor YouTube Management | Transess India" />
         <meta property="og:description" content="Grow your medical YouTube channel. 50+ doctors trust us. 500K+ subscribers gained!" />
-        <meta property="og:url" content={`${BASE_URL}/services/youtube-management`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/youtube-management`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Doctor YouTube Management | Transess" />
         <meta name="twitter:description" content="YouTube growth for healthcare professionals in India." />

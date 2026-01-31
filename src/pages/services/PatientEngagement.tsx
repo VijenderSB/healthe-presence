@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Users, MessageSquare, Bell, Heart, Calendar, Shield, ArrowRight, Globe, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroEngagement from "@/assets/hero-engagement.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
@@ -51,12 +50,12 @@ const PatientEngagement = () => {
         <title>Patient Engagement India | Reduce No-Shows by 60% | WhatsApp Marketing | Transess</title>
         <meta name="description" content="Patient engagement solutions: WhatsApp marketing, appointment reminders, follow-ups & loyalty programs. 60% fewer no-shows, 40% better retention, 3x more referrals!" />
         <meta name="keywords" content="patient engagement India, healthcare patient retention, WhatsApp marketing doctors, appointment reminder system, patient loyalty programs, reduce no-shows" />
-        <link rel="canonical" href={`${BASE_URL}/services/patient-engagement`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/patient-engagement`} />
         <meta property="og:title" content="Patient Engagement Solutions | Transess India" />
         <meta property="og:description" content="Reduce no-shows by 60%! WhatsApp marketing & patient retention tools." />
-        <meta property="og:url" content={`${BASE_URL}/services/patient-engagement`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/patient-engagement`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Patient Engagement | Transess" />
         <meta name="twitter:description" content="Patient retention & engagement solutions for doctors." />

@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import { specialties } from "@/data/specialties";
 import { ArrowRight, Stethoscope } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const Specialties = () => {
   return (
@@ -18,16 +17,16 @@ const Specialties = () => {
         <title>Medical Marketing for 33+ Specialties | Eye Care, Dental, IVF & More | Transess</title>
         <meta name="description" content="Specialized healthcare marketing for 33+ medical specialties: Eye Care, Dental, Cardiology, IVF, Dermatology, Orthopedics & more. Expert SEO, social media & branding tailored to your specialty!" />
         <meta name="keywords" content="medical specialty marketing, eye care marketing, dental marketing India, cardiology marketing, IVF clinic marketing, dermatology digital marketing, orthopedic surgeon marketing" />
-        <link rel="canonical" href={`${BASE_URL}/specialties`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/specialties`} />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Medical Marketing for 33+ Specialties | Transess" />
         <meta property="og:description" content="Specialized healthcare marketing for every medical specialty in India." />
-        <meta property="og:url" content={`${BASE_URL}/specialties`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/specialties`} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

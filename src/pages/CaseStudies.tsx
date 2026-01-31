@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, Eye, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroCasestudies from "@/assets/hero-casestudies.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const caseStudies = [
   {
@@ -109,12 +108,12 @@ const CaseStudies = () => {
         <title>Medical Marketing Case Studies | 300%+ Growth Results | Transess India</title>
         <meta name="description" content="Real case studies: 300% patient growth, first-page rankings, 100K+ YouTube subscribers. See how cardiologists, dentists & hospitals grew with Transess digital marketing." />
         <meta name="keywords" content="medical marketing case studies, healthcare success stories, doctor marketing results, hospital digital marketing ROI, patient growth case study" />
-        <link rel="canonical" href={`${BASE_URL}/case-studies`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/case-studies`} />
         <meta property="og:title" content="Medical Marketing Case Studies | Transess" />
         <meta property="og:description" content="Real results: 300%+ patient growth. See how doctors transformed their practice." />
-        <meta property="og:url" content={`${BASE_URL}/case-studies`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/case-studies`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Case Studies | Transess Medical Marketing" />
         <meta name="twitter:description" content="Real healthcare marketing results - 300%+ growth!" />
