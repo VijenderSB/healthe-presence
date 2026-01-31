@@ -4,11 +4,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import transessLogo from "@/assets/transess-header-logo.png";
 import { specialties } from "@/data/specialties";
+import { cities } from "@/data/cities";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [specialtiesOpen, setSpecialtiesOpen] = useState(false);
+  const [citiesOpen, setCitiesOpen] = useState(false);
+  
+  const topCities = cities.filter(c => c.tier === 1).slice(0, 8);
 
   const services = [
     { label: "Medical Influencer Marketing", href: "/services/influencer-marketing", featured: true },
@@ -94,7 +98,33 @@ const Navbar = () => {
             </div>
           </div>
           
-          {navLinks.slice(0, 3).map((link) => (
+          {/* Cities Dropdown */}
+          <div className="relative group">
+            <Link to="/cities" className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium">
+              Cities <ChevronDown className="w-4 h-4" />
+            </Link>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[260px]">
+                {topCities.map((city) => (
+                  <Link 
+                    key={city.id} 
+                    to={`/${city.slug}`}
+                    className="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+                <Link 
+                  to="/cities"
+                  className="block px-4 py-2 text-primary font-semibold hover:bg-primary/10 transition-colors border-t border-border mt-2"
+                >
+                  View All 200 Cities →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {navLinks.slice(0, 2).map((link) => (
             <Link key={link.label} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               {link.label}
             </Link>
@@ -161,6 +191,31 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   View All 33 Specialties →
+                </Link>
+              </div>
+            )}
+            
+            <button onClick={() => setCitiesOpen(!citiesOpen)} className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors font-medium py-2">
+              Cities <ChevronDown className={`w-4 h-4 transition-transform ${citiesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {citiesOpen && (
+              <div className="pl-4 flex flex-col gap-2 max-h-[200px] overflow-y-auto">
+                {topCities.map((city) => (
+                  <Link 
+                    key={city.id} 
+                    to={`/${city.slug}`}
+                    className="transition-colors py-1 text-muted-foreground hover:text-foreground"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+                <Link 
+                  to="/cities"
+                  className="transition-colors py-1 text-primary font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  View All 200 Cities →
                 </Link>
               </div>
             )}
