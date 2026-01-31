@@ -1,12 +1,16 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import transessLogo from "@/assets/transess-footer-logo.png";
+import { specialties } from "@/data/specialties";
 
 const Footer = () => {
+  // Select key specialties to display in footer (first 8)
+  const featuredSpecialties = specialties.slice(0, 8);
+  
   return (
     <footer className="py-12 md:py-16 bg-secondary border-t border-secondary-foreground/10">
       <div className="container">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4">
@@ -39,6 +43,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
+              <li><Link to="/services/influencer-marketing" className="hover:text-secondary-foreground transition-colors">Influencer Marketing</Link></li>
               <li><Link to="/services/website-design" className="hover:text-secondary-foreground transition-colors">Website Design</Link></li>
               <li><Link to="/services/social-media" className="hover:text-secondary-foreground transition-colors">Social Media</Link></li>
               <li><Link to="/services/video-production" className="hover:text-secondary-foreground transition-colors">Video Production</Link></li>
@@ -46,6 +51,25 @@ const Footer = () => {
               <li><Link to="/services/seo" className="hover:text-secondary-foreground transition-colors">SEO & Visibility</Link></li>
               <li><Link to="/services/branding" className="hover:text-secondary-foreground transition-colors">Branding & Creatives</Link></li>
               <li><Link to="/services/patient-engagement" className="hover:text-secondary-foreground transition-colors">Patient Engagement</Link></li>
+            </ul>
+          </div>
+
+          {/* Medical Specialties */}
+          <div>
+            <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Specialties</h4>
+            <ul className="space-y-2 text-sm text-secondary-foreground/70">
+              {featuredSpecialties.map((specialty) => (
+                <li key={specialty.id}>
+                  <Link to={`/${specialty.slug}`} className="hover:text-secondary-foreground transition-colors">
+                    {specialty.name.split(' / ')[0]}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/services" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                  View All →
+                </Link>
+              </li>
             </ul>
           </div>
 
