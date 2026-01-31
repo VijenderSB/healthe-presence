@@ -67,18 +67,18 @@ const Services = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Digital Marketing Services | Transess - Healthcare Marketing India</title>
-        <meta name="description" content="360° medical digital marketing services: website design, SEO, social media, video production, YouTube management & patient engagement for doctors & hospitals in India." />
-        <meta name="keywords" content="medical marketing services, doctor website design, healthcare SEO, medical video production, hospital social media, patient engagement" />
+        <title>Medical Marketing Services India | SEO, Website, Social Media for Doctors | Transess</title>
+        <meta name="description" content="Complete 360° medical marketing services: doctor website design, healthcare SEO, social media management, video production, YouTube & patient engagement. Transform your practice today!" />
+        <meta name="keywords" content="medical marketing services India, doctor website design, healthcare SEO services, medical video production, hospital social media marketing, patient engagement tools, clinic marketing" />
         <link rel="canonical" href={`${BASE_URL}/services`} />
-        <meta property="og:title" content="Medical Digital Marketing Services | Transess" />
-        <meta property="og:description" content="Complete 360° digital marketing solutions for healthcare professionals in India." />
+        <meta property="og:title" content="Medical Marketing Services | Transess India" />
+        <meta property="og:description" content="360° healthcare marketing: website, SEO, social media, video for doctors & hospitals." />
         <meta property="og:url" content={`${BASE_URL}/services`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medical Digital Marketing Services | Transess" />
-        <meta name="twitter:description" content="Complete 360° digital marketing solutions for healthcare professionals." />
+        <meta name="twitter:title" content="Medical Marketing Services | Transess" />
+        <meta name="twitter:description" content="Complete digital marketing for healthcare professionals in India." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services" }]} />

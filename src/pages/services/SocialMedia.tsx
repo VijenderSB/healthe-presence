@@ -55,18 +55,18 @@ const SocialMedia = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Social Media Marketing | Transess - Healthcare Social Media India</title>
-        <meta name="description" content="Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management. Build patient trust and grow your medical practice online." />
-        <meta name="keywords" content="medical social media marketing, doctor social media, hospital Instagram, healthcare Facebook marketing, clinic social media management" />
+        <title>Medical Social Media Marketing India | Doctor Instagram & Facebook | Transess</title>
+        <meta name="description" content="Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management. Build patient trust, 200% average growth rate. 100+ healthcare accounts managed!" />
+        <meta name="keywords" content="medical social media marketing India, doctor social media, hospital Instagram marketing, healthcare Facebook, clinic social media management, doctor LinkedIn" />
         <link rel="canonical" href={`${BASE_URL}/services/social-media`} />
-        <meta property="og:title" content="Medical Social Media Marketing | Transess" />
-        <meta property="og:description" content="Build your medical brand on social media and connect with patients." />
+        <meta property="og:title" content="Medical Social Media Marketing | Transess India" />
+        <meta property="og:description" content="Social media management for doctors & hospitals. 200% average growth!" />
         <meta property="og:url" content={`${BASE_URL}/services/social-media`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Social Media Marketing | Transess" />
-        <meta name="twitter:description" content="Social media management for healthcare professionals." />
+        <meta name="twitter:description" content="Instagram & Facebook marketing for healthcare professionals." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Social Media" }]} />

@@ -88,18 +88,18 @@ const AboutUs = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>About Us | Transess - India's Leading Medical Digital Marketing Agency</title>
-        <meta name="description" content="Learn about Transess - India's premier medical digital marketing agency. 500+ healthcare clients, 8+ years experience helping doctors and hospitals grow their practice." />
-        <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, doctor marketing experts" />
+        <title>About Transess | India's #1 Medical Digital Marketing Agency | 500+ Doctors Trust Us</title>
+        <meta name="description" content="Transess is India's premier healthcare marketing agency with 500+ satisfied clients & 8+ years experience. We help doctors, clinics & hospitals grow their practice with proven digital strategies." />
+        <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, doctor marketing experts, hospital marketing team, best medical marketing agency" />
         <link rel="canonical" href={`${BASE_URL}/about`} />
-        <meta property="og:title" content="About Us | Transess - Medical Digital Marketing" />
-        <meta property="og:description" content="India's leading medical marketing agency with 500+ healthcare clients and 8+ years experience." />
+        <meta property="og:title" content="About Transess - India's Leading Medical Marketing Agency" />
+        <meta property="og:description" content="500+ healthcare clients trust Transess for digital marketing. 8+ years helping doctors & hospitals grow." />
         <meta property="og:url" content={`${BASE_URL}/about`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us | Transess" />
-        <meta name="twitter:description" content="India's leading medical marketing agency with 500+ healthcare clients." />
+        <meta name="twitter:title" content="About Transess | Medical Marketing Agency" />
+        <meta name="twitter:description" content="India's top medical marketing agency. 500+ doctors trust us." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "About Us" }]} />

@@ -48,18 +48,18 @@ const PatientEngagement = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Patient Engagement Solutions | Transess - Healthcare Retention India</title>
-        <meta name="description" content="Patient engagement & retention solutions for doctors & hospitals. WhatsApp marketing, appointment reminders, follow-ups & loyalty programs that reduce no-shows by 60%." />
-        <meta name="keywords" content="patient engagement India, healthcare retention, WhatsApp marketing doctors, appointment reminders, patient loyalty programs" />
+        <title>Patient Engagement India | Reduce No-Shows by 60% | WhatsApp Marketing | Transess</title>
+        <meta name="description" content="Patient engagement solutions: WhatsApp marketing, appointment reminders, follow-ups & loyalty programs. 60% fewer no-shows, 40% better retention, 3x more referrals!" />
+        <meta name="keywords" content="patient engagement India, healthcare patient retention, WhatsApp marketing doctors, appointment reminder system, patient loyalty programs, reduce no-shows" />
         <link rel="canonical" href={`${BASE_URL}/services/patient-engagement`} />
-        <meta property="og:title" content="Patient Engagement Solutions | Transess" />
-        <meta property="og:description" content="Retain patients and build lasting relationships with our engagement tools." />
+        <meta property="og:title" content="Patient Engagement Solutions | Transess India" />
+        <meta property="og:description" content="Reduce no-shows by 60%! WhatsApp marketing & patient retention tools." />
         <meta property="og:url" content={`${BASE_URL}/services/patient-engagement`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Patient Engagement | Transess" />
-        <meta name="twitter:description" content="Patient retention and engagement solutions." />
+        <meta name="twitter:description" content="Patient retention & engagement solutions for doctors." />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Patient Engagement" }]} />

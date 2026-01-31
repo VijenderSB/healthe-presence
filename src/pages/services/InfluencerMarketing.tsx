@@ -90,12 +90,12 @@ const InfluencerMarketing = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Doctor Influencer Marketing | Transess - Medical Influencer Agency India</title>
-        <meta name="description" content="Become a medical influencer with Transess. Personal brand building, content creation, social media growth & patient acquisition for doctors. 200+ doctor influencers created." />
-        <meta name="keywords" content="doctor influencer marketing, medical influencer agency India, healthcare content creator, physician personal branding, doctor social media growth" />
+        <title>Doctor Influencer Marketing India | Become a Medical Influencer | 200+ Created</title>
+        <meta name="description" content="Become a medical influencer! Personal brand building, content creation, social media growth. 200+ doctor influencers created, 500K+ followers generated, 50M+ views delivered!" />
+        <meta name="keywords" content="doctor influencer marketing India, medical influencer agency, healthcare content creator, physician personal branding, doctor social media growth, medical thought leader" />
         <link rel="canonical" href={`${BASE_URL}/services/influencer-marketing`} />
-        <meta property="og:title" content="Doctor Influencer Marketing | Transess" />
-        <meta property="og:description" content="Transform from a doctor to a trusted medical influencer. Build your personal brand online." />
+        <meta property="og:title" content="Doctor Influencer Marketing | Transess India" />
+        <meta property="og:description" content="Become a medical influencer. 200+ doctors transformed. 500K+ followers generated!" />
         <meta property="og:url" content={`${BASE_URL}/services/influencer-marketing`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />

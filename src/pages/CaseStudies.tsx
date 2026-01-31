@@ -106,18 +106,18 @@ const CaseStudies = () => {
   return (
     <main className="min-h-screen">
       <Helmet>
-        <title>Medical Marketing Case Studies | Transess - Healthcare Success Stories</title>
-        <meta name="description" content="Explore real case studies of doctors and hospitals who achieved 300%+ growth with Transess. See proven results in patient acquisition, SEO rankings, and social media." />
-        <meta name="keywords" content="medical marketing case studies, healthcare success stories, doctor marketing results, hospital digital marketing ROI" />
+        <title>Medical Marketing Case Studies | 300%+ Growth Results | Transess India</title>
+        <meta name="description" content="Real case studies: 300% patient growth, first-page rankings, 100K+ YouTube subscribers. See how cardiologists, dentists & hospitals grew with Transess digital marketing." />
+        <meta name="keywords" content="medical marketing case studies, healthcare success stories, doctor marketing results, hospital digital marketing ROI, patient growth case study" />
         <link rel="canonical" href={`${BASE_URL}/case-studies`} />
         <meta property="og:title" content="Medical Marketing Case Studies | Transess" />
-        <meta property="og:description" content="Real success stories of healthcare professionals who transformed their practices with our digital marketing." />
+        <meta property="og:description" content="Real results: 300%+ patient growth. See how doctors transformed their practice." />
         <meta property="og:url" content={`${BASE_URL}/case-studies`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medical Marketing Case Studies | Transess" />
-        <meta name="twitter:description" content="Real success stories of healthcare professionals." />
+        <meta name="twitter:title" content="Case Studies | Transess Medical Marketing" />
+        <meta name="twitter:description" content="Real healthcare marketing results - 300%+ growth!" />
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Case Studies" }]} />
