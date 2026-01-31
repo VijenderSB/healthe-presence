@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Palette, Image, FileImage, BookOpen, Layers, PenTool, ArrowRight, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroBranding from "@/assets/hero-branding.jpg";
 
 const services = [
   {
@@ -42,30 +44,14 @@ const Branding = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-500/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-purple-500/10 text-purple-600 rounded-full text-sm font-medium mb-6">
-              Branding & Creatives
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Build a Memorable Medical Brand
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Specialty-focused creatives and unique branded visuals that set your practice apart and build patient trust.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Start Branding</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">View Portfolio</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Branding & Creatives"
+        title="Build a Memorable Medical Brand"
+        description="Specialty-focused creatives and unique branded visuals that set your practice apart and build patient trust."
+        backgroundImage={heroBranding}
+        primaryCta={{ text: "Start Branding", link: "/contact" }}
+        secondaryCta={{ text: "View Portfolio", link: "/case-studies" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">

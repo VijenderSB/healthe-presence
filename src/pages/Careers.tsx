@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Briefcase, MapPin, Clock, ArrowRight, Heart, Zap, Users, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroCareers from "@/assets/hero-careers.jpg";
 
 const openings = [
   {
@@ -77,30 +79,14 @@ const Careers = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Careers
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Join Our Mission to Transform Healthcare Marketing
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Be part of a team that's helping healthcare professionals reach more patients and save more lives through effective digital marketing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <a href="#openings">View Open Positions</a>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/about">Learn About Us</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Careers"
+        title="Join Our Mission to Transform Healthcare Marketing"
+        description="Be part of a team that's helping healthcare professionals reach more patients and save more lives through effective digital marketing."
+        backgroundImage={heroCareers}
+        primaryCta={{ text: "View Open Positions", link: "#openings" }}
+        secondaryCta={{ text: "Learn About Us", link: "/about" }}
+      />
 
       {/* Why Join Us */}
       <section className="py-20 bg-background">

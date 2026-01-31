@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Globe, FileText, Link2, BarChart3, ArrowRight, Smartphone, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroSeo from "@/assets/hero-seo.jpg";
 
 const services = [
   {
@@ -42,30 +44,14 @@ const SEO = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-green-500/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-6">
-              SEO & Google Visibility
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Get Found by Patients on Google
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Comprehensive SEO services designed for medical practices. Rank higher, get more visibility, and attract more patients through organic search.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Improve Your Rankings</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">View Results</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="SEO & Google Visibility"
+        title="Get Found by Patients on Google"
+        description="Comprehensive SEO services designed for medical practices. Rank higher, get more visibility, and attract more patients through organic search."
+        backgroundImage={heroSeo}
+        primaryCta={{ text: "Improve Your Rankings", link: "/contact" }}
+        secondaryCta={{ text: "View Results", link: "/case-studies" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">

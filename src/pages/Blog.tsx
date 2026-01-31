@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroBlog from "@/assets/hero-blog.jpg";
 
 const featuredPost = {
   title: "The Complete Guide to Medical SEO in 2024",
@@ -79,22 +81,12 @@ const Blog = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Blog
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Insights for Healthcare Marketing
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Expert tips, strategies, and insights to help you grow your medical practice through digital marketing.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Blog"
+        title="Insights for Healthcare Marketing"
+        description="Expert tips, strategies, and insights to help you grow your medical practice through digital marketing."
+        backgroundImage={heroBlog}
+      />
 
       {/* Categories */}
       <section className="py-8 bg-muted/30 border-b border-border">
