@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Youtube, Settings, TrendingUp, Users, FileVideo, BarChart, ArrowRight, Video, Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroYoutube from "@/assets/hero-youtube.jpg";
 
 const services = [
   {
@@ -42,30 +44,14 @@ const YouTubeManagement = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-red-500/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-red-500/10 text-red-600 rounded-full text-sm font-medium mb-6">
-              YouTube Management
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Grow Your Medical YouTube Channel
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Complete YouTube channel management including setup, optimization, content strategy, and subscriber growth for healthcare professionals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Grow Your Channel</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">See Success Stories</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="YouTube Management"
+        title="Grow Your Medical YouTube Channel"
+        description="Complete YouTube channel management including setup, optimization, content strategy, and subscriber growth for healthcare professionals."
+        backgroundImage={heroYoutube}
+        primaryCta={{ text: "Grow Your Channel", link: "/contact" }}
+        secondaryCta={{ text: "See Success Stories", link: "/case-studies" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">

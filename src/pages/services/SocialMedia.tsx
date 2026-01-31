@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Users, TrendingUp, Calendar, MessageCircle, BarChart, Heart, ArrowRight, Video, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroSocial from "@/assets/hero-social.jpg";
 
 const features = [
   {
@@ -49,30 +51,14 @@ const SocialMedia = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-accent/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium mb-6">
-              Social Media Management
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Build Your Medical Brand on Social Media
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              End-to-end social media management for doctors, clinics, and hospitals. Connect with patients where they spend their time online.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Start Growing</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">See Results</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Social Media Management"
+        title="Build Your Medical Brand on Social Media"
+        description="End-to-end social media management for doctors, clinics, and hospitals. Connect with patients where they spend their time online."
+        backgroundImage={heroSocial}
+        primaryCta={{ text: "Start Growing", link: "/contact" }}
+        secondaryCta={{ text: "See Results", link: "/case-studies" }}
+      />
 
       {/* Platforms */}
       <section className="py-16 bg-muted/30">

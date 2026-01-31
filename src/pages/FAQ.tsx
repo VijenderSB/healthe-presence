@@ -1,5 +1,6 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -9,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import heroFaq from "@/assets/hero-faq.jpg";
 
 const faqs = [
   {
@@ -123,27 +125,13 @@ const FAQ = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              FAQ
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Find answers to common questions about our medical digital marketing services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Still Have Questions? Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="FAQ"
+        title="Frequently Asked Questions"
+        description="Find answers to common questions about our medical digital marketing services."
+        backgroundImage={heroFaq}
+        primaryCta={{ text: "Still Have Questions? Contact Us", link: "/contact" }}
+      />
 
       {/* FAQ Sections */}
       <section className="py-20 bg-background">

@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Video, Clapperboard, Mic, Film, Play, Sparkles, ArrowRight, Users, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroVideo from "@/assets/hero-video.jpg";
 
 const videoTypes = [
   {
@@ -42,30 +44,14 @@ const VideoProduction = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-secondary/20 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium mb-6">
-              Medical Video Production
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Professional Medical Videos That Connect with Patients
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              From doctor introductions to patient education, we create compelling video content that builds trust and drives patient engagement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Start Your Project</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">View Samples</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Medical Video Production"
+        title="Professional Medical Videos That Connect with Patients"
+        description="From doctor introductions to patient education, we create compelling video content that builds trust and drives patient engagement."
+        backgroundImage={heroVideo}
+        primaryCta={{ text: "Start Your Project", link: "/contact" }}
+        secondaryCta={{ text: "View Samples", link: "/case-studies" }}
+      />
 
       {/* Video Types */}
       <section className="py-20 bg-background">

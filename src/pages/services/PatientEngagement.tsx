@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Users, MessageSquare, Bell, Heart, Calendar, Shield, ArrowRight, Globe, Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroEngagement from "@/assets/hero-engagement.jpg";
 
 const services = [
   {
@@ -42,30 +44,14 @@ const PatientEngagement = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-orange-500/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-medium mb-6">
-              Patient Engagement
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Retain Patients & Build Lasting Relationships
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Complete patient retention system with engagement, communication, and trust-building tools that keep patients coming back.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Boost Retention</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">See Results</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Patient Engagement"
+        title="Retain Patients & Build Lasting Relationships"
+        description="Complete patient retention system with engagement, communication, and trust-building tools that keep patients coming back."
+        backgroundImage={heroEngagement}
+        primaryCta={{ text: "Boost Retention", link: "/contact" }}
+        secondaryCta={{ text: "See Results", link: "/case-studies" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">

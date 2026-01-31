@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, Eye, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroCasestudies from "@/assets/hero-casestudies.jpg";
 
 const caseStudies = [
   {
@@ -100,30 +102,14 @@ const CaseStudies = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Case Studies
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Real Results for Real Medical Practices
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Explore how we've helped healthcare professionals across specialties grow their practices through strategic digital marketing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Get Similar Results</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/testimonials">Read Testimonials</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Case Studies"
+        title="Real Results for Real Medical Practices"
+        description="Explore how we've helped healthcare professionals across specialties grow their practices through strategic digital marketing."
+        backgroundImage={heroCasestudies}
+        primaryCta={{ text: "Get Similar Results", link: "/contact" }}
+        secondaryCta={{ text: "Read Testimonials", link: "/testimonials" }}
+      />
 
       {/* Stats Bar */}
       <section className="py-12 bg-primary">
