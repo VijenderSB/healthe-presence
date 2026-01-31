@@ -59,6 +59,27 @@ const YouTubeManagement = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Doctor YouTube Management | Transess" />
         <meta name="twitter:description" content="YouTube growth for healthcare professionals in India." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "YouTube Channel Management for Doctors",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "YouTube channel management for doctors & hospitals. Channel setup, SEO, content strategy, subscriber growth.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "YouTube Management" }]} />

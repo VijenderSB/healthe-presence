@@ -66,6 +66,27 @@ const WebsiteDesign = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Website Design | Transess" />
         <meta name="twitter:description" content="HIPAA-compliant websites for healthcare professionals." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Medical Website Design",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Professional medical website design for doctors, clinics & hospitals. HIPAA-compliant, mobile-responsive, SEO-optimized websites.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Website Design" }]} />

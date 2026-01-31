@@ -101,6 +101,27 @@ const InfluencerMarketing = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Doctor Influencer Marketing | Transess" />
         <meta name="twitter:description" content="Become a medical influencer with professional support." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Doctor Influencer Marketing",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Become a medical influencer! Personal brand building, content creation, social media growth.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Influencer Marketing" }]} />

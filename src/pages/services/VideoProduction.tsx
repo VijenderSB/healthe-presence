@@ -59,6 +59,27 @@ const VideoProduction = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Video Production | Transess" />
         <meta name="twitter:description" content="Professional video content for doctors & hospitals." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Medical Video Production",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Professional medical video production: doctor introductions, patient testimonials, explainers, reels & facility tours.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Video Production" }]} />

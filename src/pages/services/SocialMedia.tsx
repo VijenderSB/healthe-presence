@@ -66,6 +66,27 @@ const SocialMedia = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Social Media Marketing | Transess" />
         <meta name="twitter:description" content="Instagram & Facebook marketing for healthcare professionals." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Medical Social Media Marketing",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Social Media" }]} />

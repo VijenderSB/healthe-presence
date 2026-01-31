@@ -59,6 +59,27 @@ const Branding = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Branding | Transess" />
         <meta name="twitter:description" content="Healthcare branding and creative design services in India." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Medical Branding & Creative Design",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Medical branding & creative design: doctor logo design, clinic brand identity, social media creatives & marketing collateral.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Branding" }]} />

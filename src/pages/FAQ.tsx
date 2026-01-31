@@ -140,6 +140,22 @@ const FAQ = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="FAQ | Transess Medical Marketing" />
         <meta name="twitter:description" content="Answers to your medical marketing questions." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.flatMap(section => 
+              section.questions.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            )
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "FAQ" }]} />

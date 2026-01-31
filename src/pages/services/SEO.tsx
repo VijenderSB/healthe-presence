@@ -59,6 +59,27 @@ const SEO = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical SEO Services | Transess" />
         <meta name="twitter:description" content="Get found by patients on Google. Healthcare SEO experts." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Medical SEO Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Transess",
+              "url": SITE_CONFIG.BASE_URL
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "description": "Healthcare SEO services for doctors, clinics & hospitals. Local SEO, first-page Google rankings, keyword optimization.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "SEO" }]} />
