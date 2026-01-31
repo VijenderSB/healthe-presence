@@ -10,8 +10,7 @@ import { ArrowRight, MapPin, Building2, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroDoctor from "@/assets/hero-doctor.jpg";
-
-const BASE_URL = "https://healthe-presence.lovable.app";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const Cities = () => {
   const states = getStates();
@@ -25,16 +24,16 @@ const Cities = () => {
         <title>Medical Marketing in 200+ Indian Cities | Find Your City | Transess</title>
         <meta name="description" content="Medical digital marketing services in 200+ Indian cities. From Mumbai to Noida, Delhi to Bangalore - find healthcare SEO, social media & branding for doctors in your city!" />
         <meta name="keywords" content="medical marketing India cities, healthcare marketing by location, doctor marketing Mumbai, hospital marketing Delhi, clinic marketing Bangalore, medical SEO by city" />
-        <link rel="canonical" href={`${BASE_URL}/cities`} />
+        <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/cities`} />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Medical Marketing in 200+ Indian Cities | Transess" />
         <meta property="og:description" content="Healthcare marketing across 200+ cities. Find services in your location!" />
-        <meta property="og:url" content={`${BASE_URL}/cities`} />
+        <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/cities`} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
