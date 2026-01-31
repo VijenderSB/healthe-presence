@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroServices from "@/assets/hero-services.jpg";
 
 const services = [
   {
@@ -31,28 +33,28 @@ const services = [
     title: "YouTube Management",
     description: "Complete YouTube channel setup, optimization, content strategy, and subscriber growth. Build authority in your specialty through video content.",
     link: "/services/youtube-management",
-    color: "bg-red-500/10 text-red-600"
+    color: "bg-destructive/10 text-destructive"
   },
   {
     icon: Search,
     title: "SEO & Google Visibility",
     description: "Get found by patients searching for doctors like you on Google. Local SEO, technical optimization, content strategy, and performance tracking.",
     link: "/services/seo",
-    color: "bg-green-500/10 text-green-600"
+    color: "bg-primary/10 text-primary"
   },
   {
     icon: Palette,
     title: "Branding & Creatives",
     description: "Specialty-focused creatives and unique branded visuals that set you apart. Logo design, brand guidelines, marketing collateral, and visual templates.",
     link: "/services/branding",
-    color: "bg-purple-500/10 text-purple-600"
+    color: "bg-secondary text-secondary-foreground"
   },
   {
     icon: Heart,
     title: "Patient Engagement",
     description: "Complete patient retention system with automated reminders, follow-ups, loyalty programs, and reputation management tools.",
     link: "/services/patient-engagement",
-    color: "bg-orange-500/10 text-orange-600"
+    color: "bg-accent/10 text-accent-foreground"
   }
 ];
 
@@ -61,30 +63,14 @@ const Services = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Our Services
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              360° Medical Digital Marketing Solutions
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Everything you need to build a powerful digital presence and grow your medical practice. From your first website to ongoing patient engagement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Get Free Consultation</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/case-studies">View Our Work</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Our Services"
+        title="360° Medical Digital Marketing Solutions"
+        description="Everything you need to build a powerful digital presence and grow your medical practice. From your first website to ongoing patient engagement."
+        backgroundImage={heroServices}
+        primaryCta={{ text: "Get Free Consultation", link: "/contact" }}
+        secondaryCta={{ text: "View Our Work", link: "/case-studies" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">

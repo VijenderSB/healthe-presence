@@ -1,8 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import PageHero from "@/components/landing/PageHero";
 import { Button } from "@/components/ui/button";
 import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const values = [
   {
@@ -82,30 +84,14 @@ const AboutUs = () => {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              About Us
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Your Partner in Medical Digital Excellence
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We help healthcare professionals build powerful digital presences that attract patients and grow practices.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Work With Us</Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/services">Explore Services</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="About Us"
+        title="Your Partner in Medical Digital Excellence"
+        description="We help healthcare professionals build powerful digital presences that attract patients and grow practices."
+        backgroundImage={heroAbout}
+        primaryCta={{ text: "Work With Us", link: "/contact" }}
+        secondaryCta={{ text: "Explore Services", link: "/services" }}
+      />
 
       {/* Our Story */}
       <section className="py-20 bg-background">
