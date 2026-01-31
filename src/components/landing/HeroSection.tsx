@@ -10,7 +10,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen pt-20 md:pt-24 overflow-hidden">
+    <section className="relative min-h-[70vh] pt-20 md:pt-24 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -22,7 +22,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-[calc(100vh-6rem)]">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-[calc(70vh-6rem)]">
           {/* Content */}
           <div className="flex flex-col gap-6 md:gap-8 py-12 lg:py-0">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium w-fit animate-fade-up">
