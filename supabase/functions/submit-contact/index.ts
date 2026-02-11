@@ -305,10 +305,8 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Send email notification (don't block response on email)
-    sendEmailNotification(sanitizedData).catch((err) => {
-      console.error("Email notification failed:", err);
-    });
+    // Send email notification (await to ensure it completes before function terminates)
+    await sendEmailNotification(sanitizedData);
 
     console.log("Contact form submitted successfully:", sanitizedData.email);
 
