@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img 
           src={heroBg} 
-          alt="" 
+          alt="Medical digital marketing agency India - doctor with digital presence tools" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-background/60" />
@@ -96,8 +96,8 @@ const HeroSection = () => {
                     <span className="text-3xl">🩺</span>
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold text-foreground">Dr. Sarah Mitchell</h3>
-                    <p className="text-sm text-muted-foreground">Cardiologist • New York</p>
+                    <h3 className="font-heading font-semibold text-foreground">Dr. Priya Sharma</h3>
+                    <p className="text-sm text-muted-foreground">Cardiologist • Mumbai</p>
                   </div>
                 </div>
                 <div className="space-y-3">
