@@ -48,6 +48,7 @@ const App = () => (
           <Route path="/services/video-production" element={<VideoProduction />} />
           <Route path="/services/youtube-management" element={<YouTubeManagement />} />
           <Route path="/services/seo" element={<SEO />} />
+          <Route path="/services/geo" element={<GEO />} />
           <Route path="/services/branding" element={<Branding />} />
           <Route path="/services/patient-engagement" element={<PatientEngagement />} />
           <Route path="/about" element={<AboutUs />} />

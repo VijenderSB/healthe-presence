@@ -12,6 +12,14 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
   {
+    icon: Brain,
+    title: "Generative Engine Optimization (GEO)",
+    description: "Future-proof your practice. Get cited by ChatGPT, Google AI Overviews, and Perplexity when patients ask AI about doctors and treatments. The next frontier of medical marketing.",
+    link: "/services/geo",
+    color: "bg-primary/10 text-primary",
+    featured: true
+  },
+  {
     icon: Globe,
     title: "Medical Website Design",
     description: "Professional, fast, mobile-responsive websites built specifically for healthcare professionals. HIPAA-compliant, SEO-optimized, and designed to convert visitors into patients.",
