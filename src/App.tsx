@@ -13,6 +13,7 @@ import SocialMedia from "./pages/services/SocialMedia";
 import VideoProduction from "./pages/services/VideoProduction";
 import YouTubeManagement from "./pages/services/YouTubeManagement";
 import SEO from "./pages/services/SEO";
+import GEO from "./pages/services/GEO";
 import Branding from "./pages/services/Branding";
 import PatientEngagement from "./pages/services/PatientEngagement";
 import AboutUs from "./pages/AboutUs";
