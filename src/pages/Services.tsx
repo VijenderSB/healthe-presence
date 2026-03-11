@@ -5,7 +5,7 @@ import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight } from "lucide-react";
+import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroServices from "@/assets/hero-services.jpg";
 import { SITE_CONFIG } from "@/lib/constants";
