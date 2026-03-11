@@ -107,7 +107,11 @@ const Services = () => {
               <Link 
                 key={index} 
                 to={service.link}
-                className="group p-8 bg-card rounded-xl border border-border hover:shadow-xl transition-all hover:-translate-y-1"
+                className={`group p-8 rounded-xl border transition-all hover:-translate-y-1 ${
+                  service.featured 
+                    ? 'bg-primary/5 border-primary border-2 hover:shadow-xl hover:shadow-primary/10 md:col-span-2 lg:col-span-1' 
+                    : 'bg-card border-border hover:shadow-xl'
+                }`}
               >
                 <div className={`w-14 h-14 ${service.color} rounded-xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-7 h-7" />
