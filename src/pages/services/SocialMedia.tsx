@@ -172,13 +172,24 @@ const SocialMedia = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <Link to="/services/video-production" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
               <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4">
                 <Video className="w-6 h-6 text-secondary-foreground" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Video Production</h3>
               <p className="text-muted-foreground mb-4">Create compelling reels and video content for social.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/geo" className="group p-6 bg-primary/5 rounded-xl border-2 border-primary hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">GEO (AI Search) 🚀</h3>
+              <p className="text-muted-foreground mb-4">Social signals boost your AI search visibility.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </span>
