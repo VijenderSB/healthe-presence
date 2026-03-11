@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Smartphone, Video, Star, Users, MessageCircle } from "lucide-react";
+import { ArrowRight, Globe, Smartphone, Video, Star, Users, MessageCircle, Brain } from "lucide-react";
 
 const SolutionSection = () => {
   const pillars = [
     { icon: Globe, label: "Website" },
     { icon: Smartphone, label: "Social Media" },
     { icon: Video, label: "Video" },
+    { icon: Brain, label: "GEO (AI)" },
     { icon: Star, label: "Reputation" },
     { icon: Users, label: "Acquisition" },
     { icon: MessageCircle, label: "Retention" },

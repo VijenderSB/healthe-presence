@@ -7,7 +7,8 @@ import {
   Palette, 
   MessageCircle,
   ArrowRight,
-  Star
+  Star,
+  Brain
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -27,6 +28,18 @@ const ServicesSection = () => {
   };
 
   const services = [
+    {
+      icon: Brain,
+      title: "Generative Engine Optimization (GEO)",
+      description: "Get cited by ChatGPT, Google AI Overviews & Perplexity when patients ask about doctors.",
+      benefits: [
+        "AI answer optimization",
+        "Conversational content strategy",
+        "E-E-A-T authority building",
+        "AI visibility tracking",
+      ],
+      href: "/services/geo",
+    },
     {
       icon: Globe,
       title: "Medical Website Design",

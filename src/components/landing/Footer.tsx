@@ -52,6 +52,7 @@ const Footer = () => {
               <li><Link to="/services/video-production" className="hover:text-secondary-foreground transition-colors">Video Production</Link></li>
               <li><Link to="/services/youtube-management" className="hover:text-secondary-foreground transition-colors">YouTube Management</Link></li>
               <li><Link to="/services/seo" className="hover:text-secondary-foreground transition-colors">SEO & Visibility</Link></li>
+              <li><Link to="/services/geo" className="hover:text-secondary-foreground transition-colors font-medium text-primary">GEO (AI Optimization)</Link></li>
               <li><Link to="/services/branding" className="hover:text-secondary-foreground transition-colors">Branding & Creatives</Link></li>
               <li><Link to="/services/patient-engagement" className="hover:text-secondary-foreground transition-colors">Patient Engagement</Link></li>
             </ul>

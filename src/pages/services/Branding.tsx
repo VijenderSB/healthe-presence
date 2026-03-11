@@ -182,13 +182,24 @@ const Branding = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <Link to="/services/website-design" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Website Design</h3>
               <p className="text-muted-foreground mb-4">A branded website that represents your practice.</p>
+              <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+            
+            <Link to="/services/geo" className="group p-6 bg-primary/5 rounded-xl border-2 border-primary hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Globe className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">GEO (AI Search) 🚀</h3>
+              <p className="text-muted-foreground mb-4">Strong branding helps AI engines recognize your authority.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </span>
