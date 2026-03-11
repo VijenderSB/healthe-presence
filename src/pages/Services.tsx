@@ -5,12 +5,20 @@ import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight } from "lucide-react";
+import { Globe, Users, Video, Youtube, Search, Palette, Heart, ArrowRight, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroServices from "@/assets/hero-services.jpg";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const services = [
+  {
+    icon: Brain,
+    title: "Generative Engine Optimization (GEO)",
+    description: "Future-proof your practice. Get cited by ChatGPT, Google AI Overviews, and Perplexity when patients ask AI about doctors and treatments. The next frontier of medical marketing.",
+    link: "/services/geo",
+    color: "bg-primary/10 text-primary",
+    featured: true
+  },
   {
     icon: Globe,
     title: "Medical Website Design",
@@ -99,7 +107,11 @@ const Services = () => {
               <Link 
                 key={index} 
                 to={service.link}
-                className="group p-8 bg-card rounded-xl border border-border hover:shadow-xl transition-all hover:-translate-y-1"
+                className={`group p-8 rounded-xl border transition-all hover:-translate-y-1 ${
+                  service.featured 
+                    ? 'bg-primary/5 border-primary border-2 hover:shadow-xl hover:shadow-primary/10 md:col-span-2 lg:col-span-1' 
+                    : 'bg-card border-border hover:shadow-xl'
+                }`}
               >
                 <div className={`w-14 h-14 ${service.color} rounded-xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-7 h-7" />

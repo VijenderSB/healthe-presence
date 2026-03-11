@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const services = [
     { label: "Medical Influencer Marketing", href: "/services/influencer-marketing", featured: true },
+    { label: "Generative Engine Optimization (GEO)", href: "/services/geo", featured: true },
     { label: "Website Design", href: "/services/website-design" },
     { label: "Social Media", href: "/services/social-media" },
     { label: "Video Production", href: "/services/video-production" },

@@ -13,6 +13,7 @@ import SocialMedia from "./pages/services/SocialMedia";
 import VideoProduction from "./pages/services/VideoProduction";
 import YouTubeManagement from "./pages/services/YouTubeManagement";
 import SEO from "./pages/services/SEO";
+import GEO from "./pages/services/GEO";
 import Branding from "./pages/services/Branding";
 import PatientEngagement from "./pages/services/PatientEngagement";
 import AboutUs from "./pages/AboutUs";
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/services/video-production" element={<VideoProduction />} />
           <Route path="/services/youtube-management" element={<YouTubeManagement />} />
           <Route path="/services/seo" element={<SEO />} />
+          <Route path="/services/geo" element={<GEO />} />
           <Route path="/services/branding" element={<Branding />} />
           <Route path="/services/patient-engagement" element={<PatientEngagement />} />
           <Route path="/about" element={<AboutUs />} />
