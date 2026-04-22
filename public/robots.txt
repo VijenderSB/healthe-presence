@@ -1,8 +1,16 @@
 User-agent: Googlebot
 Allow: /
+Allow: /favicon.ico
+Allow: /favicon.png
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon.png
 
 User-agent: Bingbot
 Allow: /
+Allow: /favicon.ico
 
 User-agent: Twitterbot
 Allow: /
@@ -12,5 +20,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /favicon.png
 
 Sitemap: https://www.transess.com/sitemap.xml
