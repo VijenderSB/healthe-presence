@@ -76,8 +76,10 @@ async function checkRobots() {
     // Parse robots.txt minimally to confirm favicon paths aren't disallowed for Googlebot/*
     const blocks = text.split(/\n(?=User-agent:)/i);
     const checkAgent = (agent) => {
+      const escaped = agent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const boundary = agent === "*" ? "" : "\\b";
       const block = blocks.find((b) =>
-        new RegExp(`^User-agent:\\s*${agent}\\b`, "im").test(b)
+        new RegExp(`^User-agent:\\s*${escaped}${boundary}`, "im").test(b)
       );
       if (!block) return { found: false, blocked: [] };
       const disallows = [...block.matchAll(/^Disallow:\s*(\S+)/gim)].map((m) => m[1]);
