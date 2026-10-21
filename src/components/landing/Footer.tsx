@@ -46,7 +46,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
-              <li><Link to="/services/influencer-marketing" className="hover:text-secondary-foreground transition-colors">Influencer Marketing</Link></li>
+              <li><Link to="/services/influencer-marketing" className="hover:text-secondary-foreground transition-colors">Personal Branding</Link></li>
               <li><Link to="/services/website-design" className="hover:text-secondary-foreground transition-colors">Website Design</Link></li>
               <li><Link to="/services/social-media" className="hover:text-secondary-foreground transition-colors">Social Media</Link></li>
               <li><Link to="/services/video-production" className="hover:text-secondary-foreground transition-colors">Video Production</Link></li>
@@ -71,7 +71,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link to="/specialties" className="text-primary hover:text-primary/80 transition-colors font-medium">
-                  View All 33 →
+                  View All →
                 </Link>
               </li>
             </ul>
@@ -90,7 +90,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link to="/cities" className="text-primary hover:text-primary/80 transition-colors font-medium">
-                  View All 200 →
+                  View All →
                 </Link>
               </li>
             </ul>
@@ -101,7 +101,6 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-secondary-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
               <li><Link to="/about" className="hover:text-secondary-foreground transition-colors">About Us</Link></li>
-              <li><Link to="/testimonials" className="hover:text-secondary-foreground transition-colors">Testimonials</Link></li>
               <li><Link to="/case-studies" className="hover:text-secondary-foreground transition-colors">Case Studies</Link></li>
               <li><Link to="/blog" className="hover:text-secondary-foreground transition-colors">Blog</Link></li>
               <li><Link to="/careers" className="hover:text-secondary-foreground transition-colors">Careers</Link></li>

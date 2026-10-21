@@ -5,22 +5,22 @@ const WhyUsSection = () => {
     {
       icon: HeartHandshake,
       title: "Medical Marketing Specialists",
-      description: "We exclusively serve healthcare. We understand HIPAA compliance, medical ethics, and what patients really search for.",
+      description: "We exclusively serve healthcare. We understand medical ethics, data privacy (DPDP Act), and what patients really look for.",
     },
     {
       icon: Video,
       title: "Video Production Experts",
-      description: "In-house video team specialized in medical content. From doctor intros to complex procedure explainers.",
+      description: "In-house video team specialized in medical content. From doctor intros to clear procedure explainers.",
     },
     {
       icon: Target,
-      title: "Results-Driven Approach",
-      description: "We measure success by your new patient numbers, not vanity metrics. Every strategy is optimized for conversions.",
+      title: "NMC-Compliant Approach",
+      description: "Every website, profile and campaign is built to be factual, verifiable and aligned with NMC ethical advertising guidelines.",
     },
     {
       icon: Users,
       title: "Dedicated Team",
-      description: "Your personal account manager, content creator, and strategist—all focused on your practice's growth.",
+      description: "Your personal account manager, content creator, and strategist—all focused on your digital presence.",
     },
     {
       icon: BarChart3,
@@ -29,8 +29,8 @@ const WhyUsSection = () => {
     },
     {
       icon: Award,
-      title: "Proven Track Record",
-      description: "500+ healthcare clients. Millions of patient impressions generated. Real results you can verify.",
+      title: "Healthcare Focus",
+      description: "We work only with doctors, clinics and hospitals, so every strategy fits the realities of medical practice.",
     },
   ];
 
@@ -42,7 +42,7 @@ const WhyUsSection = () => {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            The <span className="text-gradient">Medical Marketing</span> Team That Gets Results
+            The <span className="text-gradient">Medical Marketing</span> Team That Does It Ethically
           </h2>
           <p className="text-lg text-muted-foreground">
             We're not a generic agency. We're healthcare marketing specialists who understand your unique challenges and opportunities.
@@ -68,16 +68,16 @@ const WhyUsSection = () => {
           ))}
         </div>
 
-        {/* Stats Bar */}
+        {/* Commitments Bar */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 p-6 md:p-8 rounded-2xl bg-card shadow-card border border-border">
           {[
-            { value: "500+", label: "Healthcare Clients" },
-            { value: "10M+", label: "Patient Impressions" },
-            { value: "5000+", label: "Videos Produced" },
-            { value: "98%", label: "Client Satisfaction" },
+            { value: "Factual", label: "Verifiable Content" },
+            { value: "No Testimonials", label: "No Patient Reviews or Ratings" },
+            { value: "Transparent", label: "Clear Reporting" },
+            { value: "NMC-Aligned", label: "Ethical Advertising" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-heading font-bold text-primary mb-1">
+              <div className="text-xl md:text-2xl font-heading font-bold text-primary mb-1">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>

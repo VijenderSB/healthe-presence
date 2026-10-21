@@ -1,11 +1,11 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { Target, Users, Award, Heart, TrendingUp, Globe, Smartphone, Video, Search, BarChart, ArrowRight } from "lucide-react";
+import { Target, Users, Award, Heart, Video, Search, BarChart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroAbout from "@/assets/hero-about.jpg";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -14,17 +14,17 @@ const values = [
   {
     icon: Target,
     title: "Mission-Driven",
-    description: "We're dedicated to helping healthcare professionals reach more patients through effective digital marketing."
+    description: "We help healthcare professionals communicate with patients through factual, ethical digital marketing."
   },
   {
     icon: Users,
     title: "Patient-Centric",
-    description: "Every strategy we create focuses on improving patient experience and healthcare accessibility."
+    description: "Every strategy we create focuses on clear, accurate information that supports patients and healthcare accessibility."
   },
   {
     icon: Award,
-    title: "Excellence",
-    description: "We hold ourselves to the highest standards of quality, creativity, and measurable results."
+    title: "Compliance-First",
+    description: "We hold ourselves to healthcare advertising guidelines, keeping all communication accurate and verifiable."
   },
   {
     icon: Heart,
@@ -33,80 +33,53 @@ const values = [
   }
 ];
 
-const reasons = [
-  {
-    icon: TrendingUp,
-    stat: "77%",
-    title: "Search Before Booking",
-    description: "of patients research healthcare providers online before making an appointment."
-  },
-  {
-    icon: Globe,
-    stat: "5B+",
-    title: "Daily Searches",
-    description: "health-related searches are made on Google every single day."
-  },
-  {
-    icon: Smartphone,
-    stat: "60%",
-    title: "Mobile First",
-    description: "of patients use mobile devices to search for healthcare information."
-  },
-  {
-    icon: Video,
-    stat: "85%",
-    title: "Video Impact",
-    description: "of patients prefer watching a video about a doctor before booking."
-  }
-];
-
 const differentiators = [
   {
     icon: Award,
     title: "Medical Marketing Specialists",
-    description: "We exclusively focus on healthcare, understanding the unique challenges and regulations of medical marketing."
+    description: "We focus on healthcare, understanding the unique challenges and regulations of medical marketing."
   },
   {
     icon: Video,
-    title: "Video Production Experts",
-    description: "In-house video production team specializing in medical content that educates and builds trust."
+    title: "In-House Video Production",
+    description: "A video production team that creates factual, educational medical content."
   },
   {
     icon: Search,
-    title: "Data-Driven Strategies",
-    description: "Every decision is backed by data and analytics to ensure maximum ROI for your practice."
+    title: "Data-Informed Strategies",
+    description: "Our decisions are informed by data and analytics to support clear, measurable communication for your practice."
   },
   {
     icon: BarChart,
-    title: "Proven Results",
-    description: "Track record of growing patient bases and online visibility for healthcare practices nationwide."
+    title: "Ethical, Compliant Approach",
+    description: "We align every campaign with healthcare advertising guidelines and avoid unsubstantiated claims."
   }
 ];
 
 const AboutUs = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>About Transess | India's #1 Medical Digital Marketing Agency | 500+ Doctors Trust Us</title>
-        <meta name="description" content="Transess is India's premier healthcare marketing agency with 500+ satisfied clients & 8+ years experience. We help doctors, clinics & hospitals grow their practice with proven digital strategies." />
-        <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, doctor marketing experts, hospital marketing team, best medical marketing agency" />
+      <Head>
+        <title>About Transess | Ethical Medical Digital Marketing Agency</title>
+        <meta name="description" content="Transess is a medical digital marketing agency for doctors, clinics & hospitals. We deliver ethical, compliant digital marketing built on accurate, factual communication." />
+        <meta name="keywords" content="about Transess, medical marketing agency India, healthcare digital marketing company, ethical medical marketing, doctor marketing, hospital marketing" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/about`} />
-        <meta property="og:title" content="About Transess - India's Leading Medical Marketing Agency" />
-        <meta property="og:description" content="500+ healthcare clients trust Transess for digital marketing. 8+ years helping doctors & hospitals grow." />
+        <meta property="og:title" content="About Transess | Ethical Medical Marketing Agency" />
+        <meta property="og:description" content="A medical digital marketing agency for doctors, clinics & hospitals, built on ethical, compliant and factual communication." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/about`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Transess | Medical Marketing Agency" />
-        <meta name="twitter:description" content="India's top medical marketing agency. 500+ doctors trust us." />
-      </Helmet>
+        <meta name="twitter:description" content="A medical digital marketing agency for doctors, clinics and hospitals." />
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "About Us" }]} />
       
       <PageHero
         badge="About Us"
         title="Your Partner in Medical Digital Excellence"
-        description="We help healthcare professionals build powerful digital presences that attract patients and grow practices."
+        description="We help healthcare professionals build a clear, factual and NMC-compliant digital presence that helps patients find accurate information."
         backgroundImage={heroAbout}
         primaryCta={{ text: "Work With Us", link: "/contact" }}
         secondaryCta={{ text: "Explore Services", link: "/services" }}
@@ -119,13 +92,13 @@ const AboutUs = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">Our Story</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="mb-6">
-                Founded with a singular vision: to bridge the gap between exceptional healthcare and the patients who need it. We recognized that many brilliant doctors and healthcare facilities were invisible online, while patients struggled to find quality care.
+                We founded Transess to help doctors, clinics and hospitals communicate with patients online in a way that is accurate, ethical and compliant with healthcare advertising guidelines.
               </p>
               <p className="mb-6">
-                Our team combines deep expertise in digital marketing with a genuine passion for healthcare. We understand the unique challenges medical professionals face—from strict regulations to maintaining patient trust while building an online presence.
+                Our team combines expertise in digital marketing with an understanding of healthcare. We know the unique challenges medical professionals face, from advertising regulations to maintaining patient trust while building an online presence.
               </p>
               <p>
-                Today, we're proud to be the trusted digital marketing partner for hundreds of healthcare providers, helping them connect with patients who need their expertise.
+                We work as a digital marketing partner for healthcare providers, helping them share factual information about their services with the patients who are looking for them.
               </p>
             </div>
           </div>
@@ -148,33 +121,6 @@ const AboutUs = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Digital Presence */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Digital Presence Matters
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              In today's digital-first world, your online presence is often the first impression patients have of your practice.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reasons.map((reason, index) => (
-              <div key={index} className="p-6 bg-card rounded-xl border border-border text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <reason.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-4xl font-bold text-primary mb-2">{reason.stat}</div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{reason.title}</h3>
-                <p className="text-sm text-muted-foreground">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -209,25 +155,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "500+", label: "Medical Clients" },
-              { value: "10M+", label: "Patients Reached" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "8+", label: "Years Experience" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{stat.value}</div>
-                <div className="text-primary-foreground/80">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Quick Links */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -238,11 +165,11 @@ const AboutUs = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Link to="/testimonials" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
-              <h3 className="text-xl font-semibold text-foreground mb-2">Client Testimonials</h3>
-              <p className="text-muted-foreground mb-4">Hear from healthcare professionals who've worked with us.</p>
+            <Link to="/case-studies" className="group p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Work</h3>
+              <p className="text-muted-foreground mb-4">See examples of the healthcare projects we've worked on.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                Read Stories <ArrowRight className="w-4 h-4 ml-1" />
+                View Work <ArrowRight className="w-4 h-4 ml-1" />
               </span>
             </Link>
             
@@ -274,7 +201,7 @@ const AboutUs = () => {
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join hundreds of healthcare professionals who trust us with their digital marketing.
+            Work with a medical digital marketing agency that keeps your communication accurate and compliant.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link to="/contact">Get Started Today</Link>

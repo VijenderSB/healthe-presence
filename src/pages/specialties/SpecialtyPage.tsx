@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -8,8 +8,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { getSpecialtyBySlug, specialties } from "@/data/specialties";
 import { 
-  Search, Target, Globe, 
-  Video, Users, Megaphone, ArrowRight, CheckCircle, Star
+  Search, Target, Globe,
+  Video, Users, Megaphone, ArrowRight, CheckCircle
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -18,47 +18,47 @@ const services = [
   {
     icon: Search,
     title: "Medical SEO",
-    description: "Rank #1 on Google for specialty-specific searches in your city"
+    description: "Help patients find accurate information about your practice in specialty searches"
   },
   {
     icon: Target,
     title: "Google Ads",
-    description: "High-intent patient acquisition with optimized ad campaigns"
+    description: "Factual, compliant ad campaigns that share accurate practice information"
   },
   {
     icon: Globe,
     title: "Website Design",
-    description: "Conversion-focused websites built for your specialty"
+    description: "Clear, accessible websites built for your specialty"
   },
   {
     icon: Megaphone,
     title: "Social Media",
-    description: "Build trust and engagement across all platforms"
+    description: "Factual, educational health content across platforms"
   },
   {
     icon: Video,
     title: "Video Marketing",
-    description: "Patient testimonials and educational content that converts"
+    description: "Doctor introductions and public health education content"
   },
   {
     icon: Users,
-    title: "Influencer Marketing",
-    description: "Connect with medical influencers to expand your reach"
+    title: "Personal Branding & Health Education",
+    description: "Build a credible professional presence through factual content"
   }
 ];
 
 const benefits = [
   "Specialty-specific marketing strategies",
-  "HIPAA-compliant campaigns",
+  "Data-privacy-aware (DPDP Act) campaigns",
   "Dedicated account manager",
   "Monthly performance reports",
-  "Transparent ROI tracking",
+  "NMC-compliant, factual content",
   "24/7 support"
 ];
 
 const SpecialtyPage = () => {
   const location = useLocation();
-  const slug = location.pathname.slice(1); // Remove leading slash
+  const slug = location.pathname.replace(/^\/+|\/+$/g, ""); // strip leading/trailing slashes
   const specialty = getSpecialtyBySlug(slug);
 
   if (!specialty) {
@@ -83,11 +83,11 @@ const SpecialtyPage = () => {
     .slice(0, 6);
 
   const canonicalUrl = `${SITE_CONFIG.BASE_URL}/${specialty.slug}`;
-  const metaDescription = `${specialty.h1}. ${specialty.h2}. Expert SEO, social media, video production & branding for ${specialty.name.toLowerCase()} in India.`;
+  const metaDescription = `${specialty.h1}. ${specialty.h2}. Ethical, NMC-compliant SEO, social media, video production & branding for ${specialty.name.toLowerCase()} in India.`;
 
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>{specialty.h1} | Transess - Healthcare Marketing</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={specialty.keywords.join(", ")} />
@@ -157,7 +157,7 @@ const SpecialtyPage = () => {
                   "itemOffered": {
                     "@type": "Service",
                     "name": `${specialty.name} Website Design`,
-                    "description": `Conversion-focused websites for ${specialty.name.toLowerCase()} clinics`
+                    "description": `Clear, accessible websites for ${specialty.name.toLowerCase()} clinics`
                   }
                 },
                 {
@@ -169,17 +169,10 @@ const SpecialtyPage = () => {
                   }
                 }
               ]
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "500",
-              "bestRating": "5",
-              "worstRating": "1"
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       
       <Navbar />
       <Breadcrumbs items={[{ label: "Specialties", href: "/specialties" }, { label: specialty.name }]} />
@@ -241,12 +234,12 @@ const SpecialtyPage = () => {
                 Why Choose Us
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                India's Leading {specialty.name} Marketing Agency
+                Ethical {specialty.name} Marketing
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We understand the unique challenges of marketing {specialty.name.toLowerCase()} services. 
-                Our team combines healthcare expertise with digital marketing excellence to deliver 
-                measurable results.
+                We understand the unique challenges of marketing {specialty.name.toLowerCase()} services.
+                Our team combines healthcare expertise with ethical, NMC-compliant digital marketing
+                to present your practice accurately.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
@@ -258,41 +251,41 @@ const SpecialtyPage = () => {
               </div>
             </div>
             <div className="bg-muted/30 rounded-2xl p-8">
-              <div className="flex items-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-primary text-primary" />
-                ))}
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <CheckCircle className="w-7 h-7 text-primary" />
               </div>
-              <blockquote className="text-lg text-foreground mb-6">
-                "Transess transformed our online presence completely. We've seen a 300% increase 
-                in patient inquiries within the first 6 months. Their understanding of the 
-                healthcare industry is unmatched."
-              </blockquote>
-              <p className="text-muted-foreground font-medium">— Verified Healthcare Client</p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Compliant by Design
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Every website, profile and piece of content we create for {specialty.name.toLowerCase()} practices
+                is factual, verifiable and aligned with NMC ethical advertising guidelines — no patient
+                testimonials, no ratings, and no exaggerated claims.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Commitments Section */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
-              <div className="text-primary-foreground/80">Healthcare Clients</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Factual</div>
+              <div className="text-primary-foreground/80">Verifiable content only</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">10M+</div>
-              <div className="text-primary-foreground/80">Patient Leads Generated</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">NMC-Aligned</div>
+              <div className="text-primary-foreground/80">Ethical advertising</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">95%</div>
-              <div className="text-primary-foreground/80">Client Retention Rate</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">No Testimonials</div>
+              <div className="text-primary-foreground/80">No patient reviews or ratings</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">8+</div>
-              <div className="text-primary-foreground/80">Years Experience</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Transparent</div>
+              <div className="text-primary-foreground/80">Clear monthly reporting</div>
             </div>
           </div>
         </div>
@@ -341,17 +334,18 @@ const SpecialtyPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Grow Your {specialty.name} Practice?
+            Ready to Build Your {specialty.name} Digital Presence?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get a free marketing consultation and discover how we can help you attract more patients.
+            Get a free consultation and see how an ethical, NMC-compliant digital presence can help
+            patients find accurate information about your practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="xl" asChild>
               <Link to="/contact">Schedule Free Consultation</Link>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <Link to="/testimonials">Read Success Stories</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

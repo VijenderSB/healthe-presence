@@ -11,11 +11,11 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [specialtiesOpen, setSpecialtiesOpen] = useState(false);
   const [citiesOpen, setCitiesOpen] = useState(false);
-  
+
   const topCities = cities.filter(c => c.tier === 1).slice(0, 8);
 
   const services = [
-    { label: "Medical Influencer Marketing", href: "/services/influencer-marketing", featured: true },
+    { label: "Personal Branding & Health Education", href: "/services/influencer-marketing", featured: true },
     { label: "Generative Engine Optimization (GEO)", href: "/services/geo", featured: true },
     { label: "Website Design", href: "/services/website-design" },
     { label: "Social Media", href: "/services/social-media" },
@@ -28,7 +28,6 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "About", href: "/about" },
-    { label: "Testimonials", href: "/testimonials" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Blog", href: "/blog" },
     { label: "Careers", href: "/careers" },
@@ -93,7 +92,7 @@ const Navbar = () => {
                   to="/specialties"
                   className="block px-4 py-2 text-primary font-semibold hover:bg-primary/10 transition-colors border-t border-border mt-2"
                 >
-                  View All 33 Specialties →
+                  View All Specialties →
                 </Link>
               </div>
             </div>
@@ -119,7 +118,7 @@ const Navbar = () => {
                   to="/cities"
                   className="block px-4 py-2 text-primary font-semibold hover:bg-primary/10 transition-colors border-t border-border mt-2"
                 >
-                  View All 200 Cities →
+                  View All Cities →
                 </Link>
               </div>
             </div>
@@ -191,7 +190,7 @@ const Navbar = () => {
                   className="transition-colors py-1 text-primary font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
-                  View All 33 Specialties →
+                  View All Specialties →
                 </Link>
               </div>
             )}
@@ -216,11 +215,11 @@ const Navbar = () => {
                   className="transition-colors py-1 text-primary font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
-                  View All 200 Cities →
+                  View All Cities →
                 </Link>
               </div>
             )}
-            
+
             {navLinks.map((link) => (
               <Link key={link.label} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2" onClick={() => setIsOpen(false)}>
                 {link.label}

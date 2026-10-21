@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -30,7 +30,7 @@ const openings = [
     department: "Creative",
     location: "Mumbai",
     type: "Full-time",
-    description: "Produce high-quality medical videos including doctor introductions, patient education, and testimonials."
+    description: "Produce high-quality medical videos including doctor introductions, patient education, and facility tours."
   },
   {
     title: "Social Media Specialist",
@@ -81,27 +81,27 @@ const benefits = [
 const Careers = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Careers at Transess | Medical Marketing Jobs India | Join Our Team</title>
-        <meta name="description" content="Join India's #1 medical marketing agency! Explore careers in digital marketing, content writing, video production, SEO & more. Flexible work, learning budget & meaningful impact." />
+        <meta name="description" content="Join Transess, a medical digital marketing agency. Explore careers in digital marketing, content writing, video production, SEO & more. Flexible work and a learning budget." />
         <meta name="keywords" content="Transess careers, medical marketing jobs India, healthcare digital marketing careers, marketing agency jobs, content writer jobs, SEO jobs India" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/careers`} />
         <meta property="og:title" content="Careers at Transess | Medical Marketing Jobs" />
-        <meta property="og:description" content="Join India's leading medical marketing agency. Meaningful work, great culture!" />
+        <meta property="og:description" content="Join a medical digital marketing agency. Meaningful work, great culture." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/careers`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Careers at Transess" />
         <meta name="twitter:description" content="Join our medical marketing team in India." />
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Careers" }]} />
       
       <PageHero
         badge="Careers"
         title="Join Our Mission to Transform Healthcare Marketing"
-        description="Be part of a team that's helping healthcare professionals reach more patients and save more lives through effective digital marketing."
+        description="Be part of a team that helps healthcare professionals communicate with patients through ethical, compliant digital marketing."
         backgroundImage={heroCareers}
         primaryCta={{ text: "View Open Positions", link: "#openings" }}
         secondaryCta={{ text: "Learn About Us", link: "/about" }}
@@ -140,7 +140,7 @@ const Careers = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-6 bg-background rounded-xl border border-border">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Mission-Driven Work</h3>
-                <p className="text-muted-foreground">Every campaign we run, every website we build, helps doctors reach patients who need them. Your work directly impacts healthcare outcomes.</p>
+                <p className="text-muted-foreground">Every campaign we run and every website we build helps doctors share accurate information with patients looking for their services.</p>
               </div>
               <div className="p-6 bg-background rounded-xl border border-border">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Continuous Learning</h3>
@@ -224,11 +224,11 @@ const Careers = () => {
               </span>
             </Link>
             
-            <Link to="/testimonials" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
-              <h3 className="text-xl font-semibold text-foreground mb-2">Client Impact</h3>
-              <p className="text-muted-foreground mb-4">Hear from the doctors we help.</p>
+            <Link to="/services" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Services</h3>
+              <p className="text-muted-foreground mb-4">See the kind of work our team delivers.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                Read Stories <ArrowRight className="w-4 h-4 ml-1" />
+                View Services <ArrowRight className="w-4 h-4 ml-1" />
               </span>
             </Link>
           </div>

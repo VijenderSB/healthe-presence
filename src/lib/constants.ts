@@ -4,5 +4,5 @@ export const SITE_CONFIG = {
   SITE_NAME: "Transess",
   PHONE: "+91-8447314061",
   EMAIL: "info@transess.com",
-  TAGLINE: "#1 Medical Digital Marketing Agency India",
+  TAGLINE: "Ethical, NMC-Compliant Medical Marketing for Doctors, Clinics & Hospitals",
 } as const;

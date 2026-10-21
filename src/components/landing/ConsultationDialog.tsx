@@ -130,7 +130,7 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
                 <Label htmlFor="message">What are you looking to achieve? (Optional)</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="e.g., More patient inquiries, better online reputation, video content..."
+                  placeholder="e.g., A new website, factual health content, better search visibility..."
                   rows={3}
                 />
               </div>

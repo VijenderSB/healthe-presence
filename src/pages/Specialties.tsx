@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -13,28 +13,28 @@ import { SITE_CONFIG } from "@/lib/constants";
 const Specialties = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Marketing for 33+ Specialties | Eye Care, Dental, IVF & More | Transess</title>
-        <meta name="description" content="Specialized healthcare marketing for 33+ medical specialties: Eye Care, Dental, Cardiology, IVF, Dermatology, Orthopedics & more. Expert SEO, social media & branding tailored to your specialty!" />
+      <Head>
+        <title>Medical Marketing by Specialty | Eye Care, Dental, IVF & More | Transess</title>
+        <meta name="description" content="Specialized healthcare marketing across medical specialties: Eye Care, Dental, Cardiology, IVF, Dermatology, Orthopedics & more. SEO, social media & branding tailored to your specialty." />
         <meta name="keywords" content="medical specialty marketing, eye care marketing, dental marketing India, cardiology marketing, IVF clinic marketing, dermatology digital marketing, orthopedic surgeon marketing" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/specialties`} />
-        
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Medical Marketing for 33+ Specialties | Transess" />
-        <meta property="og:description" content="Specialized healthcare marketing for every medical specialty in India." />
+        <meta property="og:title" content="Medical Marketing by Specialty | Transess" />
+        <meta property="og:description" content="Specialized healthcare marketing for medical specialties across India." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/specialties`} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marketing for 33+ Medical Specialties" />
-        <meta name="twitter:description" content="Specialized healthcare marketing for every specialty in India." />
+        <meta name="twitter:title" content="Medical Marketing by Specialty" />
+        <meta name="twitter:description" content="Specialized healthcare marketing for medical specialties in India." />
         
         <meta name="robots" content="index, follow" />
-      </Helmet>
+      </Head>
       
       <Navbar />
       <Breadcrumbs items={[{ label: "Medical Specialties" }]} />
@@ -59,7 +59,7 @@ const Specialties = () => {
               Find Your Medical Specialty
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We serve healthcare providers across 33+ medical specialties with customized digital marketing strategies
+              We serve healthcare providers across {specialties.length} medical specialties with customized digital marketing strategies
             </p>
           </div>
           
@@ -91,23 +91,9 @@ const Specialties = () => {
       {/* Stats Section */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">33+</div>
-              <div className="text-primary-foreground/80">Medical Specialties</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
-              <div className="text-primary-foreground/80">Healthcare Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">10M+</div>
-              <div className="text-primary-foreground/80">Patient Leads Generated</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">8+</div>
-              <div className="text-primary-foreground/80">Years Experience</div>
-            </div>
+          <div className="text-center">
+            <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{specialties.length}</div>
+            <div className="text-primary-foreground/80">Medical Specialties We Serve</div>
           </div>
         </div>
       </section>

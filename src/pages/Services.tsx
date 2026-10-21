@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -14,7 +14,7 @@ const services = [
   {
     icon: Brain,
     title: "Generative Engine Optimization (GEO)",
-    description: "Future-proof your practice. Get cited by ChatGPT, Google AI Overviews, and Perplexity when patients ask AI about doctors and treatments. The next frontier of medical marketing.",
+    description: "Help people find accurate, verifiable information about your practice when they ask AI assistants like ChatGPT, Google AI Overviews, and Perplexity about doctors and treatments.",
     link: "/services/geo",
     color: "bg-primary/10 text-primary",
     featured: true
@@ -22,7 +22,7 @@ const services = [
   {
     icon: Globe,
     title: "Medical Website Design",
-    description: "Professional, fast, mobile-responsive websites built specifically for healthcare professionals. HIPAA-compliant, SEO-optimized, and designed to convert visitors into patients.",
+    description: "Professional, fast, mobile-responsive websites built specifically for healthcare professionals. Data privacy aligned (DPDP Act, 2023), SEO-optimized, and designed to present clear, accurate information about your practice.",
     link: "/services/website-design",
     color: "bg-primary/10 text-primary"
   },
@@ -36,7 +36,7 @@ const services = [
   {
     icon: Video,
     title: "Video Production",
-    description: "Professional medical videos including doctor introductions, patient education, explainers, testimonials, and short-form content for social media.",
+    description: "Professional medical videos including doctor introductions, patient education, explainers, and short-form content for social media.",
     link: "/services/video-production",
     color: "bg-secondary text-secondary-foreground"
   },
@@ -50,7 +50,7 @@ const services = [
   {
     icon: Search,
     title: "SEO & Google Visibility",
-    description: "Get found by patients searching for doctors like you on Google. Local SEO, technical optimization, content strategy, and performance tracking.",
+    description: "Help people searching for health information find accurate details about your practice on Google. Local SEO, technical optimization, content strategy, and performance tracking.",
     link: "/services/seo",
     color: "bg-primary/10 text-primary"
   },
@@ -64,7 +64,7 @@ const services = [
   {
     icon: Heart,
     title: "Patient Engagement",
-    description: "Complete patient retention system with automated reminders, follow-ups, loyalty programs, and reputation management tools.",
+    description: "Patient communication tools including automated appointment reminders, follow-ups, and health information updates.",
     link: "/services/patient-engagement",
     color: "bg-accent/10 text-accent-foreground"
   }
@@ -73,9 +73,9 @@ const services = [
 const Services = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Medical Marketing Services India | SEO, Website, Social Media for Doctors | Transess</title>
-        <meta name="description" content="Complete 360° medical marketing services: doctor website design, healthcare SEO, social media management, video production, YouTube & patient engagement. Transform your practice today!" />
+        <meta name="description" content="Medical marketing services for doctors, clinics and hospitals: website design, healthcare SEO, social media management, video production, YouTube and patient communication. NMC-compliant approach." />
         <meta name="keywords" content="medical marketing services India, doctor website design, healthcare SEO services, medical video production, hospital social media marketing, patient engagement tools, clinic marketing" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services`} />
         <meta property="og:title" content="Medical Marketing Services | Transess India" />
@@ -86,7 +86,7 @@ const Services = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Marketing Services | Transess" />
         <meta name="twitter:description" content="Complete digital marketing for healthcare professionals in India." />
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services" }]} />
       
@@ -142,7 +142,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "Healthcare Focused", desc: "We understand medical regulations, patient psychology, and healthcare marketing nuances." },
-              { title: "Proven Results", desc: "500+ healthcare clients with documented growth in patient acquisition and engagement." },
+              { title: "Ethics-First", desc: "We follow the NMC's ethical advertising guidelines, so your communication stays factual and compliant." },
               { title: "Full-Service", desc: "One partner for all your digital marketing needs—no juggling multiple agencies." },
               { title: "Data-Driven", desc: "Every strategy is backed by analytics with transparent monthly reporting." }
             ].map((item, index) => (
@@ -163,7 +163,7 @@ const Services = () => {
               Popular Service Combinations
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              While you can choose individual services, these combinations deliver the best results.
+              While you can choose individual services, these combinations work well together.
             </p>
           </div>
           
@@ -204,7 +204,7 @@ const Services = () => {
                   Patient Engagement
                 </li>
               </ul>
-              <p className="text-sm text-muted-foreground">For practices ready to scale patient acquisition.</p>
+              <p className="text-sm text-muted-foreground">For practices ready to expand their digital presence.</p>
             </div>
             
             <div className="p-8 bg-card rounded-xl border border-border">

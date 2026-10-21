@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -7,9 +7,9 @@ import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { getCityBySlug, cities } from "@/data/cities";
-import { 
-  Search, Target, Globe, Video, Users, Megaphone, 
-  ArrowRight, CheckCircle, Star, MapPin, Building2,
+import {
+  Search, Target, Globe, Video, Users, Megaphone,
+  ArrowRight, CheckCircle, MapPin, Building2,
   Stethoscope, Heart, Camera, Share2
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.jpg";
@@ -19,32 +19,32 @@ const services = [
   {
     icon: Search,
     title: "Medical SEO",
-    description: "Rank #1 on Google for healthcare searches in your city"
+    description: "Help patients find accurate information about your practice in local search"
   },
   {
     icon: Target,
     title: "Google Ads",
-    description: "High-intent patient acquisition with targeted ad campaigns"
+    description: "Factual, compliant ad campaigns that share accurate practice information"
   },
   {
     icon: Globe,
     title: "Healthcare Website",
-    description: "Conversion-optimized websites for doctors & hospitals"
+    description: "Clear, accessible websites for doctors & hospitals"
   },
   {
     icon: Megaphone,
     title: "Social Media Marketing",
-    description: "Build trust & engagement with local patients"
+    description: "Factual, educational health content for local audiences"
   },
   {
     icon: Video,
     title: "Medical Video Production",
-    description: "Patient testimonials & educational content that converts"
+    description: "Doctor introductions & public health education content"
   },
   {
     icon: Users,
-    title: "Doctor Influencer Marketing",
-    description: "Build your personal brand as a medical professional"
+    title: "Personal Branding & Health Education",
+    description: "Build a credible professional presence through factual content"
   },
   {
     icon: Camera,
@@ -54,29 +54,29 @@ const services = [
   {
     icon: Share2,
     title: "Patient Engagement",
-    description: "WhatsApp marketing & patient retention strategies"
+    description: "Compliant reminders, follow-ups & patient communication"
   }
 ];
 
 const targetAudience = [
-  { icon: Stethoscope, title: "Doctors & Surgeons", desc: "Personal branding & patient acquisition" },
+  { icon: Stethoscope, title: "Doctors & Surgeons", desc: "Personal branding & public health education" },
   { icon: Building2, title: "Hospitals & Clinics", desc: "Complete digital marketing solutions" },
-  { icon: Heart, title: "Healthcare Influencers", desc: "Social media growth & monetization" },
-  { icon: Users, title: "Medical Professionals", desc: "Online reputation management" }
+  { icon: Heart, title: "Healthcare Educators", desc: "Factual health content & awareness" },
+  { icon: Users, title: "Medical Professionals", desc: "Accurate, compliant online presence" }
 ];
 
 const benefits = [
   "Local SEO optimized for your city",
-  "HIPAA-compliant marketing campaigns",
+  "Data-privacy-aware (DPDP Act) campaigns",
   "Dedicated account manager",
   "Monthly performance reports",
-  "Transparent ROI tracking",
+  "NMC-compliant, factual content",
   "24/7 support"
 ];
 
 const CityPage = () => {
   const location = useLocation();
-  const slug = location.pathname.slice(1);
+  const slug = location.pathname.replace(/^\/+|\/+$/g, ""); // strip leading/trailing slashes
   const city = getCityBySlug(slug);
 
   if (!city) {
@@ -99,7 +99,7 @@ const CityPage = () => {
     .filter(c => c.id !== city.id && c.state === city.state)
     .slice(0, 4);
 
-  const otherCities = relatedCities.length < 4 
+  const otherCities = relatedCities.length < 4
     ? cities.filter(c => c.id !== city.id && c.tier === city.tier).slice(0, 6 - relatedCities.length)
     : [];
 
@@ -107,12 +107,12 @@ const CityPage = () => {
 
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>{city.h1} | Transess - Healthcare Marketing</title>
         <meta name="description" content={city.metaDescription} />
         <meta name="keywords" content={city.keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-        
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${city.h1} | Transess`} />
@@ -121,21 +121,21 @@ const CityPage = () => {
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${city.h1} | Transess`} />
         <meta name="twitter:description" content={city.metaDescription} />
         <meta name="twitter:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
-        
+
         {/* Geo Tags */}
         <meta name="geo.region" content="IN" />
         <meta name="geo.placename" content={`${city.name}, ${city.state}`} />
-        
+
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Transess" />
-        
+
         {/* JSON-LD LocalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -184,18 +184,11 @@ const CityPage = () => {
               "https://www.facebook.com/transess",
               "https://www.instagram.com/transess",
               "https://www.linkedin.com/company/transess"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "500",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
+            ]
           })}
         </script>
-      </Helmet>
-      
+      </Head>
+
       <Navbar />
       <Breadcrumbs items={[{ label: "Cities", href: "/cities" }, { label: city.name }]} />
       <PageHero
@@ -217,14 +210,14 @@ const CityPage = () => {
               <span className="text-muted-foreground">• Population: {city.population}</span>
             </div>
             <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-              Looking for the best <strong>medical digital marketing agency in {city.name}</strong>? 
-              Transess is India's leading healthcare marketing partner, helping doctors, surgeons, 
-              hospitals, and clinics in {city.name} build powerful online presence and attract more patients.
+              Looking for an ethical <strong>medical digital marketing agency in {city.name}</strong>?
+              Transess is a healthcare marketing partner helping doctors, surgeons,
+              hospitals, and clinics in {city.name} build a clear, factual and NMC-compliant online presence.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Whether you're a solo practitioner, multi-specialty hospital, or healthcare influencer in {city.name}, 
-              our 360° digital marketing solutions are designed to help you dominate local search results, 
-              build patient trust, and grow your practice sustainably.
+              Whether you're a solo practitioner or a multi-specialty hospital in {city.name},
+              our 360° digital marketing solutions are designed to help patients find accurate
+              information about your practice — within professional ethics and NMC guidelines.
             </p>
           </div>
         </div>
@@ -241,7 +234,7 @@ const CityPage = () => {
               Healthcare Marketing for {city.name}
             </h2>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {targetAudience.map((item, index) => (
               <div key={index} className="p-6 bg-card rounded-xl border border-border text-center hover:shadow-lg transition-shadow">
@@ -270,7 +263,7 @@ const CityPage = () => {
               Comprehensive marketing solutions for healthcare providers in {city.name}, {city.state}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-shadow group">
@@ -294,12 +287,12 @@ const CityPage = () => {
                 Why Choose Transess
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Best Medical Marketing Agency in {city.name}
+                Ethical Medical Marketing in {city.name}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We understand the unique healthcare landscape of {city.name}. Our team combines 
-                deep local market knowledge with digital marketing expertise to deliver measurable 
-                results for doctors and hospitals in {city.state}.
+                We understand the healthcare landscape of {city.name}. Our team combines
+                local market knowledge with ethical, NMC-compliant digital marketing for
+                doctors and hospitals in {city.state}.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
@@ -311,41 +304,41 @@ const CityPage = () => {
               </div>
             </div>
             <div className="bg-card rounded-2xl p-8 border border-border">
-              <div className="flex items-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-primary text-primary" />
-                ))}
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <CheckCircle className="w-7 h-7 text-primary" />
               </div>
-              <blockquote className="text-lg text-foreground mb-6">
-                "Transess transformed our hospital's digital presence in {city.name}. We've seen 
-                a 400% increase in online patient inquiries. Their understanding of local healthcare 
-                marketing is exceptional."
-              </blockquote>
-              <p className="text-muted-foreground font-medium">— Verified Healthcare Client, {city.name}</p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Compliant by Design
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Every website, profile and piece of content we build for practices in {city.name} is
+                factual, verifiable and aligned with NMC ethical advertising guidelines — no patient
+                testimonials, no ratings, and no exaggerated claims.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Commitments Section */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
-              <div className="text-primary-foreground/80">Healthcare Clients</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Factual</div>
+              <div className="text-primary-foreground/80">Verifiable content only</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">200+</div>
-              <div className="text-primary-foreground/80">Cities Served</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">NMC-Aligned</div>
+              <div className="text-primary-foreground/80">Ethical advertising</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">10M+</div>
-              <div className="text-primary-foreground/80">Patient Leads</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">No Testimonials</div>
+              <div className="text-primary-foreground/80">No patient reviews or ratings</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">8+</div>
-              <div className="text-primary-foreground/80">Years Experience</div>
+              <div className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Transparent</div>
+              <div className="text-primary-foreground/80">Clear monthly reporting</div>
             </div>
           </div>
         </div>
@@ -365,10 +358,10 @@ const CityPage = () => {
                 We serve healthcare providers across India
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[...relatedCities, ...otherCities].slice(0, 6).map((related) => (
-                <Link 
+                <Link
                   key={related.id}
                   to={`/${related.slug}`}
                   className="group p-5 bg-card rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1"
@@ -389,7 +382,7 @@ const CityPage = () => {
 
             <div className="text-center mt-10">
               <Button variant="outline" size="lg" asChild>
-                <Link to="/cities">View All 200 Cities</Link>
+                <Link to="/cities">View All Cities</Link>
               </Button>
             </div>
           </div>
@@ -400,17 +393,18 @@ const CityPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Grow Your Practice in {city.name}?
+            Ready to Build Your Digital Presence in {city.name}?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get a free marketing consultation and discover how we can help you attract more patients in {city.name}.
+            Get a free consultation and see how an ethical, NMC-compliant digital presence can help
+            patients find accurate information about your practice in {city.name}.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="xl" asChild>
               <Link to="/contact">Schedule Free Consultation</Link>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <Link to="/testimonials">Read Success Stories</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

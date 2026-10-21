@@ -13,17 +13,17 @@ const CtaSection = () => {
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6">
-            Limited Time Offer
+            Get Started
           </span>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-secondary-foreground mb-6">
-            Start Growing Your Patient Base{" "}
-            <span className="text-accent">Today</span>
+            Build Your Ethical{" "}
+            <span className="text-accent">Digital Presence</span>
           </h2>
-          
+
           <p className="text-xl text-secondary-foreground/70 mb-8 max-w-2xl mx-auto">
-            Don't let another day pass while your competitors capture your potential patients. 
-            Book a free strategy session and discover how we can transform your practice.
+            Book a free, no-obligation strategy session to see how an NMC-compliant digital
+            presence can help patients find accurate information about your practice.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -50,7 +50,7 @@ const CtaSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />
-              Custom growth plan included
+              Custom digital presence plan
             </div>
           </div>
         </div>

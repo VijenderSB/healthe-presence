@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -14,7 +14,7 @@ const services = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "Dominate local search results. Get found by patients searching for doctors in your area."
+    description: "Help people in your area find accurate information about your practice in local search results."
   },
   {
     icon: Globe,
@@ -39,26 +39,26 @@ const services = [
   {
     icon: BarChart3,
     title: "Performance Tracking",
-    description: "Detailed monthly reports on rankings, traffic, and patient inquiries from organic search."
+    description: "Detailed monthly reports on rankings, traffic, and enquiries from organic search."
   }
 ];
 
 const SEO = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical SEO Services India | Doctor & Hospital SEO | Get First Page Rankings</title>
-        <meta name="description" content="Healthcare SEO services for doctors, clinics & hospitals. Local SEO, first-page Google rankings, keyword optimization. 77% patients search online - get found by them!" />
+      <Head>
+        <title>Medical SEO Services India | NMC-Compliant Healthcare SEO for Doctors & Hospitals</title>
+        <meta name="description" content="Healthcare SEO services for doctors, clinics & hospitals. Local SEO, keyword optimization and technical SEO to help patients find accurate information about your practice online." />
         <meta name="keywords" content="medical SEO India, doctor SEO services, hospital SEO, healthcare search engine optimization, local SEO for doctors, Google My Business optimization" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/seo`} />
         <meta property="og:title" content="Medical SEO Services | Transess India" />
-        <meta property="og:description" content="Get first-page Google rankings. Healthcare SEO for doctors & hospitals." />
+        <meta property="og:description" content="Healthcare SEO for doctors & hospitals that helps patients find accurate information about your practice." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/seo`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical SEO Services | Transess" />
-        <meta name="twitter:description" content="Get found by patients on Google. Healthcare SEO experts." />
+        <meta name="twitter:description" content="Healthcare SEO that helps patients find accurate information about your practice on Google." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -73,24 +73,24 @@ const SEO = () => {
               "@type": "Country",
               "name": "India"
             },
-            "description": "Healthcare SEO services for doctors, clinics & hospitals. Local SEO, first-page Google rankings, keyword optimization.",
+            "description": "Healthcare SEO services for doctors, clinics & hospitals. Local SEO, technical SEO and keyword optimization.",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock"
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "SEO" }]} />
       
       <PageHero
         badge="SEO & Google Visibility"
-        title="Get Found by Patients on Google"
-        description="Comprehensive SEO services designed for medical practices. Rank higher, get more visibility, and attract more patients through organic search."
+        title="NMC-Compliant Healthcare SEO"
+        description="Comprehensive SEO services designed for medical practices. We optimise your site with factual, verifiable information so people searching for health information can find your practice through organic search."
         backgroundImage={heroSeo}
-        primaryCta={{ text: "Improve Your Rankings", link: "/contact" }}
-        secondaryCta={{ text: "View Results", link: "/case-studies" }}
+        primaryCta={{ text: "Request a Consultation", link: "/contact" }}
+        secondaryCta={{ text: "See Our Work", link: "/case-studies" }}
       />
 
       {/* Services Grid */}
@@ -101,7 +101,7 @@ const SEO = () => {
               Our Medical SEO Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive approach to improving your online visibility and patient acquisition.
+              A comprehensive approach to improving your online visibility with accurate, verifiable information.
             </p>
           </div>
           
@@ -129,22 +129,22 @@ const SEO = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="text-4xl font-bold text-primary">77%</div>
-                  <p className="text-muted-foreground">of patients use search engines before booking a doctor's appointment</p>
+                  <div className="w-2 h-2 mt-3 bg-primary rounded-full shrink-0"></div>
+                  <p className="text-muted-foreground">Many people now search online for health information before choosing a doctor or clinic, so accurate, findable information matters.</p>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-4xl font-bold text-primary">46%</div>
-                  <p className="text-muted-foreground">of all Google searches have local intent</p>
+                  <div className="w-2 h-2 mt-3 bg-primary rounded-full shrink-0"></div>
+                  <p className="text-muted-foreground">Local searches often carry local intent, so well-structured local SEO helps nearby patients find your practice details.</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="text-4xl font-bold text-primary">75%</div>
-                  <p className="text-muted-foreground">of users never scroll past the first page of search results</p>
+                  <div className="w-2 h-2 mt-3 bg-primary rounded-full shrink-0"></div>
+                  <p className="text-muted-foreground">Clear, accurate listings and verifiable information make it easier for people to understand your services and qualifications.</p>
                 </div>
                 <div className="flex gap-4">
-                  <div className="text-4xl font-bold text-primary">88%</div>
-                  <p className="text-muted-foreground">of consumers trust online reviews as much as personal recommendations</p>
+                  <div className="w-2 h-2 mt-3 bg-primary rounded-full shrink-0"></div>
+                  <p className="text-muted-foreground">Good technical SEO helps search engines understand and index your content correctly.</p>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ const SEO = () => {
               Our SEO Process
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A proven methodology that delivers sustainable results.
+              A structured methodology focused on sustainable, long-term visibility.
             </p>
           </div>
           
@@ -186,10 +186,10 @@ const SEO = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Maximize Your SEO Results
+              Strengthen Your SEO
             </h2>
             <p className="text-lg text-muted-foreground">
-              SEO works best when combined with these services.
+              SEO works well when combined with these services.
             </p>
           </div>
           
@@ -210,7 +210,7 @@ const SEO = () => {
                 <Smartphone className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Website Design</h3>
-              <p className="text-muted-foreground mb-4">SEO-optimized websites built for rankings.</p>
+              <p className="text-muted-foreground mb-4">SEO-optimized websites built for search visibility.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </span>
@@ -232,7 +232,7 @@ const SEO = () => {
                 <FileText className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Patient Engagement</h3>
-              <p className="text-muted-foreground mb-4">Convert SEO traffic into loyal patients.</p>
+              <p className="text-muted-foreground mb-4">Help visitors find the information they need about your practice.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </span>
@@ -247,17 +247,17 @@ const SEO = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Ready to Rank Higher on Google?
+            Ready to Improve Your Search Visibility?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Get a free SEO audit and discover opportunities to improve your search visibility.
+            Get a free SEO audit and discover opportunities to improve how patients find accurate information about your practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="xl" asChild>
               <Link to="/contact">Get Free SEO Audit</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">Client Results</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

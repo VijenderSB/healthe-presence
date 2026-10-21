@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, CheckCircle, Phone, Mail, User, Building2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { submitLead } from "@/lib/submitLead";
 
 const LeadCaptureForm = () => {
   const { toast } = useToast();
@@ -14,6 +15,7 @@ const LeadCaptureForm = () => {
     phone: "",
     clinic: "",
     message: "",
+    botcheck: "", // honeypot — hidden from humans, bots fill it
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -34,22 +36,29 @@ const LeadCaptureForm = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Thank you for your inquiry!",
-      description: "Our team will contact you within 24 hours.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "", clinic: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      await submitLead({ ...formData, source: "Lead Capture Form" });
+      toast({
+        title: "Thank you for your inquiry!",
+        description: "Our team will contact you within 24 hours.",
+      });
+      setFormData({ name: "", email: "", phone: "", clinic: "", message: "", botcheck: "" });
+    } catch (error) {
+      console.error("Lead submission failed:", error);
+      toast({
+        title: "Something went wrong",
+        description:
+          error instanceof Error ? error.message : "Please try again, or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const benefits = [
     "Free 30-minute strategy consultation",
-    "Custom growth plan for your practice",
+    "Custom, NMC-compliant digital presence plan",
     "No commitment required",
     "Response within 24 hours",
   ];
@@ -64,11 +73,11 @@ const LeadCaptureForm = () => {
               Get Started Today
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-              Ready to <span className="text-gradient">Transform</span> Your Practice?
+              Ready to Build an <span className="text-gradient">Ethical</span> Digital Presence?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Schedule a free consultation with our medical marketing experts. 
-              We'll analyze your current digital presence and create a custom growth strategy.
+              Schedule a free consultation with our medical marketing team.
+              We'll review your current digital presence and outline an NMC-compliant plan.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -85,17 +94,17 @@ const LeadCaptureForm = () => {
             {/* Trust Badges */}
             <div className="flex items-center gap-6 p-4 rounded-xl bg-card border border-border">
               <div className="text-center">
-                <div className="text-2xl font-heading font-bold text-primary">500+</div>
-                <div className="text-xs text-muted-foreground">Doctors Trust Us</div>
+                <div className="text-base font-heading font-bold text-primary">NMC-Compliant</div>
+                <div className="text-xs text-muted-foreground">Ethical Advertising</div>
               </div>
               <div className="w-px h-10 bg-border" />
               <div className="text-center">
-                <div className="text-2xl font-heading font-bold text-primary">98%</div>
-                <div className="text-xs text-muted-foreground">Satisfaction Rate</div>
+                <div className="text-base font-heading font-bold text-primary">Factual</div>
+                <div className="text-xs text-muted-foreground">No Testimonials or Ratings</div>
               </div>
               <div className="w-px h-10 bg-border" />
               <div className="text-center">
-                <div className="text-2xl font-heading font-bold text-primary">24hr</div>
+                <div className="text-base font-heading font-bold text-primary">24hr</div>
                 <div className="text-xs text-muted-foreground">Response Time</div>
               </div>
             </div>
@@ -111,6 +120,16 @@ const LeadCaptureForm = () => {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="botcheck"
+                value={formData.botcheck}
+                onChange={handleChange}
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input

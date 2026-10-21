@@ -1,0 +1,85 @@
+# Transess — static prerendered site (vite-react-ssg, nested output).
+# Each route is a real /route/index.html file. These rules serve them at
+# clean URLs (/about, /services/seo, ...) with no trailing-slash redirect,
+# so the served URL matches the per-page <link rel="canonical">.
+
+Options -Indexes
+# Don't auto-redirect /about -> /about/ ; the rewrite below serves it directly.
+DirectorySlash Off
+ServerSignature Off
+
+# Branded 404 for any URL that isn't a real prerendered page.
+ErrorDocument 404 /404.html
+
+# ── Security headers ─────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Only executable scripts we ship or Google Analytics can run; inline is
+  # required by the gtag snippet and vite-react-ssg's hydration data.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://api.web3forms.com https://get.geojs.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'none'; upgrade-insecure-requests"
+  # No other site may embed this one (clickjacking protection)
+  Header always set X-Frame-Options "DENY"
+  # Browsers must not MIME-sniff responses into executable types
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  # HSTS: browsers refuse plain-HTTP for a year once they've seen HTTPS
+  # (spec-ignored when served over plain HTTP, so safe to send always)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header unset X-Powered-By
+  Header unset Server
+</IfModule>
+
+# ── Block access to sensitive files (dotfiles, source maps, configs) ─────
+<FilesMatch "^\.|\.(env|json|lock|md|toml|yml|yaml|sh|bak|sql|map)$">
+  Require all denied
+</FilesMatch>
+# Files the site actually serves at runtime stay reachable
+<FilesMatch "^(robots\.txt|site\.webmanifest|manifest\.json|static-loader-data-manifest-.*\.json)$">
+  Require all granted
+</FilesMatch>
+
+# ── Only the HTTP methods a static site needs ────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)$ [NC]
+  RewriteRule ^ - [F]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS (active once SSL is installed in hPanel)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Real files (assets, favicon, robots.txt, sitemap.xml, og-image) — serve as-is
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Clean URL -> prerendered page, served internally (no redirect):
+  #   /about        -> /about/index.html
+  #   /services/seo -> /services/seo/index.html
+  RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.*?)/?$ /$1/index.html [L]
+
+  # Anything else (unknown/removed path) -> real 404 status; ErrorDocument
+  # above serves the branded /404.html page.
+  RewriteRule ^ - [L,R=404]
+</IfModule>
+
+# Caching: hashed assets forever, HTML always revalidated so deploys show up.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -24,7 +24,7 @@ const features = [
   {
     icon: TrendingUp,
     title: "Growth Strategy",
-    description: "Proven strategies to increase followers, engagement, and ultimately patient inquiries."
+    description: "Strategies to grow an engaged audience and share helpful, accurate health information."
   },
   {
     icon: MessageCircle,
@@ -45,7 +45,7 @@ const features = [
 
 const platforms = [
   { name: "Instagram", description: "Visual storytelling and patient education" },
-  { name: "Facebook", description: "Community building and patient testimonials" },
+  { name: "Facebook", description: "Community building and health awareness" },
   { name: "LinkedIn", description: "Professional networking and thought leadership" },
   { name: "Twitter/X", description: "Real-time updates and healthcare news" }
 ];
@@ -53,13 +53,13 @@ const platforms = [
 const SocialMedia = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Social Media Marketing India | Doctor Instagram & Facebook | Transess</title>
-        <meta name="description" content="Social media marketing for doctors, clinics & hospitals. Instagram, Facebook, LinkedIn management. Build patient trust, 200% average growth rate. 100+ healthcare accounts managed!" />
+      <Head>
+        <title>Ethical Social Media for Doctors India | Instagram & Facebook Management | Transess</title>
+        <meta name="description" content="NMC-compliant social media management for doctors, clinics & hospitals. Instagram, Facebook and LinkedIn content that builds trust and shares accurate health information." />
         <meta name="keywords" content="medical social media marketing India, doctor social media, hospital Instagram marketing, healthcare Facebook, clinic social media management, doctor LinkedIn" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/social-media`} />
         <meta property="og:title" content="Medical Social Media Marketing | Transess India" />
-        <meta property="og:description" content="Social media management for doctors & hospitals. 200% average growth!" />
+        <meta property="og:description" content="Social media management for doctors & hospitals, focused on trust and accurate health information." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/social-media`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
@@ -87,7 +87,7 @@ const SocialMedia = () => {
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Social Media" }]} />
       
@@ -97,7 +97,7 @@ const SocialMedia = () => {
         description="End-to-end social media management for doctors, clinics, and hospitals. Connect with patients where they spend their time online."
         backgroundImage={heroSocial}
         primaryCta={{ text: "Start Growing", link: "/contact" }}
-        secondaryCta={{ text: "See Results", link: "/case-studies" }}
+        secondaryCta={{ text: "See Our Work", link: "/case-studies" }}
       />
 
       {/* Platforms */}
@@ -141,25 +141,6 @@ const SocialMedia = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "100+", label: "Healthcare Accounts" },
-              { value: "5M+", label: "Engagement Generated" },
-              { value: "200%", label: "Average Growth Rate" },
-              { value: "95%", label: "Client Retention" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Related Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -168,7 +149,7 @@ const SocialMedia = () => {
               Amplify Your Social Presence
             </h2>
             <p className="text-lg text-muted-foreground">
-              Pair social media with these services for maximum impact.
+              Pair social media with these services for greater impact.
             </p>
           </div>
           
@@ -226,17 +207,17 @@ const SocialMedia = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Ready to Dominate Social Media?
+            Ready to Build Your Social Presence?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's create a social media strategy that brings patients to your practice.
+            Let's create a social media strategy that shares accurate health information and builds trust in your practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="xl" asChild>
               <Link to="/contact">Get Your Strategy</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">Client Success Stories</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

@@ -4,33 +4,33 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: Eye,
-      title: "Low Online Visibility",
-      description: "Patients search online first. If they can't find you, they'll find your competitor.",
-    },
-    {
-      icon: Users,
-      title: "Rising Competition",
-      description: "More doctors are going digital. Those without an online presence get left behind.",
+      title: "Hard to Find Online",
+      description: "When accurate information about your practice isn't available online, patients can't easily find or verify it.",
     },
     {
       icon: MessageSquareOff,
       title: "Misinformation Spreads",
-      description: "Without your voice online, patients rely on unreliable sources for medical information.",
+      description: "Without a factual voice online, patients may rely on unreliable sources for medical information.",
     },
     {
       icon: Shield,
-      title: "Trust Deficit",
-      description: "No online reviews or content means patients question your credibility before walking in.",
+      title: "Credentials Not Visible",
+      description: "Patients value clear, verifiable information about your qualifications, registration and areas of practice.",
+    },
+    {
+      icon: Users,
+      title: "Fragmented Information",
+      description: "Scattered or outdated listings make it harder for patients to reach the right department or service.",
     },
     {
       icon: TrendingDown,
-      title: "Poor Reputation",
-      description: "A few negative reviews without positive content can destroy years of reputation.",
+      title: "Non-Compliant Content",
+      description: "Testimonials, ratings and exaggerated claims now carry regulatory risk under NMC guidelines.",
     },
     {
       icon: AlertTriangle,
-      title: "Patient Leakage",
-      description: "Existing patients leave when competitors engage them better online.",
+      title: "No Clear Digital Presence",
+      description: "A factual, well-organised online presence helps patients understand the care you provide.",
     },
   ];
 
@@ -42,12 +42,12 @@ const ProblemSection = () => {
             The Reality Check
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-secondary-foreground mb-6">
-            What Happens When Doctors{" "}
-            <span className="text-accent">Ignore Digital?</span>
+            Why an Ethical{" "}
+            <span className="text-accent">Digital Presence</span> Matters
           </h2>
           <p className="text-lg text-secondary-foreground/70">
-            In today's world, 77% of patients search online before choosing a healthcare provider. 
-            Without a strong digital presence, you're invisible to the majority of potential patients.
+            Many patients look online for health information before visiting a doctor. A clear,
+            factual and NMC-compliant presence helps them find accurate information about your practice.
           </p>
         </div>
 
@@ -73,9 +73,9 @@ const ProblemSection = () => {
 
         <div className="mt-12 p-6 md:p-8 rounded-2xl bg-accent/10 border border-accent/20 text-center">
           <p className="text-xl md:text-2xl font-heading font-semibold text-secondary-foreground">
-            "Every day without digital presence is a day of{" "}
-            <span className="text-accent">lost patients</span> and{" "}
-            <span className="text-accent">lost revenue.</span>"
+            Good healthcare communication is{" "}
+            <span className="text-accent">factual</span>, respects patients, and stays{" "}
+            <span className="text-accent">within professional ethics.</span>
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -12,7 +12,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 const featuredPost = {
   title: "The Complete Guide to Medical SEO in 2024",
-  excerpt: "Learn how to optimize your medical practice website for search engines and attract more patients through organic search. This comprehensive guide covers everything from local SEO to content strategy.",
+  excerpt: "Learn how to optimize your medical practice website for search engines so people searching for health information can find accurate details about your practice. This comprehensive guide covers everything from local SEO to content strategy.",
   author: "Dr. Marketing Team",
   date: "December 1, 2024",
   readTime: "12 min read",
@@ -24,7 +24,7 @@ const featuredPost = {
 const blogPosts = [
   {
     title: "5 Social Media Mistakes Doctors Make (And How to Avoid Them)",
-    excerpt: "Common pitfalls in medical social media marketing and proven strategies to build patient trust online.",
+    excerpt: "Common pitfalls in medical social media marketing and practical strategies to build patient trust online.",
     author: "Social Media Team",
     date: "November 28, 2024",
     readTime: "8 min read",
@@ -41,17 +41,17 @@ const blogPosts = [
     service: "video-production"
   },
   {
-    title: "Building Patient Trust Through Online Reviews",
-    excerpt: "A strategic approach to managing your online reputation and encouraging positive patient reviews.",
-    author: "Reputation Team",
+    title: "Building Patient Trust Through Accurate, Factual Information",
+    excerpt: "How clear, factual communication about your services helps patients make informed decisions and builds lasting trust.",
+    author: "Content Team",
     date: "November 22, 2024",
     readTime: "7 min read",
-    category: "Reputation",
+    category: "Patient Trust",
     service: "patient-engagement"
   },
   {
-    title: "The ROI of Digital Marketing for Healthcare",
-    excerpt: "Understanding the return on investment from digital marketing efforts in the healthcare industry.",
+    title: "The Value of an Ethical Digital Presence for Healthcare",
+    excerpt: "Understanding how an ethical, NMC-compliant digital presence supports patients and practices in the healthcare industry.",
     author: "Analytics Team",
     date: "November 18, 2024",
     readTime: "10 min read",
@@ -78,32 +78,32 @@ const blogPosts = [
   }
 ];
 
-const categories = ["All", "SEO", "Social Media", "Video Marketing", "Content", "Strategy", "Reputation"];
+const categories = ["All", "SEO", "Social Media", "Video Marketing", "Content", "Strategy", "Patient Trust"];
 
 const Blog = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Marketing Blog | Expert Tips for Doctors & Hospitals | Transess</title>
-        <meta name="description" content="Expert healthcare marketing tips, SEO guides, social media strategies & patient acquisition insights for doctors, clinics & hospitals. Free knowledge from industry experts!" />
-        <meta name="keywords" content="medical marketing blog, healthcare marketing tips, doctor SEO guide, hospital social media strategy, patient acquisition tips, clinic marketing ideas" />
+      <Head>
+        <title>Medical Marketing Blog | Insights for Doctors & Hospitals | Transess</title>
+        <meta name="description" content="Healthcare marketing insights, SEO guides and social media strategies for doctors, clinics & hospitals, with a focus on accurate, compliant communication." />
+        <meta name="keywords" content="medical marketing blog, healthcare marketing insights, doctor SEO guide, hospital social media strategy, clinic marketing ideas" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/blog`} />
         <meta property="og:title" content="Medical Marketing Blog | Transess" />
-        <meta property="og:description" content="Expert tips on healthcare SEO, social media & patient acquisition for doctors." />
+        <meta property="og:description" content="Healthcare SEO, social media and content insights for doctors and hospitals." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/blog`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Marketing Blog | Transess" />
-        <meta name="twitter:description" content="Expert healthcare marketing tips for doctors & hospitals." />
-      </Helmet>
+        <meta name="twitter:description" content="Healthcare marketing insights for doctors & hospitals." />
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Blog" }]} />
       
       <PageHero
         badge="Blog"
         title="Insights for Healthcare Marketing"
-        description="Expert tips, strategies, and insights to help you grow your medical practice through digital marketing."
+        description="Tips, strategies, and insights to help you communicate with patients through ethical digital marketing."
         backgroundImage={heroBlog}
       />
 

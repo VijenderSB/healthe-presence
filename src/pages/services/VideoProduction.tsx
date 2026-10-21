@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -33,26 +33,26 @@ const videoTypes = [
   },
   {
     icon: Sparkles,
-    title: "Testimonial Videos",
-    description: "Authentic patient success stories that build trust and credibility for your practice."
+    title: "Public Health Education Videos",
+    description: "Factual, educational videos explaining conditions, procedures and preventive care in clear, accessible language."
   },
   {
     icon: Video,
     title: "Facility Tours",
-    description: "Virtual tours of your clinic or hospital that make patients feel comfortable before their visit."
+    description: "Virtual tours of your clinic or hospital that help patients become familiar with the environment before their visit."
   }
 ];
 
 const VideoProduction = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Video Production India | Doctor Videos & Reels | 500+ Videos Created</title>
-        <meta name="description" content="Professional medical video production: doctor introductions, patient testimonials, explainers, reels & facility tours. 500+ videos produced, 10M+ views generated. 4K quality!" />
-        <meta name="keywords" content="medical video production India, doctor video content, hospital video marketing, healthcare reels, patient testimonial videos, medical explainer videos" />
+      <Head>
+        <title>Medical Video Production India | Doctor Videos & Reels | Transess</title>
+        <meta name="description" content="Medical video production: doctor introductions, public health education videos, explainers, reels & facility tours. Clear, factual video content for healthcare professionals." />
+        <meta name="keywords" content="medical video production India, doctor video content, hospital video marketing, healthcare reels, public health education videos, medical explainer videos" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/video-production`} />
         <meta property="og:title" content="Medical Video Production | Transess India" />
-        <meta property="og:description" content="Professional medical videos. 500+ produced, 10M+ views. Build patient trust!" />
+        <meta property="og:description" content="Clear, factual medical video content for doctors and hospitals." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/video-production`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
@@ -73,14 +73,14 @@ const VideoProduction = () => {
               "@type": "Country",
               "name": "India"
             },
-            "description": "Professional medical video production: doctor introductions, patient testimonials, explainers, reels & facility tours.",
+            "description": "Medical video production: doctor introductions, public health education videos, explainers, reels & facility tours.",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock"
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Video Production" }]} />
       
@@ -139,25 +139,6 @@ const VideoProduction = () => {
                 <div className="text-5xl font-bold text-primary/20 mb-4">{item.step}</div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "500+", label: "Videos Produced" },
-              { value: "85%", label: "Increase in Trust" },
-              { value: "10M+", label: "Views Generated" },
-              { value: "4K", label: "Ultra HD Quality" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -240,7 +221,7 @@ const VideoProduction = () => {
               <Link to="/contact">Book a Consultation</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">View Testimonials</Link>
+              <Link to="/case-studies">View Our Work</Link>
             </Button>
           </div>
         </div>

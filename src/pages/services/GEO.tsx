@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -62,7 +62,7 @@ const seoVsGeo = [
   {
     aspect: "User Behavior",
     seo: "User clicks a link from search results",
-    geo: "User gets answer directly from AI — your name is cited"
+    geo: "User reads an AI answer that may cite your practice"
   },
   {
     aspect: "Metrics",
@@ -79,26 +79,26 @@ const seoVsGeo = [
 const processSteps = [
   { step: "01", title: "AI Visibility Audit", desc: "We analyze how your practice currently appears (or doesn't) across ChatGPT, Google AI Overviews, Perplexity, and other AI platforms." },
   { step: "02", title: "Content Restructuring", desc: "Rewrite and create content in conversational, citation-friendly formats that AI engines prefer to reference." },
-  { step: "03", title: "Authority Amplification", desc: "Build E-E-A-T signals through doctor profiles, credentials, publications, and patient testimonials." },
+  { step: "03", title: "Authority Amplification", desc: "Build E-E-A-T signals through doctor profiles, credentials, and publications." },
   { step: "04", title: "Monitor & Optimize", desc: "Track AI citations, adjust strategy based on which queries surface your practice, and stay ahead of algorithm changes." }
 ];
 
 const GEO = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Generative Engine Optimization (GEO) for Doctors | AI Search Visibility | Transess</title>
-        <meta name="description" content="Get your medical practice cited by ChatGPT, Google AI Overviews & Perplexity. GEO is the future of healthcare marketing — go beyond traditional SEO with AI-optimized content." />
+        <meta name="description" content="Help your medical practice appear in ChatGPT, Google AI Overviews & Perplexity with accurate, verifiable information. GEO complements traditional SEO with AI-optimized content." />
         <meta name="keywords" content="generative engine optimization, GEO for doctors, AI search optimization healthcare, ChatGPT medical marketing, AI visibility for hospitals, doctor AI search, GEO vs SEO" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/geo`} />
         <meta property="og:title" content="GEO for Doctors | AI-Powered Visibility | Transess" />
-        <meta property="og:description" content="Future-proof your practice. Get cited by AI engines like ChatGPT, Gemini & Perplexity with Generative Engine Optimization." />
+        <meta property="og:description" content="Help AI engines like ChatGPT, Gemini & Perplexity cite accurate information about your practice with Generative Engine Optimization." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/geo`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Generative Engine Optimization for Healthcare | Transess" />
-        <meta name="twitter:description" content="Be the answer. Get your practice recommended by AI assistants patients are already using." />
+        <meta name="twitter:description" content="Make accurate information about your practice available to the AI assistants patients are already using." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -110,16 +110,16 @@ const GEO = () => {
             "serviceType": "Generative Engine Optimization"
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Generative Engine Optimization (GEO)" }]} />
 
       <PageHero
-        badge="🚀 The Future of Medical Marketing"
+        badge="AI Search Visibility"
         title="Generative Engine Optimization (GEO)"
-        description="Patients are no longer just Googling — they're asking ChatGPT, Gemini, and Perplexity. Is your practice showing up in AI-generated answers? GEO ensures it does."
+        description="People are increasingly asking AI assistants like ChatGPT, Gemini, and Perplexity about health topics. GEO helps your practice appear in AI-generated answers with accurate, verifiable information."
         backgroundImage={heroGeo}
-        primaryCta={{ text: "Get AI-Ready Now", link: "/contact" }}
+        primaryCta={{ text: "Request a Consultation", link: "/contact" }}
         secondaryCta={{ text: "See How It Works", link: "#geo-vs-seo" }}
       />
 
@@ -134,7 +134,7 @@ const GEO = () => {
               What is Generative Engine Optimization?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              GEO is the practice of optimizing your digital presence so that <strong className="text-foreground">AI-powered search engines cite your practice</strong> when patients ask health-related questions. While SEO gets you ranked on Google's link list, GEO gets you <strong className="text-foreground">mentioned by name</strong> in AI-generated answers.
+              GEO is the practice of optimizing your digital presence so that <strong className="text-foreground">AI-powered search engines can cite your practice</strong> when people ask health-related questions. While SEO focuses on Google's link list, GEO focuses on making your accurate, verifiable information available for AI-generated answers.
             </p>
           </div>
 
@@ -144,21 +144,21 @@ const GEO = () => {
                 <Sparkles className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">AI-First Discovery</h3>
-              <p className="text-muted-foreground">40% of Gen Z uses TikTok & ChatGPT instead of Google. The shift to AI search is already here.</p>
+              <p className="text-muted-foreground">More people are turning to AI assistants alongside traditional search. The shift to AI search is already underway.</p>
             </div>
             <div className="text-center p-8 bg-card rounded-xl border border-border">
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Zero-Click Future</h3>
-              <p className="text-muted-foreground">AI Overviews answer queries directly — users may never scroll to traditional results. You need to be IN the answer.</p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Answer-Based Search</h3>
+              <p className="text-muted-foreground">AI Overviews often answer queries directly, so it helps to have accurate information available within those answers.</p>
             </div>
             <div className="text-center p-8 bg-card rounded-xl border border-border">
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">First-Mover Advantage</h3>
-              <p className="text-muted-foreground">Most doctors haven't heard of GEO yet. Early adopters will dominate AI search results in their specialty.</p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">An Emerging Channel</h3>
+              <p className="text-muted-foreground">GEO is still new in healthcare, so there is an opportunity to establish accurate information about your practice early.</p>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ const GEO = () => {
                 <Search className="w-8 h-8 text-muted-foreground" />
                 <h3 className="text-xl font-semibold text-foreground">Traditional SEO</h3>
               </div>
-              <p className="text-muted-foreground mb-4 text-sm italic">"Best cardiologist in Mumbai"</p>
+              <p className="text-muted-foreground mb-4 text-sm italic">"cardiologist in Mumbai"</p>
               <div className="space-y-3">
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <CheckCircle2 className="w-4 h-4 mt-0.5 text-primary shrink-0" />
@@ -223,19 +223,19 @@ const GEO = () => {
                 <Brain className="w-8 h-8 text-primary" />
                 <h3 className="text-xl font-semibold text-foreground">GEO</h3>
               </div>
-              <p className="text-muted-foreground mb-4 text-sm italic">"Who's the best cardiologist in Mumbai?"</p>
+              <p className="text-muted-foreground mb-4 text-sm italic">"Which cardiologists practise in Mumbai?"</p>
               <div className="space-y-3">
                 <div className="flex items-start gap-2 text-sm text-foreground">
                   <CheckCircle2 className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-                  <span><strong>AI directly recommends your name</strong> in its response</span>
+                  <span><strong>AI may cite your practice by name</strong> in its response</span>
                 </div>
                 <div className="flex items-start gap-2 text-sm text-foreground">
                   <CheckCircle2 className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-                  <span>Patient sees your credentials & expertise instantly</span>
+                  <span>People can see your credentials and areas of expertise</span>
                 </div>
                 <div className="flex items-start gap-2 text-sm text-foreground">
                   <CheckCircle2 className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-                  <span>You're the featured recommendation — no competition</span>
+                  <span>Accurate, verifiable information is surfaced in context</span>
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@ const GEO = () => {
               Our GEO Process
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A proven 4-step framework to get your practice recommended by AI.
+A clear 4-step framework to make accurate information about your practice available to AI engines.
             </p>
           </div>
 
@@ -293,31 +293,12 @@ const GEO = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {[
-              { stat: "1B+", label: "Weekly ChatGPT users globally" },
-              { stat: "40%", label: "Gen Z prefers AI over Google" },
-              { stat: "60%", label: "AI Overviews reduce clicks to sites" },
-              { stat: "Early", label: "First-mover advantage is NOW" }
-            ].map((item, index) => (
-              <div key={index}>
-                <div className="text-4xl md:text-5xl font-black text-primary-foreground mb-2">{item.stat}</div>
-                <p className="text-primary-foreground/70">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Related Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Works Best With</h2>
-            <p className="text-muted-foreground">GEO delivers maximum impact when combined with these services.</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Works Well With</h2>
+            <p className="text-muted-foreground">GEO works well alongside these services.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
@@ -343,10 +324,10 @@ const GEO = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Don't Wait for AI to Leave You Behind
+            Make Your Practice Discoverable in AI Search
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            The doctors who optimize for AI search today will own the patient pipeline of tomorrow.
+            Let's make accurate, verifiable information about your practice available to the AI tools people are already using.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="xl" asChild>

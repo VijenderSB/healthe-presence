@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -14,7 +14,7 @@ const services = [
   {
     icon: Settings,
     title: "Channel Setup & Optimization",
-    description: "Professional channel setup with optimized branding, descriptions, and settings for maximum discoverability."
+    description: "Professional channel setup with optimized branding, descriptions, and settings for better discoverability."
   },
   {
     icon: FileVideo,
@@ -29,7 +29,7 @@ const services = [
   {
     icon: Users,
     title: "Subscriber Growth",
-    description: "Proven strategies to grow your subscriber base with engaged, quality followers."
+    description: "Strategies to grow your subscriber base with engaged, relevant viewers."
   },
   {
     icon: BarChart,
@@ -46,13 +46,13 @@ const services = [
 const YouTubeManagement = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Doctor YouTube Management India | Grow Medical YouTube Channel | Transess</title>
-        <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, SEO, content strategy, subscriber growth. 50+ channels managed, 10M+ views, 500K+ subscribers gained!" />
+      <Head>
+        <title>Doctor YouTube Management India | Medical YouTube Channel Management | Transess</title>
+        <meta name="description" content="YouTube channel management for doctors & hospitals. Channel setup, SEO, content strategy and subscriber growth to help you share accurate health information through video." />
         <meta name="keywords" content="doctor YouTube channel management, medical YouTube marketing, hospital YouTube SEO, healthcare video channel, doctor content creator, medical thought leader" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/youtube-management`} />
         <meta property="og:title" content="Doctor YouTube Management | Transess India" />
-        <meta property="og:description" content="Grow your medical YouTube channel. 50+ doctors trust us. 500K+ subscribers gained!" />
+        <meta property="og:description" content="Grow your medical YouTube channel and share accurate health information through video." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/youtube-management`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
@@ -80,7 +80,7 @@ const YouTubeManagement = () => {
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "YouTube Management" }]} />
       
@@ -90,7 +90,7 @@ const YouTubeManagement = () => {
         description="Complete YouTube channel management including setup, optimization, content strategy, and subscriber growth for healthcare professionals."
         backgroundImage={heroYoutube}
         primaryCta={{ text: "Grow Your Channel", link: "/contact" }}
-        secondaryCta={{ text: "See Success Stories", link: "/case-studies" }}
+        secondaryCta={{ text: "See Our Work", link: "/case-studies" }}
       />
 
       {/* Services Grid */}
@@ -119,25 +119,6 @@ const YouTubeManagement = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "50+", label: "Channels Managed" },
-              { value: "10M+", label: "Total Views Generated" },
-              { value: "500K+", label: "Subscribers Gained" },
-              { value: "95%", label: "Client Satisfaction" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why YouTube */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -147,24 +128,20 @@ const YouTubeManagement = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-6 bg-card rounded-xl border border-border">
-                <div className="text-4xl font-bold text-primary mb-2">2nd</div>
-                <h3 className="font-semibold text-foreground mb-2">Largest Search Engine</h3>
-                <p className="text-muted-foreground">YouTube is the second-largest search engine after Google. Patients are actively searching for health information.</p>
+                <h3 className="font-semibold text-foreground mb-2">A Major Search Engine</h3>
+                <p className="text-muted-foreground">YouTube is one of the most-used search engines, and people regularly look there for health information.</p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
-                <div className="text-4xl font-bold text-primary mb-2">85%</div>
-                <h3 className="font-semibold text-foreground mb-2">Trust Factor</h3>
-                <p className="text-muted-foreground">Patients who watch a doctor's video before visiting report 85% higher trust in that healthcare provider.</p>
+                <h3 className="font-semibold text-foreground mb-2">Builds Familiarity</h3>
+                <p className="text-muted-foreground">Video lets people see and hear you before a visit, which can help build familiarity and confidence.</p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
-                <div className="text-4xl font-bold text-primary mb-2">500M+</div>
-                <h3 className="font-semibold text-foreground mb-2">Health Searches Daily</h3>
-                <p className="text-muted-foreground">Over 500 million health-related searches happen on YouTube every day. Are you capturing that audience?</p>
+                <h3 className="font-semibold text-foreground mb-2">Patient Education</h3>
+                <p className="text-muted-foreground">Video is a clear format for explaining conditions, procedures, and aftercare in accessible language.</p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
-                <div className="text-4xl font-bold text-primary mb-2">Forever</div>
                 <h3 className="font-semibold text-foreground mb-2">Evergreen Content</h3>
-                <p className="text-muted-foreground">Unlike social media posts, YouTube videos continue generating views and patients for years after publishing.</p>
+                <p className="text-muted-foreground">Unlike most social media posts, YouTube videos remain discoverable for years after publishing.</p>
               </div>
             </div>
           </div>
@@ -179,7 +156,7 @@ const YouTubeManagement = () => {
               Complete Your Video Strategy
             </h2>
             <p className="text-lg text-muted-foreground">
-              Pair YouTube management with these services for maximum reach.
+              Pair YouTube management with these services for broader reach.
             </p>
           </div>
           
@@ -240,14 +217,14 @@ const YouTubeManagement = () => {
             Ready to Become a YouTube Authority?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's build a YouTube channel that establishes you as a leader in your specialty.
+            Let's build a YouTube channel that shares accurate, helpful health information in your specialty.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="xl" asChild>
               <Link to="/contact">Get Started Today</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">Read Success Stories</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { contactFormSchema, type ContactFormData } from "@/lib/contactFormSchema";
-import { supabase } from "@/integrations/supabase/client";
+import { submitLead } from "@/lib/submitLead";
 import { toast } from "sonner";
 import {
   Form,
@@ -20,7 +20,6 @@ import {
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [formLoadTime] = useState(Date.now());
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -38,39 +37,24 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Get honeypot value
+      // Honeypot: if the hidden field is filled, it's a bot — pretend success.
       const honeypotField = document.getElementById("website") as HTMLInputElement;
-      const honeypotValue = honeypotField?.value || "";
-
-      const response = await supabase.functions.invoke("submit-contact", {
-        body: {
-          ...data,
-          website: honeypotValue, // Honeypot
-          formLoadTime, // Time tracking
-        },
-      });
-
-      if (response.error) {
-        throw new Error(response.error.message || "Failed to submit form");
-      }
-
-      const result = response.data;
-
-      if (result.error) {
-        if (result.cooldown) {
-          toast.error(result.error);
-        } else {
-          toast.error(result.error);
-        }
+      if (honeypotField?.value) {
+        setIsSuccess(true);
+        form.reset();
         return;
       }
+
+      await submitLead({ ...data, source: "Contact Page" });
 
       setIsSuccess(true);
       toast.success("Thank you! We'll get back to you within 24 hours.");
       form.reset();
     } catch (error) {
       console.error("Form submission error:", error);
-      toast.error("Something went wrong. Please try again or call us directly.");
+      toast.error(
+        error instanceof Error ? error.message : "Something went wrong. Please try again or call us directly."
+      );
     } finally {
       setIsSubmitting(false);
     }

@@ -15,8 +15,8 @@ export const specialties: Specialty[] = [
     name: "Eye Care / Ophthalmology",
     slug: "eyecare-digital-marketing-agency-india",
     h1: "Eyecare Digital Marketing Agency in India",
-    h2: "Grow Your Eye Hospital & LASIK Clinic with High-Intent Patients",
-    description: "Specialized digital marketing for ophthalmologists, eye hospitals, and LASIK clinics. Attract patients seeking cataract surgery, LASIK, glaucoma treatment, and comprehensive eye care services.",
+    h2: "Digital Marketing for Eye Hospitals & LASIK Clinics",
+    description: "Specialized digital marketing for ophthalmologists, eye hospitals, and LASIK clinics. Reach patients seeking cataract surgery, LASIK, glaucoma treatment, and comprehensive eye care services.",
     keywords: ["eye care marketing", "ophthalmology marketing", "LASIK clinic marketing", "eye hospital digital marketing"],
     icon: "Eye"
   },
@@ -25,8 +25,8 @@ export const specialties: Specialty[] = [
     name: "Dental",
     slug: "dental-digital-marketing-agency-india",
     h1: "Dental Digital Marketing Agency in India",
-    h2: "Get More Dental Patients with SEO & Google Ads",
-    description: "Results-driven digital marketing for dental clinics and hospitals. From general dentistry to implants, orthodontics, and cosmetic procedures—we help you attract and retain patients.",
+    h2: "Digital Marketing for Dental Clinics with SEO & Google Ads",
+    description: "Ethical digital marketing for dental clinics and hospitals. From general dentistry to implants, orthodontics, and cosmetic procedures—we help you inform and stay connected with patients.",
     keywords: ["dental marketing", "dentist digital marketing", "dental clinic SEO", "dental implant marketing"],
     icon: "Smile"
   },
@@ -35,8 +35,8 @@ export const specialties: Specialty[] = [
     name: "Cosmetic / Aesthetic",
     slug: "cosmetic-digital-marketing-agency-india",
     h1: "Cosmetic Digital Marketing Agency in India",
-    h2: "High-Conversion Marketing for Skin, Hair & Aesthetic Clinics",
-    description: "Premium digital marketing for cosmetic surgery centers and aesthetic clinics. Showcase your transformations, build trust, and attract high-value patients seeking enhancement procedures.",
+    h2: "Digital Marketing for Skin, Hair & Aesthetic Clinics",
+    description: "Specialized digital marketing for cosmetic surgery centers and aesthetic clinics. Share factual information about your procedures and services, and build trust with patients seeking enhancement procedures.",
     keywords: ["cosmetic surgery marketing", "aesthetic clinic marketing", "plastic surgery digital marketing"],
     icon: "Sparkles"
   },
@@ -55,8 +55,8 @@ export const specialties: Specialty[] = [
     name: "Hair Transplant",
     slug: "hair-transplant-digital-marketing-agency-india",
     h1: "Hair Transplant Digital Marketing Agency in India",
-    h2: "Attract High-Value Hair Restoration Patients",
-    description: "Expert digital marketing for hair transplant clinics and restoration centers. Reach patients seeking FUE, FUT, PRP therapy, and other hair loss solutions.",
+    h2: "Digital Marketing for Hair Restoration Clinics",
+    description: "Specialized digital marketing for hair transplant clinics and restoration centers. Reach patients seeking FUE, FUT, PRP therapy, and other hair loss solutions.",
     keywords: ["hair transplant marketing", "hair restoration marketing", "FUE clinic marketing"],
     icon: "Scissors"
   },
@@ -65,8 +65,8 @@ export const specialties: Specialty[] = [
     name: "IVF & Fertility",
     slug: "ivf-digital-marketing-agency-india",
     h1: "IVF Digital Marketing Agency in India",
-    h2: "Trusted Marketing Solutions for Fertility Clinics",
-    description: "Sensitive, results-focused marketing for IVF centers and fertility clinics. We understand the patient journey and create campaigns that build trust and generate qualified leads.",
+    h2: "Marketing Solutions for Fertility Clinics",
+    description: "Sensitive marketing for IVF centers and fertility clinics. We understand the patient journey and create campaigns that build trust and share accurate information.",
     keywords: ["IVF marketing", "fertility clinic marketing", "infertility treatment marketing"],
     icon: "Baby"
   },
@@ -135,7 +135,7 @@ export const specialties: Specialty[] = [
     name: "Oncology (Cancer Care)",
     slug: "oncology-digital-marketing-agency-india",
     h1: "Oncology Digital Marketing Agency in India",
-    h2: "Reputation-Driven Marketing for Cancer Hospitals",
+    h2: "Ethical Marketing for Cancer Hospitals",
     description: "Compassionate marketing for oncology centers and cancer hospitals. Build trust, showcase expertise, and reach patients seeking quality cancer care.",
     keywords: ["oncology marketing", "cancer hospital marketing", "cancer care marketing"],
     icon: "Ribbon"
@@ -146,7 +146,7 @@ export const specialties: Specialty[] = [
     slug: "diagnostic-lab-digital-marketing-agency-india",
     h1: "Diagnostic Lab Digital Marketing Agency in India",
     h2: "Grow Your Pathology Lab with Local SEO & Ads",
-    description: "Results-driven marketing for diagnostic laboratories and pathology centers. Increase test bookings with local SEO, Google Ads, and targeted campaigns.",
+    description: "Ethical marketing for diagnostic laboratories and pathology centers. Support informed patient choices with local SEO, Google Ads, and factual campaigns.",
     keywords: ["diagnostic lab marketing", "pathology lab marketing", "medical lab digital marketing"],
     icon: "TestTube"
   },
@@ -155,7 +155,7 @@ export const specialties: Specialty[] = [
     name: "Radiology & Imaging",
     slug: "radiology-digital-marketing-agency-india",
     h1: "Radiology Digital Marketing Agency in India",
-    h2: "Increase MRI, CT Scan & Imaging Bookings",
+    h2: "Digital Marketing for Imaging & Diagnostic Centers",
     description: "Specialized marketing for radiology centers and imaging facilities. From MRI to CT scans, we help you reach patients and referring physicians.",
     keywords: ["radiology marketing", "imaging center marketing", "MRI center digital marketing"],
     icon: "Scan"
@@ -165,7 +165,7 @@ export const specialties: Specialty[] = [
     name: "General Physician",
     slug: "physician-digital-marketing-agency-india",
     h1: "Physician Digital Marketing Agency in India",
-    h2: "Patient Acquisition for Family & Internal Medicine Doctors",
+    h2: "Digital Marketing for Family & Internal Medicine Doctors",
     description: "Comprehensive digital marketing for general physicians and family doctors. Build your local presence and become the trusted healthcare provider in your community.",
     keywords: ["physician marketing", "general doctor marketing", "family medicine marketing"],
     icon: "Stethoscope"
@@ -206,7 +206,7 @@ export const specialties: Specialty[] = [
     slug: "gastroenterology-digital-marketing-agency-india",
     h1: "Gastroenterology Digital Marketing Agency in India",
     h2: "Reach Patients Seeking Liver & Digestive Care",
-    description: "Expert marketing for gastroenterologists and GI clinics. From liver care to digestive disorders, we help you reach patients actively seeking treatment.",
+    description: "Specialized marketing for gastroenterologists and GI clinics. From liver care to digestive disorders, we help you reach patients actively seeking treatment.",
     keywords: ["gastroenterology marketing", "GI doctor marketing", "liver specialist marketing"],
     icon: "Activity"
   },
@@ -255,8 +255,8 @@ export const specialties: Specialty[] = [
     name: "Rehabilitation & Physiotherapy",
     slug: "physiotherapy-digital-marketing-agency-india",
     h1: "Physiotherapy Digital Marketing Agency in India",
-    h2: "Get More Rehab & Physio Appointments",
-    description: "Results-driven marketing for physiotherapists and rehabilitation centers. Attract patients recovering from injuries, surgeries, or seeking preventive care.",
+    h2: "Digital Marketing for Rehab & Physiotherapy Clinics",
+    description: "Ethical marketing for physiotherapists and rehabilitation centers. Reach patients recovering from injuries, surgeries, or seeking preventive care.",
     keywords: ["physiotherapy marketing", "rehab center marketing", "physio clinic digital marketing"],
     icon: "Dumbbell"
   },
@@ -306,7 +306,7 @@ export const specialties: Specialty[] = [
     slug: "hospital-digital-marketing-agency-india",
     h1: "Hospital Digital Marketing Agency in India",
     h2: "End-to-End Digital Marketing for Hospitals",
-    description: "Complete digital marketing solutions for multi-specialty hospitals. From brand building to department-specific campaigns, we drive patient growth across all specialties.",
+    description: "Complete digital marketing solutions for multi-specialty hospitals. From brand building to department-specific campaigns, we support clear, factual communication across all specialties.",
     keywords: ["hospital marketing", "multi-specialty hospital marketing", "healthcare marketing"],
     icon: "Building2"
   },
@@ -315,8 +315,8 @@ export const specialties: Specialty[] = [
     name: "Doctor Personal Branding",
     slug: "doctor-digital-marketing-agency-india",
     h1: "Doctor Digital Marketing Agency in India",
-    h2: "Personal Branding & Patient Acquisition for Doctors",
-    description: "Build your personal brand as a medical professional. Establish thought leadership, grow your online presence, and attract more patients to your practice.",
+    h2: "Personal Branding & Public Health Education for Doctors",
+    description: "Build your personal brand as a medical professional. Establish thought leadership, grow your online presence, and share accurate information about your practice.",
     keywords: ["doctor personal branding", "physician marketing", "medical personal brand"],
     icon: "User"
   },

@@ -23,7 +23,7 @@ export const cities: City[] = [
     population: "20M+",
     h1: "Medical Digital Marketing Agency in Mumbai",
     h2: "360° Healthcare Marketing for Doctors, Hospitals & Clinics in Mumbai",
-    metaDescription: "Top medical digital marketing agency in Mumbai. SEO, social media, video production & branding for doctors, hospitals & clinics. Get more patients today!",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mumbai. SEO, social media, video production & branding for doctors, hospitals & clinics. NMC-compliant and factual.",
     keywords: ["medical marketing mumbai", "healthcare marketing mumbai", "doctor marketing agency mumbai", "hospital digital marketing mumbai"]
   },
   {
@@ -35,7 +35,7 @@ export const cities: City[] = [
     population: "19M+",
     h1: "Medical Digital Marketing Agency in Delhi",
     h2: "Complete Digital Marketing Solutions for Healthcare in Delhi NCR",
-    metaDescription: "Leading medical digital marketing agency in Delhi. Grow your clinic with SEO, Google Ads, social media & patient engagement strategies.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Delhi. Ethical healthcare marketing — SEO, Google Ads, social media & patient engagement strategies.",
     keywords: ["medical marketing delhi", "healthcare marketing delhi ncr", "doctor marketing agency delhi", "hospital marketing delhi"]
   },
   {
@@ -47,7 +47,7 @@ export const cities: City[] = [
     population: "12M+",
     h1: "Medical Digital Marketing Agency in Bangalore",
     h2: "Data-Driven Healthcare Marketing for Bangalore's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Bangalore. Specialized healthcare SEO, social media & branding for doctors and hospitals.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bangalore. Specialized healthcare SEO, social media & branding for doctors and hospitals.",
     keywords: ["medical marketing bangalore", "healthcare marketing bangalore", "doctor marketing agency bangalore", "hospital digital marketing bengaluru"]
   },
   {
@@ -58,8 +58,8 @@ export const cities: City[] = [
     tier: 1,
     population: "10M+",
     h1: "Medical Digital Marketing Agency in Hyderabad",
-    h2: "Premier Healthcare Marketing Partner for Hyderabad's Doctors & Hospitals",
-    metaDescription: "Top-rated medical digital marketing agency in Hyderabad. SEO, video marketing & social media for healthcare professionals.",
+    h2: "Ethical Healthcare Marketing Partner for Hyderabad's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Hyderabad. SEO, video marketing & social media for healthcare professionals.",
     keywords: ["medical marketing hyderabad", "healthcare marketing hyderabad", "doctor marketing agency hyderabad", "hospital marketing telangana"]
   },
   {
@@ -70,8 +70,8 @@ export const cities: City[] = [
     tier: 1,
     population: "11M+",
     h1: "Medical Digital Marketing Agency in Chennai",
-    h2: "Result-Oriented Healthcare Marketing for Chennai's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Chennai. Comprehensive healthcare marketing solutions for doctors, surgeons & hospitals.",
+    h2: "Ethical Healthcare Marketing for Chennai's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Chennai. Comprehensive healthcare marketing solutions for doctors, surgeons & hospitals.",
     keywords: ["medical marketing chennai", "healthcare marketing chennai", "doctor marketing agency chennai", "hospital digital marketing tamil nadu"]
   },
   {
@@ -82,8 +82,8 @@ export const cities: City[] = [
     tier: 1,
     population: "14M+",
     h1: "Medical Digital Marketing Agency in Kolkata",
-    h2: "Trusted Healthcare Marketing Partner for Kolkata's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Kolkata. Expert SEO, social media & video production for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Partner for Kolkata's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kolkata. SEO, social media & video production for healthcare providers.",
     keywords: ["medical marketing kolkata", "healthcare marketing kolkata", "doctor marketing agency kolkata", "hospital marketing west bengal"]
   },
   {
@@ -95,7 +95,7 @@ export const cities: City[] = [
     population: "7M+",
     h1: "Medical Digital Marketing Agency in Pune",
     h2: "Strategic Healthcare Marketing for Pune's Growing Medical Industry",
-    metaDescription: "Expert medical digital marketing agency in Pune. Grow your healthcare practice with SEO, Google Ads & social media marketing.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Pune. Ethical healthcare marketing — SEO, Google Ads & social media marketing.",
     keywords: ["medical marketing pune", "healthcare marketing pune", "doctor marketing agency pune", "hospital digital marketing pune"]
   },
   {
@@ -107,7 +107,7 @@ export const cities: City[] = [
     population: "8M+",
     h1: "Medical Digital Marketing Agency in Ahmedabad",
     h2: "Comprehensive Healthcare Marketing Solutions for Ahmedabad",
-    metaDescription: "Top medical digital marketing agency in Ahmedabad. Specialized healthcare SEO, branding & patient acquisition for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ahmedabad. Specialized healthcare SEO, branding & patient engagement for doctors.",
     keywords: ["medical marketing ahmedabad", "healthcare marketing ahmedabad", "doctor marketing agency ahmedabad", "hospital marketing gujarat"]
   },
   // Tier 2 - Major Cities
@@ -119,8 +119,8 @@ export const cities: City[] = [
     tier: 2,
     population: "4M+",
     h1: "Medical Digital Marketing Agency in Jaipur",
-    h2: "Grow Your Healthcare Practice in Jaipur with Expert Digital Marketing",
-    metaDescription: "Best medical digital marketing agency in Jaipur. SEO, social media & video marketing for doctors, clinics & hospitals in Rajasthan.",
+    h2: "Digital Marketing for Healthcare in Jaipur",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jaipur. SEO, social media & video marketing for doctors, clinics & hospitals in Rajasthan.",
     keywords: ["medical marketing jaipur", "healthcare marketing jaipur", "doctor marketing agency jaipur", "hospital marketing rajasthan"]
   },
   {
@@ -132,7 +132,7 @@ export const cities: City[] = [
     population: "3.5M+",
     h1: "Medical Digital Marketing Agency in Lucknow",
     h2: "Digital Marketing Excellence for Lucknow's Healthcare Sector",
-    metaDescription: "Leading medical digital marketing agency in Lucknow. Expert healthcare marketing for doctors and hospitals in UP.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Lucknow. Healthcare marketing for doctors and hospitals in UP.",
     keywords: ["medical marketing lucknow", "healthcare marketing lucknow", "doctor marketing agency lucknow", "hospital marketing uttar pradesh"]
   },
   {
@@ -143,8 +143,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Chandigarh",
-    h2: "Premium Healthcare Marketing for Chandigarh's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Chandigarh. Grow your clinic with expert SEO, social media & branding solutions.",
+    h2: "Ethical Healthcare Marketing for Chandigarh's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Chandigarh. Ethical SEO, social media & branding solutions.",
     keywords: ["medical marketing chandigarh", "healthcare marketing chandigarh", "doctor marketing agency chandigarh", "hospital marketing tricity"]
   },
   {
@@ -156,7 +156,7 @@ export const cities: City[] = [
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Indore",
     h2: "Complete Healthcare Marketing Solutions for Indore's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Indore. SEO, video production & social media marketing for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Indore. SEO, video production & social media marketing for healthcare providers.",
     keywords: ["medical marketing indore", "healthcare marketing indore", "doctor marketing agency indore", "hospital marketing madhya pradesh"]
   },
   {
@@ -167,8 +167,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2M+",
     h1: "Medical Digital Marketing Agency in Bhopal",
-    h2: "Trusted Healthcare Marketing Partner for Bhopal's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Bhopal. Specialized healthcare SEO & patient acquisition strategies.",
+    h2: "Ethical Healthcare Marketing Partner for Bhopal's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bhopal. Specialized healthcare SEO & patient engagement strategies.",
     keywords: ["medical marketing bhopal", "healthcare marketing bhopal", "doctor marketing agency bhopal", "hospital marketing mp"]
   },
   {
@@ -179,8 +179,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2.8M+",
     h1: "Medical Digital Marketing Agency in Nagpur",
-    h2: "Result-Driven Healthcare Marketing for Nagpur's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Nagpur. Expert SEO, Google Ads & social media for doctors and hospitals.",
+    h2: "Ethical Healthcare Marketing for Nagpur's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nagpur. SEO, Google Ads & social media for doctors and hospitals.",
     keywords: ["medical marketing nagpur", "healthcare marketing nagpur", "doctor marketing agency nagpur", "hospital digital marketing vidarbha"]
   },
   {
@@ -191,8 +191,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Patna",
-    h2: "Premier Healthcare Marketing Services for Patna's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Patna. Comprehensive healthcare marketing for doctors and clinics in Bihar.",
+    h2: "Ethical Healthcare Marketing Services for Patna's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Patna. Comprehensive healthcare marketing for doctors and clinics in Bihar.",
     keywords: ["medical marketing patna", "healthcare marketing patna", "doctor marketing agency patna", "hospital marketing bihar"]
   },
   {
@@ -203,8 +203,8 @@ export const cities: City[] = [
     tier: 2,
     population: "6M+",
     h1: "Medical Digital Marketing Agency in Surat",
-    h2: "Grow Your Healthcare Practice in Surat with Expert Digital Marketing",
-    metaDescription: "Expert medical digital marketing agency in Surat. SEO, social media & branding for doctors and hospitals in Gujarat.",
+    h2: "Digital Marketing for Healthcare in Surat",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Surat. SEO, social media & branding for doctors and hospitals in Gujarat.",
     keywords: ["medical marketing surat", "healthcare marketing surat", "doctor marketing agency surat", "hospital digital marketing gujarat"]
   },
   {
@@ -216,7 +216,7 @@ export const cities: City[] = [
     population: "2M+",
     h1: "Medical Digital Marketing Agency in Vadodara",
     h2: "Complete Healthcare Marketing Solutions for Vadodara's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Vadodara. Expert healthcare SEO & patient acquisition for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Vadodara. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing vadodara", "healthcare marketing vadodara", "doctor marketing agency vadodara", "hospital marketing baroda"]
   },
   {
@@ -227,8 +227,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Rajkot",
-    h2: "Trusted Healthcare Marketing Partner for Rajkot's Doctors & Clinics",
-    metaDescription: "Leading medical digital marketing agency in Rajkot. SEO, video production & social media for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Partner for Rajkot's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rajkot. SEO, video production & social media for healthcare providers.",
     keywords: ["medical marketing rajkot", "healthcare marketing rajkot", "doctor marketing agency rajkot", "hospital marketing saurashtra"]
   },
   {
@@ -239,8 +239,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Coimbatore",
-    h2: "Expert Healthcare Marketing for Coimbatore's Medical Industry",
-    metaDescription: "Top medical digital marketing agency in Coimbatore. Specialized SEO, social media & branding for doctors and hospitals.",
+    h2: "Ethical Healthcare Marketing for Coimbatore's Medical Industry",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Coimbatore. Specialized SEO, social media & branding for doctors and hospitals.",
     keywords: ["medical marketing coimbatore", "healthcare marketing coimbatore", "doctor marketing agency coimbatore", "hospital marketing tamil nadu"]
   },
   {
@@ -251,8 +251,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Kochi",
-    h2: "Premium Healthcare Marketing Solutions for Kochi's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Kochi. Grow your clinic with SEO, Google Ads & patient engagement strategies.",
+    h2: "Ethical Healthcare Marketing Solutions for Kochi's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kochi. Ethical healthcare marketing — SEO, Google Ads & patient engagement strategies.",
     keywords: ["medical marketing kochi", "healthcare marketing kochi", "doctor marketing agency kochi", "hospital marketing kerala"]
   },
   {
@@ -264,7 +264,7 @@ export const cities: City[] = [
     population: "1.7M+",
     h1: "Medical Digital Marketing Agency in Thiruvananthapuram",
     h2: "Comprehensive Healthcare Marketing for Trivandrum's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Thiruvananthapuram. Expert healthcare SEO & branding for medical professionals.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Thiruvananthapuram. Healthcare SEO & branding for medical professionals.",
     keywords: ["medical marketing thiruvananthapuram", "healthcare marketing trivandrum", "doctor marketing agency kerala", "hospital digital marketing trivandrum"]
   },
   {
@@ -275,8 +275,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Visakhapatnam",
-    h2: "Result-Oriented Healthcare Marketing for Vizag's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Visakhapatnam. Expert SEO, social media & video marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Vizag's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Visakhapatnam. SEO, social media & video marketing for doctors.",
     keywords: ["medical marketing visakhapatnam", "healthcare marketing vizag", "doctor marketing agency vizag", "hospital marketing andhra pradesh"]
   },
   {
@@ -288,7 +288,7 @@ export const cities: City[] = [
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Vijayawada",
     h2: "Complete Healthcare Marketing Solutions for Vijayawada's Doctors",
-    metaDescription: "Top medical digital marketing agency in Vijayawada. SEO, branding & patient acquisition for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Vijayawada. SEO, branding & patient engagement for healthcare providers.",
     keywords: ["medical marketing vijayawada", "healthcare marketing vijayawada", "doctor marketing agency vijayawada", "hospital marketing ap"]
   },
   {
@@ -299,8 +299,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Mysore",
-    h2: "Trusted Healthcare Marketing Partner for Mysore's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Mysore. Specialized healthcare SEO & social media for doctors and clinics.",
+    h2: "Ethical Healthcare Marketing Partner for Mysore's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mysore. Specialized healthcare SEO & social media for doctors and clinics.",
     keywords: ["medical marketing mysore", "healthcare marketing mysore", "doctor marketing agency mysore", "hospital marketing karnataka"]
   },
   {
@@ -311,8 +311,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Mangalore",
-    h2: "Expert Healthcare Marketing for Mangalore's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Mangalore. SEO, video production & social media for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Mangalore's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mangalore. SEO, video production & social media for healthcare providers.",
     keywords: ["medical marketing mangalore", "healthcare marketing mangalore", "doctor marketing agency mangalore", "hospital marketing dakshin kannada"]
   },
   {
@@ -323,8 +323,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Hubli-Dharwad",
-    h2: "Grow Your Healthcare Practice in Hubli with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Hubli-Dharwad. Expert healthcare marketing for doctors and hospitals.",
+    h2: "Digital Marketing for Healthcare in Hubli",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Hubli-Dharwad. Healthcare marketing for doctors and hospitals.",
     keywords: ["medical marketing hubli", "healthcare marketing dharwad", "doctor marketing agency hubli", "hospital marketing north karnataka"]
   },
   {
@@ -335,8 +335,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Madurai",
-    h2: "Premier Healthcare Marketing Services for Madurai's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Madurai. Comprehensive SEO & social media marketing for doctors.",
+    h2: "Ethical Healthcare Marketing Services for Madurai's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Madurai. Comprehensive SEO & social media marketing for doctors.",
     keywords: ["medical marketing madurai", "healthcare marketing madurai", "doctor marketing agency madurai", "hospital marketing south tamil nadu"]
   },
   {
@@ -347,8 +347,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Tiruchirappalli",
-    h2: "Expert Healthcare Marketing for Trichy's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Trichy. SEO, branding & patient acquisition for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Trichy's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Trichy. SEO, branding & patient engagement for healthcare providers.",
     keywords: ["medical marketing trichy", "healthcare marketing tiruchirappalli", "doctor marketing agency trichy", "hospital marketing tn"]
   },
   {
@@ -360,7 +360,7 @@ export const cities: City[] = [
     population: "900K+",
     h1: "Medical Digital Marketing Agency in Salem",
     h2: "Complete Healthcare Marketing Solutions for Salem's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Salem. Expert SEO & social media for doctors and clinics.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Salem. SEO & social media for doctors and clinics.",
     keywords: ["medical marketing salem", "healthcare marketing salem", "doctor marketing agency salem", "hospital digital marketing salem"]
   },
   {
@@ -371,8 +371,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Bhubaneswar",
-    h2: "Trusted Healthcare Marketing Partner for Bhubaneswar's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Bhubaneswar. SEO, video production & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Partner for Bhubaneswar's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bhubaneswar. SEO, video production & branding for healthcare providers.",
     keywords: ["medical marketing bhubaneswar", "healthcare marketing bhubaneswar", "doctor marketing agency bhubaneswar", "hospital marketing odisha"]
   },
   {
@@ -383,8 +383,8 @@ export const cities: City[] = [
     tier: 2,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Cuttack",
-    h2: "Result-Driven Healthcare Marketing for Cuttack's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Cuttack. Comprehensive healthcare SEO & patient engagement.",
+    h2: "Ethical Healthcare Marketing for Cuttack's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Cuttack. Comprehensive healthcare SEO & patient engagement.",
     keywords: ["medical marketing cuttack", "healthcare marketing cuttack", "doctor marketing agency cuttack", "hospital marketing odisha"]
   },
   {
@@ -395,8 +395,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Ranchi",
-    h2: "Expert Healthcare Marketing for Ranchi's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Ranchi. SEO, social media & branding for healthcare providers in Jharkhand.",
+    h2: "Ethical Healthcare Marketing for Ranchi's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ranchi. SEO, social media & branding for healthcare providers in Jharkhand.",
     keywords: ["medical marketing ranchi", "healthcare marketing ranchi", "doctor marketing agency ranchi", "hospital marketing jharkhand"]
   },
   {
@@ -407,8 +407,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.4M+",
     h1: "Medical Digital Marketing Agency in Jamshedpur",
-    h2: "Grow Your Healthcare Practice in Jamshedpur with Digital Marketing",
-    metaDescription: "Best medical digital marketing agency in Jamshedpur. Expert healthcare marketing for doctors and clinics.",
+    h2: "Digital Marketing for Healthcare in Jamshedpur",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jamshedpur. Healthcare marketing for doctors and clinics.",
     keywords: ["medical marketing jamshedpur", "healthcare marketing jamshedpur", "doctor marketing agency jamshedpur", "hospital marketing jharkhand"]
   },
   {
@@ -419,8 +419,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Guwahati",
-    h2: "Premier Healthcare Marketing Services for Guwahati's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Guwahati. SEO, video marketing & social media for doctors.",
+    h2: "Ethical Healthcare Marketing Services for Guwahati's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Guwahati. SEO, video marketing & social media for doctors.",
     keywords: ["medical marketing guwahati", "healthcare marketing guwahati", "doctor marketing agency guwahati", "hospital marketing assam"]
   },
   {
@@ -432,7 +432,7 @@ export const cities: City[] = [
     population: "800K+",
     h1: "Medical Digital Marketing Agency in Dehradun",
     h2: "Complete Healthcare Marketing Solutions for Dehradun's Doctors",
-    metaDescription: "Expert medical digital marketing agency in Dehradun. Specialized healthcare SEO & branding for medical professionals.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Dehradun. Specialized healthcare SEO & branding for medical professionals.",
     keywords: ["medical marketing dehradun", "healthcare marketing dehradun", "doctor marketing agency dehradun", "hospital marketing uttarakhand"]
   },
   {
@@ -443,8 +443,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Haridwar",
-    h2: "Trusted Healthcare Marketing for Haridwar's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Haridwar. SEO & patient acquisition for doctors and clinics.",
+    h2: "Ethical Healthcare Marketing for Haridwar's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Haridwar. SEO & patient engagement for doctors and clinics.",
     keywords: ["medical marketing haridwar", "healthcare marketing haridwar", "doctor marketing agency haridwar", "hospital marketing uk"]
   },
   {
@@ -455,8 +455,8 @@ export const cities: City[] = [
     tier: 3,
     population: "120K+",
     h1: "Medical Digital Marketing Agency in Rishikesh",
-    h2: "Expert Healthcare Marketing for Rishikesh's Wellness & Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Rishikesh. Specialized marketing for wellness and healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Rishikesh's Wellness & Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rishikesh. Specialized marketing for wellness and healthcare providers.",
     keywords: ["medical marketing rishikesh", "healthcare marketing rishikesh", "doctor marketing agency rishikesh", "wellness marketing rishikesh"]
   },
   {
@@ -467,8 +467,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Varanasi",
-    h2: "Result-Oriented Healthcare Marketing for Varanasi's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Varanasi. Expert SEO, social media & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Varanasi's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Varanasi. SEO, social media & branding for healthcare providers.",
     keywords: ["medical marketing varanasi", "healthcare marketing varanasi", "doctor marketing agency varanasi", "hospital marketing banaras"]
   },
   {
@@ -479,8 +479,8 @@ export const cities: City[] = [
     tier: 2,
     population: "2M+",
     h1: "Medical Digital Marketing Agency in Agra",
-    h2: "Grow Your Healthcare Practice in Agra with Expert Digital Marketing",
-    metaDescription: "Expert medical digital marketing agency in Agra. SEO, video production & social media for doctors and hospitals.",
+    h2: "Digital Marketing for Healthcare in Agra",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Agra. SEO, video production & social media for doctors and hospitals.",
     keywords: ["medical marketing agra", "healthcare marketing agra", "doctor marketing agency agra", "hospital marketing up"]
   },
   {
@@ -492,7 +492,7 @@ export const cities: City[] = [
     population: "3M+",
     h1: "Medical Digital Marketing Agency in Kanpur",
     h2: "Comprehensive Healthcare Marketing for Kanpur's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Kanpur. Expert healthcare SEO & patient acquisition strategies.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kanpur. Healthcare SEO & patient engagement strategies.",
     keywords: ["medical marketing kanpur", "healthcare marketing kanpur", "doctor marketing agency kanpur", "hospital marketing uttar pradesh"]
   },
   {
@@ -503,8 +503,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Prayagraj",
-    h2: "Trusted Healthcare Marketing Partner for Prayagraj's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Prayagraj. SEO, branding & social media for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Partner for Prayagraj's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Prayagraj. SEO, branding & social media for healthcare providers.",
     keywords: ["medical marketing prayagraj", "healthcare marketing allahabad", "doctor marketing agency prayagraj", "hospital marketing up"]
   },
   {
@@ -515,8 +515,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Meerut",
-    h2: "Expert Healthcare Marketing for Meerut's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Meerut. Comprehensive healthcare marketing solutions.",
+    h2: "Ethical Healthcare Marketing for Meerut's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Meerut. Comprehensive healthcare marketing solutions.",
     keywords: ["medical marketing meerut", "healthcare marketing meerut", "doctor marketing agency meerut", "hospital marketing western up"]
   },
   {
@@ -528,7 +528,7 @@ export const cities: City[] = [
     population: "2.5M+",
     h1: "Medical Digital Marketing Agency in Ghaziabad",
     h2: "Complete Healthcare Marketing Solutions for Ghaziabad's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Ghaziabad. SEO, Google Ads & social media for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ghaziabad. SEO, Google Ads & social media for doctors.",
     keywords: ["medical marketing ghaziabad", "healthcare marketing ghaziabad", "doctor marketing agency ghaziabad", "hospital marketing ncr"]
   },
   {
@@ -539,8 +539,8 @@ export const cities: City[] = [
     tier: 1,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Noida",
-    h2: "Premier Healthcare Marketing Services for Noida's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Noida. Expert SEO, video marketing & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Services for Noida's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Noida. SEO, video marketing & branding for healthcare providers.",
     keywords: ["medical marketing noida", "healthcare marketing noida", "doctor marketing agency noida", "hospital marketing delhi ncr"]
   },
   {
@@ -551,8 +551,8 @@ export const cities: City[] = [
     tier: 2,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Greater Noida",
-    h2: "Grow Your Healthcare Practice in Greater Noida with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Greater Noida. Specialized healthcare SEO & patient acquisition.",
+    h2: "Digital Marketing for Healthcare in Greater Noida",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Greater Noida. Specialized healthcare SEO & patient engagement.",
     keywords: ["medical marketing greater noida", "healthcare marketing greater noida", "doctor marketing agency greater noida", "hospital marketing ncr"]
   },
   {
@@ -563,8 +563,8 @@ export const cities: City[] = [
     tier: 1,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Gurugram",
-    h2: "Premium Healthcare Marketing for Gurgaon's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Gurugram. Expert healthcare marketing for clinics and hospitals.",
+    h2: "Ethical Healthcare Marketing for Gurgaon's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Gurugram. Healthcare marketing for clinics and hospitals.",
     keywords: ["medical marketing gurugram", "healthcare marketing gurgaon", "doctor marketing agency gurgaon", "hospital marketing haryana"]
   },
   {
@@ -575,8 +575,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Faridabad",
-    h2: "Result-Driven Healthcare Marketing for Faridabad's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Faridabad. SEO, social media & branding for doctors.",
+    h2: "Ethical Healthcare Marketing for Faridabad's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Faridabad. SEO, social media & branding for doctors.",
     keywords: ["medical marketing faridabad", "healthcare marketing faridabad", "doctor marketing agency faridabad", "hospital marketing haryana"]
   },
   {
@@ -587,8 +587,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Panipat",
-    h2: "Expert Healthcare Marketing for Panipat's Doctors & Clinics",
-    metaDescription: "Best medical digital marketing agency in Panipat. Healthcare SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Panipat's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Panipat. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing panipat", "healthcare marketing panipat", "doctor marketing agency panipat", "hospital marketing haryana"]
   },
   {
@@ -599,8 +599,8 @@ export const cities: City[] = [
     tier: 3,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Karnal",
-    h2: "Trusted Healthcare Marketing Partner for Karnal's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Karnal. SEO & social media for healthcare providers.",
+    h2: "Ethical Healthcare Marketing Partner for Karnal's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Karnal. SEO & social media for healthcare providers.",
     keywords: ["medical marketing karnal", "healthcare marketing karnal", "doctor marketing agency karnal", "hospital marketing haryana"]
   },
   {
@@ -612,7 +612,7 @@ export const cities: City[] = [
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Rohtak",
     h2: "Complete Healthcare Marketing Solutions for Rohtak's Doctors",
-    metaDescription: "Top medical digital marketing agency in Rohtak. Expert healthcare marketing for doctors and hospitals.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rohtak. Healthcare marketing for doctors and hospitals.",
     keywords: ["medical marketing rohtak", "healthcare marketing rohtak", "doctor marketing agency rohtak", "hospital marketing haryana"]
   },
   {
@@ -623,8 +623,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Hisar",
-    h2: "Expert Healthcare Marketing for Hisar's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Hisar. SEO, branding & patient acquisition for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Hisar's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Hisar. SEO, branding & patient engagement for healthcare providers.",
     keywords: ["medical marketing hisar", "healthcare marketing hisar", "doctor marketing agency hisar", "hospital marketing haryana"]
   },
   {
@@ -635,8 +635,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Ambala",
-    h2: "Grow Your Healthcare Practice in Ambala with Digital Marketing",
-    metaDescription: "Best medical digital marketing agency in Ambala. Healthcare SEO & social media for doctors.",
+    h2: "Digital Marketing for Healthcare in Ambala",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ambala. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing ambala", "healthcare marketing ambala", "doctor marketing agency ambala", "hospital marketing haryana"]
   },
   {
@@ -647,8 +647,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.8M+",
     h1: "Medical Digital Marketing Agency in Ludhiana",
-    h2: "Premier Healthcare Marketing Services for Ludhiana's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Ludhiana. Expert SEO & branding for doctors and hospitals.",
+    h2: "Ethical Healthcare Marketing Services for Ludhiana's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ludhiana. SEO & branding for doctors and hospitals.",
     keywords: ["medical marketing ludhiana", "healthcare marketing ludhiana", "doctor marketing agency ludhiana", "hospital marketing punjab"]
   },
   {
@@ -659,8 +659,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Amritsar",
-    h2: "Result-Oriented Healthcare Marketing for Amritsar's Doctors",
-    metaDescription: "Top medical digital marketing agency in Amritsar. Comprehensive healthcare marketing solutions.",
+    h2: "Ethical Healthcare Marketing for Amritsar's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Amritsar. Comprehensive healthcare marketing solutions.",
     keywords: ["medical marketing amritsar", "healthcare marketing amritsar", "doctor marketing agency amritsar", "hospital marketing punjab"]
   },
   {
@@ -672,7 +672,7 @@ export const cities: City[] = [
     population: "900K+",
     h1: "Medical Digital Marketing Agency in Jalandhar",
     h2: "Complete Healthcare Marketing for Jalandhar's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Jalandhar. SEO, video production & social media for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jalandhar. SEO, video production & social media for doctors.",
     keywords: ["medical marketing jalandhar", "healthcare marketing jalandhar", "doctor marketing agency jalandhar", "hospital marketing punjab"]
   },
   {
@@ -683,8 +683,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Patiala",
-    h2: "Trusted Healthcare Marketing Partner for Patiala's Doctors",
-    metaDescription: "Best medical digital marketing agency in Patiala. Healthcare SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Patiala's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Patiala. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing patiala", "healthcare marketing patiala", "doctor marketing agency patiala", "hospital marketing punjab"]
   },
   {
@@ -695,8 +695,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Bathinda",
-    h2: "Expert Healthcare Marketing for Bathinda's Doctors & Clinics",
-    metaDescription: "Leading medical digital marketing agency in Bathinda. SEO & social media for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Bathinda's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bathinda. SEO & social media for healthcare providers.",
     keywords: ["medical marketing bathinda", "healthcare marketing bathinda", "doctor marketing agency bathinda", "hospital marketing punjab"]
   },
   {
@@ -707,8 +707,8 @@ export const cities: City[] = [
     tier: 2,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Mohali",
-    h2: "Premium Healthcare Marketing for Mohali's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Mohali. Expert healthcare marketing for doctors and hospitals.",
+    h2: "Ethical Healthcare Marketing for Mohali's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mohali. Healthcare marketing for doctors and hospitals.",
     keywords: ["medical marketing mohali", "healthcare marketing mohali", "doctor marketing agency mohali", "hospital marketing tricity"]
   },
   {
@@ -719,8 +719,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Shimla",
-    h2: "Grow Your Healthcare Practice in Shimla with Digital Marketing",
-    metaDescription: "Expert medical digital marketing agency in Shimla. Healthcare SEO & branding for doctors in HP.",
+    h2: "Digital Marketing for Healthcare in Shimla",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Shimla. Healthcare SEO & branding for doctors in HP.",
     keywords: ["medical marketing shimla", "healthcare marketing shimla", "doctor marketing agency shimla", "hospital marketing himachal"]
   },
   {
@@ -731,8 +731,8 @@ export const cities: City[] = [
     tier: 2,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Jammu",
-    h2: "Expert Healthcare Marketing for Jammu's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Jammu. SEO, social media & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Jammu's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jammu. SEO, social media & branding for healthcare providers.",
     keywords: ["medical marketing jammu", "healthcare marketing jammu", "doctor marketing agency jammu", "hospital marketing j&k"]
   },
   {
@@ -743,8 +743,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Srinagar",
-    h2: "Premier Healthcare Marketing Services for Srinagar's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Srinagar. Expert healthcare marketing for doctors and clinics.",
+    h2: "Ethical Healthcare Marketing Services for Srinagar's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Srinagar. Healthcare marketing for doctors and clinics.",
     keywords: ["medical marketing srinagar", "healthcare marketing srinagar", "doctor marketing agency srinagar", "hospital marketing kashmir"]
   },
   {
@@ -756,7 +756,7 @@ export const cities: City[] = [
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Jodhpur",
     h2: "Complete Healthcare Marketing Solutions for Jodhpur's Doctors",
-    metaDescription: "Top medical digital marketing agency in Jodhpur. Expert SEO & patient acquisition for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jodhpur. SEO & patient engagement for healthcare providers.",
     keywords: ["medical marketing jodhpur", "healthcare marketing jodhpur", "doctor marketing agency jodhpur", "hospital marketing rajasthan"]
   },
   {
@@ -767,8 +767,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Udaipur",
-    h2: "Trusted Healthcare Marketing Partner for Udaipur's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Udaipur. Healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Udaipur's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Udaipur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing udaipur", "healthcare marketing udaipur", "doctor marketing agency udaipur", "hospital marketing rajasthan"]
   },
   {
@@ -779,8 +779,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Kota",
-    h2: "Result-Driven Healthcare Marketing for Kota's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Kota. SEO, social media & video marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Kota's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kota. SEO, social media & video marketing for doctors.",
     keywords: ["medical marketing kota", "healthcare marketing kota", "doctor marketing agency kota", "hospital marketing rajasthan"]
   },
   {
@@ -791,8 +791,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Ajmer",
-    h2: "Expert Healthcare Marketing for Ajmer's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Ajmer. Healthcare SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Ajmer's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ajmer. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing ajmer", "healthcare marketing ajmer", "doctor marketing agency ajmer", "hospital marketing rajasthan"]
   },
   {
@@ -803,8 +803,8 @@ export const cities: City[] = [
     tier: 3,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Bikaner",
-    h2: "Grow Your Healthcare Practice in Bikaner with Digital Marketing",
-    metaDescription: "Top medical digital marketing agency in Bikaner. Expert healthcare marketing for doctors and clinics.",
+    h2: "Digital Marketing for Healthcare in Bikaner",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bikaner. Healthcare marketing for doctors and clinics.",
     keywords: ["medical marketing bikaner", "healthcare marketing bikaner", "doctor marketing agency bikaner", "hospital marketing rajasthan"]
   },
   {
@@ -816,7 +816,7 @@ export const cities: City[] = [
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Alwar",
     h2: "Complete Healthcare Marketing Solutions for Alwar's Doctors",
-    metaDescription: "Expert medical digital marketing agency in Alwar. SEO & social media for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Alwar. SEO & social media for healthcare providers.",
     keywords: ["medical marketing alwar", "healthcare marketing alwar", "doctor marketing agency alwar", "hospital marketing rajasthan"]
   },
   {
@@ -827,8 +827,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Bharatpur",
-    h2: "Trusted Healthcare Marketing for Bharatpur's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Bharatpur. Healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing for Bharatpur's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bharatpur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing bharatpur", "healthcare marketing bharatpur", "doctor marketing agency bharatpur", "hospital marketing rajasthan"]
   },
   {
@@ -839,8 +839,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Sikar",
-    h2: "Expert Healthcare Marketing for Sikar's Doctors & Hospitals",
-    metaDescription: "Leading medical digital marketing agency in Sikar. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Sikar's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Sikar. SEO & patient engagement for doctors.",
     keywords: ["medical marketing sikar", "healthcare marketing sikar", "doctor marketing agency sikar", "hospital marketing rajasthan"]
   },
   {
@@ -851,8 +851,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Raipur",
-    h2: "Premier Healthcare Marketing Services for Raipur's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Raipur. Expert healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing Services for Raipur's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Raipur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing raipur", "healthcare marketing raipur", "doctor marketing agency raipur", "hospital marketing chhattisgarh"]
   },
   {
@@ -864,7 +864,7 @@ export const cities: City[] = [
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Bilaspur",
     h2: "Complete Healthcare Marketing for Bilaspur's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Bilaspur. Healthcare SEO & social media for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bilaspur. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing bilaspur", "healthcare marketing bilaspur", "doctor marketing agency bilaspur", "hospital marketing chhattisgarh"]
   },
   {
@@ -875,8 +875,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Gwalior",
-    h2: "Result-Oriented Healthcare Marketing for Gwalior's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Gwalior. Expert SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Gwalior's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Gwalior. SEO & patient engagement for doctors.",
     keywords: ["medical marketing gwalior", "healthcare marketing gwalior", "doctor marketing agency gwalior", "hospital marketing mp"]
   },
   {
@@ -887,8 +887,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.3M+",
     h1: "Medical Digital Marketing Agency in Jabalpur",
-    h2: "Trusted Healthcare Marketing Partner for Jabalpur's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Jabalpur. Healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Jabalpur's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jabalpur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing jabalpur", "healthcare marketing jabalpur", "doctor marketing agency jabalpur", "hospital marketing mp"]
   },
   {
@@ -899,8 +899,8 @@ export const cities: City[] = [
     tier: 3,
     population: "550K+",
     h1: "Medical Digital Marketing Agency in Ujjain",
-    h2: "Expert Healthcare Marketing for Ujjain's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Ujjain. SEO, social media & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for Ujjain's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ujjain. SEO, social media & branding for healthcare providers.",
     keywords: ["medical marketing ujjain", "healthcare marketing ujjain", "doctor marketing agency ujjain", "hospital marketing mp"]
   },
   {
@@ -911,8 +911,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Sagar",
-    h2: "Grow Your Healthcare Practice in Sagar with Digital Marketing",
-    metaDescription: "Expert medical digital marketing agency in Sagar. Healthcare SEO & patient acquisition for doctors.",
+    h2: "Digital Marketing for Healthcare in Sagar",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Sagar. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing sagar", "healthcare marketing sagar", "doctor marketing agency sagar", "hospital marketing mp"]
   },
   {
@@ -924,7 +924,7 @@ export const cities: City[] = [
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Rewa",
     h2: "Complete Healthcare Marketing Solutions for Rewa's Doctors",
-    metaDescription: "Best medical digital marketing agency in Rewa. SEO & social media for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rewa. SEO & social media for healthcare providers.",
     keywords: ["medical marketing rewa", "healthcare marketing rewa", "doctor marketing agency rewa", "hospital marketing mp"]
   },
   {
@@ -935,8 +935,8 @@ export const cities: City[] = [
     tier: 1,
     population: "2M+",
     h1: "Medical Digital Marketing Agency in Thane",
-    h2: "Premier Healthcare Marketing for Thane's Doctors & Hospitals",
-    metaDescription: "Leading medical digital marketing agency in Thane. Expert healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing for Thane's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Thane. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing thane", "healthcare marketing thane", "doctor marketing agency thane", "hospital marketing mumbai metro"]
   },
   {
@@ -947,8 +947,8 @@ export const cities: City[] = [
     tier: 1,
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Navi Mumbai",
-    h2: "Result-Driven Healthcare Marketing for Navi Mumbai's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Navi Mumbai. Expert healthcare marketing for doctors and clinics.",
+    h2: "Ethical Healthcare Marketing for Navi Mumbai's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Navi Mumbai. Healthcare marketing for doctors and clinics.",
     keywords: ["medical marketing navi mumbai", "healthcare marketing navi mumbai", "doctor marketing agency navi mumbai", "hospital marketing mmr"]
   },
   {
@@ -960,7 +960,7 @@ export const cities: City[] = [
     population: "1.5M+",
     h1: "Medical Digital Marketing Agency in Nashik",
     h2: "Complete Healthcare Marketing for Nashik's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Nashik. SEO, video marketing & social media for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nashik. SEO, video marketing & social media for doctors.",
     keywords: ["medical marketing nashik", "healthcare marketing nashik", "doctor marketing agency nashik", "hospital marketing maharashtra"]
   },
   {
@@ -971,8 +971,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.4M+",
     h1: "Medical Digital Marketing Agency in Aurangabad",
-    h2: "Trusted Healthcare Marketing Partner for Aurangabad's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Aurangabad. Healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Aurangabad's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Aurangabad. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing aurangabad", "healthcare marketing sambhajinagar", "doctor marketing agency aurangabad", "hospital marketing maharashtra"]
   },
   {
@@ -983,8 +983,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Solapur",
-    h2: "Expert Healthcare Marketing for Solapur's Doctors & Clinics",
-    metaDescription: "Leading medical digital marketing agency in Solapur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Solapur's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Solapur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing solapur", "healthcare marketing solapur", "doctor marketing agency solapur", "hospital marketing maharashtra"]
   },
   {
@@ -995,8 +995,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Kolhapur",
-    h2: "Grow Your Healthcare Practice in Kolhapur with Digital Marketing",
-    metaDescription: "Top medical digital marketing agency in Kolhapur. Expert healthcare marketing for doctors and hospitals.",
+    h2: "Digital Marketing for Healthcare in Kolhapur",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kolhapur. Healthcare marketing for doctors and hospitals.",
     keywords: ["medical marketing kolhapur", "healthcare marketing kolhapur", "doctor marketing agency kolhapur", "hospital marketing maharashtra"]
   },
   {
@@ -1007,8 +1007,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Sangli",
-    h2: "Premier Healthcare Marketing Services for Sangli's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Sangli. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing Services for Sangli's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Sangli. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing sangli", "healthcare marketing sangli", "doctor marketing agency sangli", "hospital marketing maharashtra"]
   },
   {
@@ -1020,7 +1020,7 @@ export const cities: City[] = [
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Nanded",
     h2: "Complete Healthcare Marketing for Nanded's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Nanded. SEO & branding for healthcare providers.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nanded. SEO & branding for healthcare providers.",
     keywords: ["medical marketing nanded", "healthcare marketing nanded", "doctor marketing agency nanded", "hospital marketing marathwada"]
   },
   {
@@ -1031,8 +1031,8 @@ export const cities: City[] = [
     tier: 3,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Amravati",
-    h2: "Result-Oriented Healthcare Marketing for Amravati's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Amravati. Expert healthcare SEO for doctors.",
+    h2: "Ethical Healthcare Marketing for Amravati's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Amravati. Healthcare SEO for doctors.",
     keywords: ["medical marketing amravati", "healthcare marketing amravati", "doctor marketing agency amravati", "hospital marketing vidarbha"]
   },
   {
@@ -1043,8 +1043,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Akola",
-    h2: "Trusted Healthcare Marketing Partner for Akola's Doctors",
-    metaDescription: "Top medical digital marketing agency in Akola. Healthcare SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Akola's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Akola. Healthcare SEO & patient engagement for doctors.",
     keywords: ["medical marketing akola", "healthcare marketing akola", "doctor marketing agency akola", "hospital marketing vidarbha"]
   },
   {
@@ -1055,8 +1055,8 @@ export const cities: City[] = [
     tier: 1,
     population: "2M+",
     h1: "Medical Digital Marketing Agency in Pimpri-Chinchwad",
-    h2: "Expert Healthcare Marketing for PCMC's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Pimpri-Chinchwad. SEO & branding for healthcare providers.",
+    h2: "Ethical Healthcare Marketing for PCMC's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Pimpri-Chinchwad. SEO & branding for healthcare providers.",
     keywords: ["medical marketing pimpri chinchwad", "healthcare marketing pcmc", "doctor marketing agency pcmc", "hospital marketing pune metro"]
   },
   {
@@ -1067,8 +1067,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Belagavi",
-    h2: "Grow Your Healthcare Practice in Belgaum with Digital Marketing",
-    metaDescription: "Best medical digital marketing agency in Belagavi. Healthcare SEO & social media for doctors.",
+    h2: "Digital Marketing for Healthcare in Belgaum",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Belagavi. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing belgaum", "healthcare marketing belagavi", "doctor marketing agency belgaum", "hospital marketing north karnataka"]
   },
   {
@@ -1080,7 +1080,7 @@ export const cities: City[] = [
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Kalaburagi",
     h2: "Complete Healthcare Marketing for Gulbarga's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Kalaburagi. Expert healthcare marketing for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kalaburagi. Healthcare marketing for doctors.",
     keywords: ["medical marketing gulbarga", "healthcare marketing kalaburagi", "doctor marketing agency gulbarga", "hospital marketing north karnataka"]
   },
   {
@@ -1091,8 +1091,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Davangere",
-    h2: "Premier Healthcare Marketing for Davangere's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Davangere. Healthcare SEO & branding for doctors.",
+    h2: "Ethical Healthcare Marketing for Davangere's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Davangere. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing davangere", "healthcare marketing davangere", "doctor marketing agency davangere", "hospital marketing karnataka"]
   },
   {
@@ -1103,8 +1103,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Ballari",
-    h2: "Expert Healthcare Marketing for Bellary's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Ballari. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Bellary's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ballari. SEO & patient engagement for doctors.",
     keywords: ["medical marketing bellary", "healthcare marketing ballari", "doctor marketing agency bellary", "hospital marketing karnataka"]
   },
   {
@@ -1115,8 +1115,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Shivamogga",
-    h2: "Trusted Healthcare Marketing Partner for Shimoga's Doctors",
-    metaDescription: "Best medical digital marketing agency in Shivamogga. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing Partner for Shimoga's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Shivamogga. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing shimoga", "healthcare marketing shivamogga", "doctor marketing agency shimoga", "hospital marketing karnataka"]
   },
   {
@@ -1127,8 +1127,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Tumakuru",
-    h2: "Result-Driven Healthcare Marketing for Tumkur's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Tumakuru. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Tumkur's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Tumakuru. Healthcare marketing for doctors.",
     keywords: ["medical marketing tumkur", "healthcare marketing tumakuru", "doctor marketing agency tumkur", "hospital marketing karnataka"]
   },
   {
@@ -1140,7 +1140,7 @@ export const cities: City[] = [
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Bidar",
     h2: "Complete Healthcare Marketing for Bidar's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Bidar. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bidar. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing bidar", "healthcare marketing bidar", "doctor marketing agency bidar", "hospital marketing north karnataka"]
   },
   {
@@ -1151,8 +1151,8 @@ export const cities: City[] = [
     tier: 2,
     population: "900K+",
     h1: "Medical Digital Marketing Agency in Tiruppur",
-    h2: "Expert Healthcare Marketing for Tiruppur's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Tiruppur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Tiruppur's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Tiruppur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing tiruppur", "healthcare marketing tiruppur", "doctor marketing agency tiruppur", "hospital marketing tamil nadu"]
   },
   {
@@ -1163,8 +1163,8 @@ export const cities: City[] = [
     tier: 2,
     population: "550K+",
     h1: "Medical Digital Marketing Agency in Erode",
-    h2: "Grow Your Healthcare Practice in Erode with Digital Marketing",
-    metaDescription: "Best medical digital marketing agency in Erode. Healthcare SEO & social media for doctors.",
+    h2: "Digital Marketing for Healthcare in Erode",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Erode. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing erode", "healthcare marketing erode", "doctor marketing agency erode", "hospital marketing tamil nadu"]
   },
   {
@@ -1175,8 +1175,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Vellore",
-    h2: "Premier Healthcare Marketing for Vellore's Doctors & Hospitals",
-    metaDescription: "Leading medical digital marketing agency in Vellore. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Vellore's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Vellore. Healthcare marketing for doctors.",
     keywords: ["medical marketing vellore", "healthcare marketing vellore", "doctor marketing agency vellore", "hospital marketing tamil nadu"]
   },
   {
@@ -1188,7 +1188,7 @@ export const cities: City[] = [
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Thanjavur",
     h2: "Complete Healthcare Marketing for Thanjavur's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Thanjavur. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Thanjavur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing thanjavur", "healthcare marketing thanjavur", "doctor marketing agency thanjavur", "hospital marketing delta"]
   },
   {
@@ -1199,8 +1199,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Tirunelveli",
-    h2: "Trusted Healthcare Marketing for Tirunelveli's Doctors",
-    metaDescription: "Expert medical digital marketing agency in Tirunelveli. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Tirunelveli's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Tirunelveli. SEO & patient engagement for doctors.",
     keywords: ["medical marketing tirunelveli", "healthcare marketing tirunelveli", "doctor marketing agency tirunelveli", "hospital marketing south tn"]
   },
   {
@@ -1211,8 +1211,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Dindigul",
-    h2: "Expert Healthcare Marketing for Dindigul's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Dindigul. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Dindigul's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Dindigul. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing dindigul", "healthcare marketing dindigul", "doctor marketing agency dindigul", "hospital marketing tamil nadu"]
   },
   {
@@ -1223,8 +1223,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Thoothukudi",
-    h2: "Result-Oriented Healthcare Marketing for Tuticorin's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Thoothukudi. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Tuticorin's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Thoothukudi. Healthcare marketing for doctors.",
     keywords: ["medical marketing thoothukudi", "healthcare marketing tuticorin", "doctor marketing agency tuticorin", "hospital marketing south tn"]
   },
   {
@@ -1236,7 +1236,7 @@ export const cities: City[] = [
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Nagercoil",
     h2: "Complete Healthcare Marketing for Nagercoil's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Nagercoil. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nagercoil. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing nagercoil", "healthcare marketing nagercoil", "doctor marketing agency nagercoil", "hospital marketing kanyakumari"]
   },
   {
@@ -1247,8 +1247,8 @@ export const cities: City[] = [
     tier: 2,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Kozhikode",
-    h2: "Premier Healthcare Marketing for Calicut's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Kozhikode. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Calicut's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kozhikode. SEO & patient engagement for doctors.",
     keywords: ["medical marketing kozhikode", "healthcare marketing calicut", "doctor marketing agency kozhikode", "hospital marketing malabar"]
   },
   {
@@ -1259,8 +1259,8 @@ export const cities: City[] = [
     tier: 2,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Thrissur",
-    h2: "Expert Healthcare Marketing for Thrissur's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Thrissur. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Thrissur's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Thrissur. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing thrissur", "healthcare marketing thrissur", "doctor marketing agency thrissur", "hospital marketing central kerala"]
   },
   {
@@ -1271,8 +1271,8 @@ export const cities: City[] = [
     tier: 2,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Kollam",
-    h2: "Grow Your Healthcare Practice in Kollam with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Kollam. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Kollam",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kollam. Healthcare marketing for doctors.",
     keywords: ["medical marketing kollam", "healthcare marketing kollam", "doctor marketing agency kollam", "hospital marketing south kerala"]
   },
   {
@@ -1284,7 +1284,7 @@ export const cities: City[] = [
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Kannur",
     h2: "Complete Healthcare Marketing for Kannur's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Kannur. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kannur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing kannur", "healthcare marketing kannur", "doctor marketing agency kannur", "hospital marketing north kerala"]
   },
   {
@@ -1295,8 +1295,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Palakkad",
-    h2: "Trusted Healthcare Marketing for Palakkad's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Palakkad. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Palakkad's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Palakkad. SEO & patient engagement for doctors.",
     keywords: ["medical marketing palakkad", "healthcare marketing palakkad", "doctor marketing agency palakkad", "hospital marketing kerala"]
   },
   {
@@ -1307,8 +1307,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Alappuzha",
-    h2: "Expert Healthcare Marketing for Alleppey's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Alappuzha. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Alleppey's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Alappuzha. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing alappuzha", "healthcare marketing alleppey", "doctor marketing agency alappuzha", "hospital marketing kerala"]
   },
   {
@@ -1319,8 +1319,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Kottayam",
-    h2: "Result-Driven Healthcare Marketing for Kottayam's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Kottayam. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Kottayam's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kottayam. Healthcare marketing for doctors.",
     keywords: ["medical marketing kottayam", "healthcare marketing kottayam", "doctor marketing agency kottayam", "hospital marketing central kerala"]
   },
   {
@@ -1332,7 +1332,7 @@ export const cities: City[] = [
     population: "750K+",
     h1: "Medical Digital Marketing Agency in Guntur",
     h2: "Complete Healthcare Marketing for Guntur's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Guntur. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Guntur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing guntur", "healthcare marketing guntur", "doctor marketing agency guntur", "hospital marketing andhra pradesh"]
   },
   {
@@ -1343,8 +1343,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Nellore",
-    h2: "Premier Healthcare Marketing for Nellore's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Nellore. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Nellore's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nellore. SEO & patient engagement for doctors.",
     keywords: ["medical marketing nellore", "healthcare marketing nellore", "doctor marketing agency nellore", "hospital marketing andhra pradesh"]
   },
   {
@@ -1355,8 +1355,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Kurnool",
-    h2: "Expert Healthcare Marketing for Kurnool's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Kurnool. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Kurnool's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kurnool. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing kurnool", "healthcare marketing kurnool", "doctor marketing agency kurnool", "hospital marketing rayalaseema"]
   },
   {
@@ -1367,8 +1367,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Rajahmundry",
-    h2: "Grow Your Healthcare Practice in Rajahmundry with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Rajahmundry. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Rajahmundry",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rajahmundry. Healthcare marketing for doctors.",
     keywords: ["medical marketing rajahmundry", "healthcare marketing rajahmundry", "doctor marketing agency rajahmundry", "hospital marketing godavari"]
   },
   {
@@ -1380,7 +1380,7 @@ export const cities: City[] = [
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Kakinada",
     h2: "Complete Healthcare Marketing for Kakinada's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Kakinada. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kakinada. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing kakinada", "healthcare marketing kakinada", "doctor marketing agency kakinada", "hospital marketing east godavari"]
   },
   {
@@ -1391,8 +1391,8 @@ export const cities: City[] = [
     tier: 2,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Tirupati",
-    h2: "Trusted Healthcare Marketing for Tirupati's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Tirupati. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Tirupati's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Tirupati. SEO & patient engagement for doctors.",
     keywords: ["medical marketing tirupati", "healthcare marketing tirupati", "doctor marketing agency tirupati", "hospital marketing chittoor"]
   },
   {
@@ -1403,8 +1403,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Anantapur",
-    h2: "Expert Healthcare Marketing for Anantapur's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Anantapur. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Anantapur's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Anantapur. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing anantapur", "healthcare marketing anantapur", "doctor marketing agency anantapur", "hospital marketing rayalaseema"]
   },
   {
@@ -1415,8 +1415,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Kadapa",
-    h2: "Result-Oriented Healthcare Marketing for Kadapa's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Kadapa. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Kadapa's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kadapa. Healthcare marketing for doctors.",
     keywords: ["medical marketing kadapa", "healthcare marketing kadapa", "doctor marketing agency kadapa", "hospital marketing rayalaseema"]
   },
   {
@@ -1428,7 +1428,7 @@ export const cities: City[] = [
     population: "900K+",
     h1: "Medical Digital Marketing Agency in Warangal",
     h2: "Complete Healthcare Marketing for Warangal's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Warangal. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Warangal. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing warangal", "healthcare marketing warangal", "doctor marketing agency warangal", "hospital marketing telangana"]
   },
   {
@@ -1439,8 +1439,8 @@ export const cities: City[] = [
     tier: 3,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Nizamabad",
-    h2: "Premier Healthcare Marketing for Nizamabad's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Nizamabad. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Nizamabad's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Nizamabad. SEO & patient engagement for doctors.",
     keywords: ["medical marketing nizamabad", "healthcare marketing nizamabad", "doctor marketing agency nizamabad", "hospital marketing telangana"]
   },
   {
@@ -1451,8 +1451,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Karimnagar",
-    h2: "Expert Healthcare Marketing for Karimnagar's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Karimnagar. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Karimnagar's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Karimnagar. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing karimnagar", "healthcare marketing karimnagar", "doctor marketing agency karimnagar", "hospital marketing telangana"]
   },
   {
@@ -1463,8 +1463,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Khammam",
-    h2: "Grow Your Healthcare Practice in Khammam with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Khammam. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Khammam",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Khammam. Healthcare marketing for doctors.",
     keywords: ["medical marketing khammam", "healthcare marketing khammam", "doctor marketing agency khammam", "hospital marketing telangana"]
   },
   {
@@ -1476,7 +1476,7 @@ export const cities: City[] = [
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Mahabubnagar",
     h2: "Complete Healthcare Marketing for Mahabubnagar's Doctors",
-    metaDescription: "Top medical digital marketing agency in Mahabubnagar. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mahabubnagar. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing mahabubnagar", "healthcare marketing mahabubnagar", "doctor marketing agency mahabubnagar", "hospital marketing telangana"]
   },
   {
@@ -1487,8 +1487,8 @@ export const cities: City[] = [
     tier: 1,
     population: "3M+",
     h1: "Medical Digital Marketing Agency in Secunderabad",
-    h2: "Trusted Healthcare Marketing for Secunderabad's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Secunderabad. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Secunderabad's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Secunderabad. SEO & patient engagement for doctors.",
     keywords: ["medical marketing secunderabad", "healthcare marketing secunderabad", "doctor marketing agency secunderabad", "hospital marketing hyderabad"]
   },
   {
@@ -1499,8 +1499,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.2M+",
     h1: "Medical Digital Marketing Agency in Howrah",
-    h2: "Expert Healthcare Marketing for Howrah's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Howrah. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Howrah's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Howrah. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing howrah", "healthcare marketing howrah", "doctor marketing agency howrah", "hospital marketing kolkata metro"]
   },
   {
@@ -1511,8 +1511,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Durgapur",
-    h2: "Result-Driven Healthcare Marketing for Durgapur's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Durgapur. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Durgapur's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Durgapur. Healthcare marketing for doctors.",
     keywords: ["medical marketing durgapur", "healthcare marketing durgapur", "doctor marketing agency durgapur", "hospital marketing west bengal"]
   },
   {
@@ -1524,7 +1524,7 @@ export const cities: City[] = [
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Asansol",
     h2: "Complete Healthcare Marketing for Asansol's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Asansol. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Asansol. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing asansol", "healthcare marketing asansol", "doctor marketing agency asansol", "hospital marketing west bengal"]
   },
   {
@@ -1535,8 +1535,8 @@ export const cities: City[] = [
     tier: 2,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Siliguri",
-    h2: "Premier Healthcare Marketing for Siliguri's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Siliguri. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Siliguri's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Siliguri. SEO & patient engagement for doctors.",
     keywords: ["medical marketing siliguri", "healthcare marketing siliguri", "doctor marketing agency siliguri", "hospital marketing north bengal"]
   },
   {
@@ -1547,8 +1547,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Kharagpur",
-    h2: "Expert Healthcare Marketing for Kharagpur's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Kharagpur. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Kharagpur's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kharagpur. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing kharagpur", "healthcare marketing kharagpur", "doctor marketing agency kharagpur", "hospital marketing west bengal"]
   },
   {
@@ -1559,8 +1559,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Haldia",
-    h2: "Grow Your Healthcare Practice in Haldia with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Haldia. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Haldia",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Haldia. Healthcare marketing for doctors.",
     keywords: ["medical marketing haldia", "healthcare marketing haldia", "doctor marketing agency haldia", "hospital marketing east midnapore"]
   },
   {
@@ -1572,7 +1572,7 @@ export const cities: City[] = [
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Malda",
     h2: "Complete Healthcare Marketing for Malda's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Malda. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Malda. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing malda", "healthcare marketing malda", "doctor marketing agency malda", "hospital marketing north bengal"]
   },
   {
@@ -1583,8 +1583,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Berhampore",
-    h2: "Trusted Healthcare Marketing for Berhampore's Doctors",
-    metaDescription: "Expert medical digital marketing agency in Berhampore. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Berhampore's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Berhampore. SEO & patient engagement for doctors.",
     keywords: ["medical marketing berhampore", "healthcare marketing berhampore", "doctor marketing agency berhampore", "hospital marketing murshidabad"]
   },
   {
@@ -1595,8 +1595,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Bokaro",
-    h2: "Expert Healthcare Marketing for Bokaro's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Bokaro. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Bokaro's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bokaro. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing bokaro", "healthcare marketing bokaro", "doctor marketing agency bokaro", "hospital marketing jharkhand"]
   },
   {
@@ -1607,8 +1607,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1.3M+",
     h1: "Medical Digital Marketing Agency in Dhanbad",
-    h2: "Result-Oriented Healthcare Marketing for Dhanbad's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Dhanbad. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Dhanbad's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Dhanbad. Healthcare marketing for doctors.",
     keywords: ["medical marketing dhanbad", "healthcare marketing dhanbad", "doctor marketing agency dhanbad", "hospital marketing jharkhand"]
   },
   {
@@ -1620,7 +1620,7 @@ export const cities: City[] = [
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Hazaribagh",
     h2: "Complete Healthcare Marketing for Hazaribagh's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Hazaribagh. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Hazaribagh. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing hazaribagh", "healthcare marketing hazaribagh", "doctor marketing agency hazaribagh", "hospital marketing jharkhand"]
   },
   {
@@ -1631,8 +1631,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Muzaffarpur",
-    h2: "Premier Healthcare Marketing for Muzaffarpur's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Muzaffarpur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Muzaffarpur's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Muzaffarpur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing muzaffarpur", "healthcare marketing muzaffarpur", "doctor marketing agency muzaffarpur", "hospital marketing bihar"]
   },
   {
@@ -1643,8 +1643,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Gaya",
-    h2: "Expert Healthcare Marketing for Gaya's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Gaya. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Gaya's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Gaya. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing gaya", "healthcare marketing gaya", "doctor marketing agency gaya", "hospital marketing bihar"]
   },
   {
@@ -1655,8 +1655,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Bhagalpur",
-    h2: "Grow Your Healthcare Practice in Bhagalpur with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Bhagalpur. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Bhagalpur",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bhagalpur. Healthcare marketing for doctors.",
     keywords: ["medical marketing bhagalpur", "healthcare marketing bhagalpur", "doctor marketing agency bhagalpur", "hospital marketing bihar"]
   },
   {
@@ -1668,7 +1668,7 @@ export const cities: City[] = [
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Darbhanga",
     h2: "Complete Healthcare Marketing for Darbhanga's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Darbhanga. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Darbhanga. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing darbhanga", "healthcare marketing darbhanga", "doctor marketing agency darbhanga", "hospital marketing mithila"]
   },
   {
@@ -1679,8 +1679,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Purnia",
-    h2: "Trusted Healthcare Marketing for Purnia's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Purnia. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Purnia's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Purnia. SEO & patient engagement for doctors.",
     keywords: ["medical marketing purnia", "healthcare marketing purnia", "doctor marketing agency purnia", "hospital marketing bihar"]
   },
   {
@@ -1691,8 +1691,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Bihar Sharif",
-    h2: "Expert Healthcare Marketing for Bihar Sharif's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Bihar Sharif. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Bihar Sharif's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bihar Sharif. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing bihar sharif", "healthcare marketing bihar sharif", "doctor marketing agency bihar sharif", "hospital marketing nalanda"]
   },
   {
@@ -1703,8 +1703,8 @@ export const cities: City[] = [
     tier: 2,
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Rourkela",
-    h2: "Result-Driven Healthcare Marketing for Rourkela's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Rourkela. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Rourkela's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rourkela. Healthcare marketing for doctors.",
     keywords: ["medical marketing rourkela", "healthcare marketing rourkela", "doctor marketing agency rourkela", "hospital marketing odisha"]
   },
   {
@@ -1716,7 +1716,7 @@ export const cities: City[] = [
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Berhampur",
     h2: "Complete Healthcare Marketing for Berhampur's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Berhampur. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Berhampur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing berhampur", "healthcare marketing berhampur", "doctor marketing agency berhampur", "hospital marketing south odisha"]
   },
   {
@@ -1727,8 +1727,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Sambalpur",
-    h2: "Premier Healthcare Marketing for Sambalpur's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Sambalpur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Sambalpur's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Sambalpur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing sambalpur", "healthcare marketing sambalpur", "doctor marketing agency sambalpur", "hospital marketing west odisha"]
   },
   {
@@ -1739,8 +1739,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Balasore",
-    h2: "Expert Healthcare Marketing for Balasore's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Balasore. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Balasore's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Balasore. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing balasore", "healthcare marketing balasore", "doctor marketing agency balasore", "hospital marketing north odisha"]
   },
   {
@@ -1751,8 +1751,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Puri",
-    h2: "Grow Your Healthcare Practice in Puri with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Puri. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Puri",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Puri. Healthcare marketing for doctors.",
     keywords: ["medical marketing puri", "healthcare marketing puri", "doctor marketing agency puri", "hospital marketing coastal odisha"]
   },
   {
@@ -1764,7 +1764,7 @@ export const cities: City[] = [
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Jorhat",
     h2: "Complete Healthcare Marketing for Jorhat's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Jorhat. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jorhat. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing jorhat", "healthcare marketing jorhat", "doctor marketing agency jorhat", "hospital marketing upper assam"]
   },
   {
@@ -1775,8 +1775,8 @@ export const cities: City[] = [
     tier: 2,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Dibrugarh",
-    h2: "Trusted Healthcare Marketing for Dibrugarh's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Dibrugarh. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Dibrugarh's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Dibrugarh. SEO & patient engagement for doctors.",
     keywords: ["medical marketing dibrugarh", "healthcare marketing dibrugarh", "doctor marketing agency dibrugarh", "hospital marketing upper assam"]
   },
   {
@@ -1787,8 +1787,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Silchar",
-    h2: "Expert Healthcare Marketing for Silchar's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Silchar. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Silchar's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Silchar. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing silchar", "healthcare marketing silchar", "doctor marketing agency silchar", "hospital marketing barak valley"]
   },
   {
@@ -1799,8 +1799,8 @@ export const cities: City[] = [
     tier: 3,
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Tezpur",
-    h2: "Result-Oriented Healthcare Marketing for Tezpur's Medical Sector",
-    metaDescription: "Leading medical digital marketing agency in Tezpur. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Tezpur's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Tezpur. Healthcare marketing for doctors.",
     keywords: ["medical marketing tezpur", "healthcare marketing tezpur", "doctor marketing agency tezpur", "hospital marketing sonitpur"]
   },
   {
@@ -1812,7 +1812,7 @@ export const cities: City[] = [
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Imphal",
     h2: "Complete Healthcare Marketing for Imphal's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Imphal. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Imphal. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing imphal", "healthcare marketing imphal", "doctor marketing agency imphal", "hospital marketing manipur"]
   },
   {
@@ -1823,8 +1823,8 @@ export const cities: City[] = [
     tier: 2,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Shillong",
-    h2: "Premier Healthcare Marketing for Shillong's Medical Community",
-    metaDescription: "Expert medical digital marketing agency in Shillong. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Shillong's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Shillong. SEO & patient engagement for doctors.",
     keywords: ["medical marketing shillong", "healthcare marketing shillong", "doctor marketing agency shillong", "hospital marketing meghalaya"]
   },
   {
@@ -1835,8 +1835,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Agartala",
-    h2: "Expert Healthcare Marketing for Agartala's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Agartala. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Agartala's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Agartala. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing agartala", "healthcare marketing agartala", "doctor marketing agency agartala", "hospital marketing tripura"]
   },
   {
@@ -1847,8 +1847,8 @@ export const cities: City[] = [
     tier: 3,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Aizawl",
-    h2: "Grow Your Healthcare Practice in Aizawl with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Aizawl. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Aizawl",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Aizawl. Healthcare marketing for doctors.",
     keywords: ["medical marketing aizawl", "healthcare marketing aizawl", "doctor marketing agency aizawl", "hospital marketing mizoram"]
   },
   {
@@ -1860,7 +1860,7 @@ export const cities: City[] = [
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Gangtok",
     h2: "Complete Healthcare Marketing for Gangtok's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Gangtok. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Gangtok. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing gangtok", "healthcare marketing gangtok", "doctor marketing agency gangtok", "hospital marketing sikkim"]
   },
   {
@@ -1871,8 +1871,8 @@ export const cities: City[] = [
     tier: 3,
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Itanagar",
-    h2: "Trusted Healthcare Marketing for Itanagar's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Itanagar. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Itanagar's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Itanagar. SEO & patient engagement for doctors.",
     keywords: ["medical marketing itanagar", "healthcare marketing itanagar", "doctor marketing agency itanagar", "hospital marketing arunachal"]
   },
   {
@@ -1883,8 +1883,8 @@ export const cities: City[] = [
     tier: 3,
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Kohima",
-    h2: "Expert Healthcare Marketing for Kohima's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Kohima. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Kohima's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Kohima. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing kohima", "healthcare marketing kohima", "doctor marketing agency kohima", "hospital marketing nagaland"]
   },
   {
@@ -1895,8 +1895,8 @@ export const cities: City[] = [
     tier: 2,
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Goa",
-    h2: "Result-Driven Healthcare Marketing for Goa's Doctors & Hospitals",
-    metaDescription: "Leading medical digital marketing agency in Goa. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Goa's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Goa. Healthcare marketing for doctors.",
     keywords: ["medical marketing goa", "healthcare marketing panaji", "doctor marketing agency goa", "hospital marketing goa"]
   },
   {
@@ -1908,7 +1908,7 @@ export const cities: City[] = [
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Margao",
     h2: "Complete Healthcare Marketing for Margao's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Margao. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Margao. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing margao", "healthcare marketing margao", "doctor marketing agency margao", "hospital marketing south goa"]
   },
   {
@@ -1919,8 +1919,8 @@ export const cities: City[] = [
     tier: 3,
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Vasco da Gama",
-    h2: "Premier Healthcare Marketing for Vasco's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Vasco. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Vasco's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Vasco. SEO & patient engagement for doctors.",
     keywords: ["medical marketing vasco", "healthcare marketing vasco da gama", "doctor marketing agency vasco", "hospital marketing goa"]
   },
   {
@@ -1931,8 +1931,8 @@ export const cities: City[] = [
     tier: 2,
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Pondicherry",
-    h2: "Expert Healthcare Marketing for Pondicherry's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Pondicherry. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Pondicherry's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Pondicherry. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing pondicherry", "healthcare marketing puducherry", "doctor marketing agency pondicherry", "hospital marketing puducherry"]
   },
   {
@@ -1943,8 +1943,8 @@ export const cities: City[] = [
     tier: 3,
     population: "150K+",
     h1: "Medical Digital Marketing Agency in Port Blair",
-    h2: "Grow Your Healthcare Practice in Port Blair with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Port Blair. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Port Blair",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Port Blair. Healthcare marketing for doctors.",
     keywords: ["medical marketing port blair", "healthcare marketing andaman", "doctor marketing agency port blair", "hospital marketing andaman nicobar"]
   },
   {
@@ -1956,7 +1956,7 @@ export const cities: City[] = [
     population: "100K+",
     h1: "Medical Digital Marketing Agency in Silvassa",
     h2: "Complete Healthcare Marketing for Silvassa's Doctors & Hospitals",
-    metaDescription: "Top medical digital marketing agency in Silvassa. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Silvassa. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing silvassa", "healthcare marketing silvassa", "doctor marketing agency silvassa", "hospital marketing dadra nagar haveli"]
   },
   {
@@ -1967,8 +1967,8 @@ export const cities: City[] = [
     tier: 3,
     population: "50K+",
     h1: "Medical Digital Marketing Agency in Daman",
-    h2: "Trusted Healthcare Marketing for Daman's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Daman. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Daman's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Daman. SEO & patient engagement for doctors.",
     keywords: ["medical marketing daman", "healthcare marketing daman", "doctor marketing agency daman", "hospital marketing daman diu"]
   },
   {
@@ -1979,8 +1979,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Bhilai",
-    h2: "Expert Healthcare Marketing for Bhilai's Doctors & Clinics",
-    metaDescription: "Best medical digital marketing agency in Bhilai. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Bhilai's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bhilai. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing bhilai", "healthcare marketing bhilai", "doctor marketing agency bhilai", "hospital marketing durg"]
   },
   {
@@ -1991,8 +1991,8 @@ export const cities: City[] = [
     tier: 3,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Korba",
-    h2: "Result-Oriented Healthcare Marketing for Korba's Medical Community",
-    metaDescription: "Leading medical digital marketing agency in Korba. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Korba's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Korba. Healthcare marketing for doctors.",
     keywords: ["medical marketing korba", "healthcare marketing korba", "doctor marketing agency korba", "hospital marketing chhattisgarh"]
   },
   {
@@ -2004,7 +2004,7 @@ export const cities: City[] = [
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Rajnandgaon",
     h2: "Complete Healthcare Marketing for Rajnandgaon's Doctors",
-    metaDescription: "Top medical digital marketing agency in Rajnandgaon. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rajnandgaon. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing rajnandgaon", "healthcare marketing rajnandgaon", "doctor marketing agency rajnandgaon", "hospital marketing chhattisgarh"]
   },
   {
@@ -2015,8 +2015,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Bareilly",
-    h2: "Premier Healthcare Marketing for Bareilly's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Bareilly. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Bareilly's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bareilly. SEO & patient engagement for doctors.",
     keywords: ["medical marketing bareilly", "healthcare marketing bareilly", "doctor marketing agency bareilly", "hospital marketing rohilkhand"]
   },
   {
@@ -2027,8 +2027,8 @@ export const cities: City[] = [
     tier: 2,
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Moradabad",
-    h2: "Expert Healthcare Marketing for Moradabad's Doctors & Hospitals",
-    metaDescription: "Best medical digital marketing agency in Moradabad. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Moradabad's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Moradabad. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing moradabad", "healthcare marketing moradabad", "doctor marketing agency moradabad", "hospital marketing western up"]
   },
   {
@@ -2039,8 +2039,8 @@ export const cities: City[] = [
     tier: 2,
     population: "700K+",
     h1: "Medical Digital Marketing Agency in Saharanpur",
-    h2: "Grow Your Healthcare Practice in Saharanpur with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Saharanpur. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Saharanpur",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Saharanpur. Healthcare marketing for doctors.",
     keywords: ["medical marketing saharanpur", "healthcare marketing saharanpur", "doctor marketing agency saharanpur", "hospital marketing western up"]
   },
   {
@@ -2052,7 +2052,7 @@ export const cities: City[] = [
     population: "1M+",
     h1: "Medical Digital Marketing Agency in Aligarh",
     h2: "Complete Healthcare Marketing for Aligarh's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Aligarh. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Aligarh. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing aligarh", "healthcare marketing aligarh", "doctor marketing agency aligarh", "hospital marketing western up"]
   },
   {
@@ -2063,8 +2063,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Mathura",
-    h2: "Trusted Healthcare Marketing for Mathura's Doctors & Clinics",
-    metaDescription: "Expert medical digital marketing agency in Mathura. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Mathura's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mathura. SEO & patient engagement for doctors.",
     keywords: ["medical marketing mathura", "healthcare marketing mathura", "doctor marketing agency mathura", "hospital marketing braj"]
   },
   {
@@ -2075,8 +2075,8 @@ export const cities: City[] = [
     tier: 3,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Firozabad",
-    h2: "Expert Healthcare Marketing for Firozabad's Medical Sector",
-    metaDescription: "Best medical digital marketing agency in Firozabad. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Firozabad's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Firozabad. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing firozabad", "healthcare marketing firozabad", "doctor marketing agency firozabad", "hospital marketing western up"]
   },
   {
@@ -2087,8 +2087,8 @@ export const cities: City[] = [
     tier: 2,
     population: "750K+",
     h1: "Medical Digital Marketing Agency in Gorakhpur",
-    h2: "Result-Driven Healthcare Marketing for Gorakhpur's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Gorakhpur. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Gorakhpur's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Gorakhpur. Healthcare marketing for doctors.",
     keywords: ["medical marketing gorakhpur", "healthcare marketing gorakhpur", "doctor marketing agency gorakhpur", "hospital marketing purvanchal"]
   },
   {
@@ -2100,7 +2100,7 @@ export const cities: City[] = [
     population: "600K+",
     h1: "Medical Digital Marketing Agency in Jhansi",
     h2: "Complete Healthcare Marketing for Jhansi's Medical Community",
-    metaDescription: "Top medical digital marketing agency in Jhansi. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Jhansi. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing jhansi", "healthcare marketing jhansi", "doctor marketing agency jhansi", "hospital marketing bundelkhand"]
   },
   {
@@ -2111,8 +2111,8 @@ export const cities: City[] = [
     tier: 3,
     population: "350K+",
     h1: "Medical Digital Marketing Agency in Rampur",
-    h2: "Premier Healthcare Marketing for Rampur's Doctors & Hospitals",
-    metaDescription: "Expert medical digital marketing agency in Rampur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Rampur's Doctors & Hospitals",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Rampur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing rampur", "healthcare marketing rampur", "doctor marketing agency rampur", "hospital marketing rohilkhand"]
   },
   {
@@ -2123,8 +2123,8 @@ export const cities: City[] = [
     tier: 3,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Shahjahanpur",
-    h2: "Expert Healthcare Marketing for Shahjahanpur's Doctors & Clinics",
-    metaDescription: "Best medical digital marketing agency in Shahjahanpur. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Shahjahanpur's Doctors & Clinics",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Shahjahanpur. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing shahjahanpur", "healthcare marketing shahjahanpur", "doctor marketing agency shahjahanpur", "hospital marketing up"]
   },
   {
@@ -2135,8 +2135,8 @@ export const cities: City[] = [
     tier: 2,
     population: "500K+",
     h1: "Medical Digital Marketing Agency in Muzaffarnagar",
-    h2: "Grow Your Healthcare Practice in Muzaffarnagar with Digital Marketing",
-    metaDescription: "Leading medical digital marketing agency in Muzaffarnagar. Expert healthcare marketing for doctors.",
+    h2: "Digital Marketing for Healthcare in Muzaffarnagar",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Muzaffarnagar. Healthcare marketing for doctors.",
     keywords: ["medical marketing muzaffarnagar", "healthcare marketing muzaffarnagar", "doctor marketing agency muzaffarnagar", "hospital marketing western up"]
   },
   {
@@ -2148,7 +2148,7 @@ export const cities: City[] = [
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Etawah",
     h2: "Complete Healthcare Marketing for Etawah's Medical Sector",
-    metaDescription: "Top medical digital marketing agency in Etawah. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Etawah. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing etawah", "healthcare marketing etawah", "doctor marketing agency etawah", "hospital marketing up"]
   },
   {
@@ -2159,8 +2159,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Mirzapur",
-    h2: "Trusted Healthcare Marketing for Mirzapur's Doctors",
-    metaDescription: "Expert medical digital marketing agency in Mirzapur. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Mirzapur's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Mirzapur. SEO & patient engagement for doctors.",
     keywords: ["medical marketing mirzapur", "healthcare marketing mirzapur", "doctor marketing agency mirzapur", "hospital marketing purvanchal"]
   },
   {
@@ -2171,8 +2171,8 @@ export const cities: City[] = [
     tier: 2,
     population: "400K+",
     h1: "Medical Digital Marketing Agency in Ayodhya",
-    h2: "Expert Healthcare Marketing for Ayodhya's Medical Community",
-    metaDescription: "Best medical digital marketing agency in Ayodhya. Healthcare SEO & social media for doctors.",
+    h2: "Ethical Healthcare Marketing for Ayodhya's Medical Community",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Ayodhya. Healthcare SEO & social media for doctors.",
     keywords: ["medical marketing ayodhya", "healthcare marketing faizabad", "doctor marketing agency ayodhya", "hospital marketing awadh"]
   },
   {
@@ -2183,8 +2183,8 @@ export const cities: City[] = [
     tier: 3,
     population: "200K+",
     h1: "Medical Digital Marketing Agency in Sultanpur",
-    h2: "Result-Oriented Healthcare Marketing for Sultanpur's Doctors",
-    metaDescription: "Leading medical digital marketing agency in Sultanpur. Expert healthcare marketing for doctors.",
+    h2: "Ethical Healthcare Marketing for Sultanpur's Doctors",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Sultanpur. Healthcare marketing for doctors.",
     keywords: ["medical marketing sultanpur", "healthcare marketing sultanpur", "doctor marketing agency sultanpur", "hospital marketing awadh"]
   },
   {
@@ -2196,7 +2196,7 @@ export const cities: City[] = [
     population: "300K+",
     h1: "Medical Digital Marketing Agency in Hapur",
     h2: "Complete Healthcare Marketing for Hapur's Doctors & Clinics",
-    metaDescription: "Top medical digital marketing agency in Hapur. Healthcare SEO & branding for doctors.",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Hapur. Healthcare SEO & branding for doctors.",
     keywords: ["medical marketing hapur", "healthcare marketing hapur", "doctor marketing agency hapur", "hospital marketing ncr"]
   },
   {
@@ -2207,8 +2207,8 @@ export const cities: City[] = [
     tier: 3,
     population: "250K+",
     h1: "Medical Digital Marketing Agency in Bulandshahr",
-    h2: "Premier Healthcare Marketing for Bulandshahr's Medical Sector",
-    metaDescription: "Expert medical digital marketing agency in Bulandshahr. SEO & patient acquisition for doctors.",
+    h2: "Ethical Healthcare Marketing for Bulandshahr's Medical Sector",
+    metaDescription: "Ethical, NMC-compliant medical digital marketing agency in Bulandshahr. SEO & patient engagement for doctors.",
     keywords: ["medical marketing bulandshahr", "healthcare marketing bulandshahr", "doctor marketing agency bulandshahr", "hospital marketing western up"]
   }
 ];

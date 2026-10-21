@@ -4,27 +4,27 @@ const WhyDigitalSection = () => {
   const reasons = [
     {
       icon: Search,
-      stat: "77%",
-      title: "Patients Search Online First",
-      description: "Before booking an appointment, the vast majority of patients research doctors online. Your digital presence is your first impression.",
+      stat: "Findable",
+      title: "Easy to Find Online",
+      description: "Many patients look online before visiting a doctor. A clear, factual presence helps them find accurate information about your practice.",
     },
     {
       icon: Shield,
-      stat: "94%",
-      title: "Trust Online Reviews",
-      description: "Patients trust online reviews as much as personal recommendations. A strong review profile directly impacts patient decisions.",
+      stat: "Credible",
+      title: "Verifiable Credentials",
+      description: "Transparently sharing your qualifications, registration and areas of practice helps patients make informed choices.",
     },
     {
       icon: TrendingUp,
-      stat: "3x",
-      title: "Higher Patient Acquisition",
-      description: "Doctors with optimized digital presence see up to 3x more new patient inquiries compared to those without.",
+      stat: "Educational",
+      title: "Public Health Education",
+      description: "Factual, non-promotional health content supports patients and reflects well on your professional standing.",
     },
     {
       icon: Users,
-      stat: "60%",
-      title: "Better Patient Retention",
-      description: "Consistent digital engagement keeps patients connected to your practice, reducing churn to competitors.",
+      stat: "Connected",
+      title: "Ongoing Communication",
+      description: "Compliant reminders and follow-ups keep patients informed and connected to your practice.",
     },
   ];
 
@@ -36,11 +36,12 @@ const WhyDigitalSection = () => {
             Why Go Digital
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            The Numbers Don't Lie:{" "}
-            <span className="text-gradient">Digital Is Essential</span>
+            Why an Ethical{" "}
+            <span className="text-gradient">Digital Presence</span> Helps
           </h2>
           <p className="text-lg text-muted-foreground">
-            In the modern healthcare landscape, your online presence isn't optional—it's the foundation of patient trust and practice growth.
+            In modern healthcare, a clear and factual online presence helps patients find
+            accurate information — within professional ethics and NMC guidelines.
           </p>
         </div>
 
@@ -56,7 +57,7 @@ const WhyDigitalSection = () => {
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-heading font-bold text-primary mb-2">
+                <div className="text-2xl font-heading font-bold text-primary mb-2">
                   {reason.stat}
                 </div>
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
@@ -73,12 +74,12 @@ const WhyDigitalSection = () => {
         <div className="mt-16 relative overflow-hidden rounded-3xl bg-gradient-primary p-8 md:p-12">
           <div className="relative z-10 max-w-2xl">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-4">
-              Your Competitors Are Already Online
+              Compliant by Design
             </h3>
             <p className="text-primary-foreground/80 text-lg mb-0">
-              Every day you wait, another doctor in your specialty is building their digital presence, 
-              attracting your potential patients, and establishing themselves as the go-to expert. 
-              The question isn't whether to go digital—it's how quickly you can start.
+              We build every website, profile and piece of content to be factual, verifiable and
+              aligned with NMC ethical advertising guidelines — no testimonials, no ratings,
+              no exaggerated claims. Just a clear, honest digital presence.
             </p>
           </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl" />

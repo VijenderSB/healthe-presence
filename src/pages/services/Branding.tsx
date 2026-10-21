@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -46,7 +46,7 @@ const services = [
 const Branding = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Medical Branding India | Doctor Logo & Brand Identity Design | Transess</title>
         <meta name="description" content="Medical branding & creative design: doctor logo design, clinic brand identity, social media creatives & marketing collateral. Build a memorable medical brand that patients trust!" />
         <meta name="keywords" content="medical branding India, doctor logo design, hospital brand identity, healthcare creative design, clinic branding, medical marketing collateral" />
@@ -80,7 +80,7 @@ const Branding = () => {
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Branding" }]} />
       
@@ -246,7 +246,7 @@ const Branding = () => {
               <Link to="/contact">Start Your Brand Journey</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">See Brand Transformations</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

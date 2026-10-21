@@ -7,9 +7,9 @@ const SolutionSection = () => {
     { icon: Smartphone, label: "Social Media" },
     { icon: Video, label: "Video" },
     { icon: Brain, label: "GEO (AI)" },
-    { icon: Star, label: "Reputation" },
-    { icon: Users, label: "Acquisition" },
-    { icon: MessageCircle, label: "Retention" },
+    { icon: Star, label: "Branding" },
+    { icon: Users, label: "Education" },
+    { icon: MessageCircle, label: "Engagement" },
   ];
 
   return (
@@ -28,7 +28,7 @@ const SolutionSection = () => {
                   360° Medical Marketing Ecosystem
                 </h3>
                 <p className="text-primary-foreground/80 mb-8">
-                  Everything you need to dominate your digital presence, all in one place.
+                  Everything you need to manage an ethical, compliant digital presence, all in one place.
                 </p>
               </div>
 
@@ -61,17 +61,17 @@ const SolutionSection = () => {
               One Partner. <span className="text-gradient">Complete Solution.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Stop juggling multiple agencies. Our 360° medical digital marketing ecosystem 
-              handles everything—from your first online impression to patient retention—so 
+              Stop juggling multiple agencies. Our 360° medical digital marketing ecosystem
+              handles everything—from a clear, factual website to ongoing patient communication—so
               you can focus on what matters most: practicing medicine.
             </p>
 
             <div className="space-y-4 mb-8">
               {[
-                "Attract new patients through strategic visibility",
-                "Convert visitors with trust-building content",
-                "Retain patients through consistent engagement",
-                "Build a reputation that speaks for itself",
+                "Make accurate information about your practice easy to find",
+                "Share factual, educational content that builds trust",
+                "Stay connected with patients through compliant communication",
+                "Present your credentials and services clearly and ethically",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">

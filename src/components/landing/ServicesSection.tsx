@@ -16,13 +16,13 @@ import { Link } from "react-router-dom";
 const ServicesSection = () => {
   const featuredService = {
     icon: Star,
-    title: "Medical Influencer Marketing",
-    description: "Build your personal brand, attract more footfalls, and become the go-to doctor in your city with our end-to-end content creation and growth strategy.",
+    title: "Personal Branding & Public Health Education",
+    description: "Build a credible professional presence through factual, educational health content — talks, explainers and thought leadership rooted in your genuine expertise.",
     benefits: [
-      "Personal brand building",
-      "End-to-end content support",
-      "Unique engaging content",
-      "Multi-platform growth",
+      "Professional personal branding",
+      "Public health education content",
+      "Credential-led thought leadership",
+      "Factual, non-promotional content",
     ],
     href: "/services/influencer-marketing",
   };
@@ -43,7 +43,7 @@ const ServicesSection = () => {
     {
       icon: Globe,
       title: "Medical Website Design",
-      description: "Fast, mobile-responsive, HIPAA-aware websites that convert visitors into patients.",
+      description: "Fast, mobile-responsive, data-privacy-aware websites that present your practice clearly and factually.",
       benefits: [
         "Modern, aesthetically designed layouts",
         "Mobile-first responsive design",
@@ -55,7 +55,7 @@ const ServicesSection = () => {
     {
       icon: Smartphone,
       title: "Social Media Management",
-      description: "End-to-end social media strategy that builds your authority and attracts patients.",
+      description: "End-to-end social media strategy that shares factual, educational health content.",
       benefits: [
         "Content planning & scheduling",
         "Specialty-focused creatives",
@@ -79,24 +79,24 @@ const ServicesSection = () => {
     {
       icon: Youtube,
       title: "YouTube Channel Management",
-      description: "Complete YouTube strategy to establish thought leadership and grow subscribers.",
+      description: "Complete YouTube strategy to establish thought leadership through educational content.",
       benefits: [
         "Channel setup & optimization",
         "Content strategy & scripting",
         "SEO & thumbnail design",
-        "Subscriber growth campaigns",
+        "Reach & engagement analytics",
       ],
       href: "/services/youtube-management",
     },
     {
       icon: Search,
       title: "SEO & Google Visibility",
-      description: "Dominate local search results so patients find you first.",
+      description: "Help patients find accurate, factual information about your practice in local search.",
       benefits: [
-        "Google My Business optimization",
+        "Google Business Profile accuracy",
         "Local SEO strategy",
-        "Review management",
-        "Search ranking improvement",
+        "Accurate practice listings",
+        "Technical search optimization",
       ],
       href: "/services/seo",
     },
@@ -115,12 +115,12 @@ const ServicesSection = () => {
     {
       icon: MessageCircle,
       title: "Patient Engagement Tools",
-      description: "Systems to acquire new patients and retain existing ones through trust.",
+      description: "Compliant communication that keeps patients informed and connected to your practice.",
       benefits: [
-        "Patient acquisition funnels",
+        "Appointment reminders",
         "Automated follow-ups",
-        "Review collection system",
-        "Loyalty & referral programs",
+        "Patient education messages",
+        "WhatsApp communication",
       ],
       href: "/services/patient-engagement",
     },

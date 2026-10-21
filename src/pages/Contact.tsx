@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -35,9 +35,9 @@ const contactInfo = [
 const Contact = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Contact Transess | Free Medical Marketing Consultation | Call +91 8447314061</title>
-        <meta name="description" content="Get FREE consultation for your medical practice! Contact India's leading healthcare marketing agency. Call +91 8447314061, email info@transess.com or fill our form. We respond within 24 hours." />
+        <meta name="description" content="Get a FREE consultation for your medical practice. Contact Transess, a medical digital marketing agency. Call +91 8447314061, email info@transess.com or fill our form. We respond within 24 hours." />
         <meta name="keywords" content="contact Transess, medical marketing consultation, free healthcare consultation, doctor marketing agency contact, hospital marketing quote" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/contact`} />
         <meta property="og:title" content="Contact Transess | Free Medical Marketing Consultation" />
@@ -48,7 +48,7 @@ const Contact = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact Transess | Free Consultation" />
         <meta name="twitter:description" content="Get free medical marketing consultation. We respond in 24 hours!" />
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Contact Us" }]} />
       
@@ -120,8 +120,8 @@ const Contact = () => {
                     <span>Frequently Asked Questions</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <Link to="/testimonials" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
-                    <span>Client Testimonials</span>
+                  <Link to="/case-studies" className="flex items-center justify-between text-muted-foreground hover:text-foreground transition-colors">
+                    <span>Our Work</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

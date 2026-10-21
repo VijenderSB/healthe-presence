@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -23,8 +23,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "HIPAA Compliant",
-    description: "Secure, compliant websites that protect patient data and meet healthcare industry standards."
+    title: "Data Privacy Aligned (DPDP Act, 2023)",
+    description: "Secure websites aligned with India's Digital Personal Data Protection Act, 2023, that help protect patient data."
   },
   {
     icon: Search,
@@ -53,19 +53,19 @@ const processSteps = [
 const WebsiteDesign = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Medical Website Design India | Doctor & Hospital Websites | Transess</title>
-        <meta name="description" content="Professional medical website design for doctors, clinics & hospitals. HIPAA-compliant, mobile-responsive, SEO-optimized websites that convert visitors to patients. Free consultation!" />
-        <meta name="keywords" content="medical website design India, doctor website development, hospital website design, healthcare web design, clinic website, HIPAA compliant website" />
+        <meta name="description" content="Professional medical website design for doctors, clinics & hospitals. Data privacy aligned (DPDP Act, 2023), mobile-responsive, SEO-optimized websites that present clear, accurate information. Free consultation!" />
+        <meta name="keywords" content="medical website design India, doctor website development, hospital website design, healthcare web design, clinic website, DPDP compliant website" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/website-design`} />
         <meta property="og:title" content="Medical Website Design | Transess India" />
-        <meta property="og:description" content="Professional doctor & hospital websites that convert visitors to patients." />
+        <meta property="og:description" content="Professional doctor & hospital websites that present clear, accurate information about your practice." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/website-design`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Medical Website Design | Transess" />
-        <meta name="twitter:description" content="HIPAA-compliant websites for healthcare professionals." />
+        <meta name="twitter:description" content="Data privacy aligned (DPDP Act, 2023) websites for healthcare professionals." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -80,20 +80,20 @@ const WebsiteDesign = () => {
               "@type": "Country",
               "name": "India"
             },
-            "description": "Professional medical website design for doctors, clinics & hospitals. HIPAA-compliant, mobile-responsive, SEO-optimized websites.",
+            "description": "Professional medical website design for doctors, clinics & hospitals. Data privacy aligned (DPDP Act, 2023), mobile-responsive, SEO-optimized websites.",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock"
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Website Design" }]} />
       
       <PageHero
         badge="Medical Website Design"
-        title="Professional Medical Websites That Convert Visitors to Patients"
+        title="Professional Websites for Healthcare Providers"
         description="Custom-designed, fast, mobile-responsive websites built specifically for healthcare professionals. Make a powerful first impression online."
         backgroundImage={heroWebsite}
         primaryCta={{ text: "Get Started", link: "/contact" }}
@@ -158,7 +158,7 @@ const WebsiteDesign = () => {
               Enhance Your Website With
             </h2>
             <p className="text-lg text-muted-foreground">
-              Maximize your website's impact with these complementary services.
+              Strengthen your website's impact with these complementary services.
             </p>
           </div>
           
@@ -201,7 +201,7 @@ const WebsiteDesign = () => {
                 <CheckCircle className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Patient Engagement</h3>
-              <p className="text-muted-foreground mb-4">Convert website visitors into loyal patients.</p>
+              <p className="text-muted-foreground mb-4">Help website visitors find the information they need about your practice.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </span>
@@ -226,7 +226,7 @@ const WebsiteDesign = () => {
               <Link to="/contact">Schedule Free Consultation</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">Read Success Stories</Link>
+              <Link to="/case-studies">See Our Work</Link>
             </Button>
           </div>
         </div>

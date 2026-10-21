@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -19,40 +19,40 @@ const services = [
   {
     icon: Bell,
     title: "Appointment Reminders",
-    description: "Reduce no-shows with automated reminders across multiple channels."
+    description: "Automated appointment reminders delivered across multiple channels."
   },
   {
     icon: Heart,
-    title: "Patient Loyalty Programs",
-    description: "Build lasting relationships with rewards, referral programs, and special offers."
+    title: "Patient Education",
+    description: "Share factual health information, preventive-care tips and condition explainers to keep patients informed between visits."
   },
   {
     icon: Calendar,
-    title: "Follow-up Systems",
-    description: "Automated post-visit follow-ups to ensure patient satisfaction and continuity of care."
+    title: "Follow-up Messages",
+    description: "Automated post-visit follow-up messages that support continuity of care."
   },
   {
     icon: Users,
-    title: "Community Building",
-    description: "Create patient communities through newsletters, health tips, and educational content."
+    title: "Newsletters & Health Tips",
+    description: "Keep patients informed through newsletters, health tips, and educational content."
   },
   {
     icon: Shield,
-    title: "Reputation Management",
-    description: "Encourage reviews, respond to feedback, and build a stellar online reputation."
+    title: "Consent-Based Messaging",
+    description: "Privacy-conscious communication that respects patient consent and preferences across every channel."
   }
 ];
 
 const PatientEngagement = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Patient Engagement India | Reduce No-Shows by 60% | WhatsApp Marketing | Transess</title>
-        <meta name="description" content="Patient engagement solutions: WhatsApp marketing, appointment reminders, follow-ups & loyalty programs. 60% fewer no-shows, 40% better retention, 3x more referrals!" />
-        <meta name="keywords" content="patient engagement India, healthcare patient retention, WhatsApp marketing doctors, appointment reminder system, patient loyalty programs, reduce no-shows" />
+      <Head>
+        <title>Patient Engagement India | Appointment Reminders & WhatsApp Automation | Transess</title>
+        <meta name="description" content="Patient communication tools: WhatsApp automation, appointment reminders, follow-up messages and patient education, delivered with consent and respect for privacy." />
+        <meta name="keywords" content="patient engagement India, healthcare communication, WhatsApp automation doctors, appointment reminder system, patient education, follow-up messages" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/services/patient-engagement`} />
         <meta property="og:title" content="Patient Engagement Solutions | Transess India" />
-        <meta property="og:description" content="Reduce no-shows by 60%! WhatsApp marketing & patient retention tools." />
+        <meta property="og:description" content="Appointment reminders, WhatsApp automation and patient communication tools." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/services/patient-engagement`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
@@ -73,24 +73,24 @@ const PatientEngagement = () => {
               "@type": "Country",
               "name": "India"
             },
-            "description": "Patient engagement solutions: WhatsApp marketing, appointment reminders, follow-ups & loyalty programs.",
+            "description": "Patient communication tools: WhatsApp automation, appointment reminders, follow-up messages and patient education.",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock"
             }
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Patient Engagement" }]} />
       
       <PageHero
         badge="Patient Engagement"
-        title="Retain Patients & Build Lasting Relationships"
-        description="Complete patient retention system with engagement, communication, and trust-building tools that keep patients coming back."
+        title="Patient Communication & Engagement Tools"
+        description="Appointment reminders, follow-up messages, WhatsApp automation and patient education to help you stay in touch with your patients."
         backgroundImage={heroEngagement}
-        primaryCta={{ text: "Boost Retention", link: "/contact" }}
-        secondaryCta={{ text: "See Results", link: "/case-studies" }}
+        primaryCta={{ text: "Get Started", link: "/contact" }}
+        secondaryCta={{ text: "Our Work", link: "/case-studies" }}
       />
 
       {/* Services Grid */}
@@ -113,25 +113,6 @@ const PatientEngagement = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "40%", label: "Increase in Retention" },
-              { value: "60%", label: "Fewer No-Shows" },
-              { value: "3x", label: "More Referrals" },
-              { value: "90%", label: "Patient Satisfaction" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -243,7 +224,7 @@ const PatientEngagement = () => {
               <Link to="/contact">Get Started</Link>
             </Button>
             <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-              <Link to="/testimonials">Success Stories</Link>
+              <Link to="/case-studies">Our Work</Link>
             </Button>
           </div>
         </div>

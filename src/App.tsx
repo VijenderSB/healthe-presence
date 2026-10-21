@@ -1,8 +1,9 @@
+import type { RouteRecord } from "vite-react-ssg";
+import { Outlet } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FloatingButtons from "./components/FloatingButtons";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -17,7 +18,6 @@ import GEO from "./pages/services/GEO";
 import Branding from "./pages/services/Branding";
 import PatientEngagement from "./pages/services/PatientEngagement";
 import AboutUs from "./pages/AboutUs";
-import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import Careers from "./pages/Careers";
@@ -32,51 +32,55 @@ import { specialties } from "./data/specialties";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const Layout = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <FloatingButtons />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/influencer-marketing" element={<InfluencerMarketing />} />
-          <Route path="/services/website-design" element={<WebsiteDesign />} />
-          <Route path="/services/social-media" element={<SocialMedia />} />
-          <Route path="/services/video-production" element={<VideoProduction />} />
-          <Route path="/services/youtube-management" element={<YouTubeManagement />} />
-          <Route path="/services/seo" element={<SEO />} />
-          <Route path="/services/geo" element={<GEO />} />
-          <Route path="/services/branding" element={<Branding />} />
-          <Route path="/services/patient-engagement" element={<PatientEngagement />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/specialties" element={<Specialties />} />
-          <Route path="/cities" element={<Cities />} />
-          
-          {/* Medical Specialty Pages - Dynamic */}
-          {specialties.map((specialty) => (
-            <Route key={specialty.id} path={`/${specialty.slug}`} element={<SpecialtyPage />} />
-          ))}
-          
-          {/* City Landing Pages - Dynamic */}
-          {cities.map((city) => (
-            <Route key={city.id} path={`/${city.slug}`} element={<CityPage />} />
-          ))}
-          
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <FloatingButtons />
+      <Outlet />
     </TooltipProvider>
   </QueryClientProvider>
 );
 
-export default App;
+export const routes: RouteRecord[] = [
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Index /> },
+      { path: "services", element: <Services /> },
+      { path: "services/influencer-marketing", element: <InfluencerMarketing /> },
+      { path: "services/website-design", element: <WebsiteDesign /> },
+      { path: "services/social-media", element: <SocialMedia /> },
+      { path: "services/video-production", element: <VideoProduction /> },
+      { path: "services/youtube-management", element: <YouTubeManagement /> },
+      { path: "services/seo", element: <SEO /> },
+      { path: "services/geo", element: <GEO /> },
+      { path: "services/branding", element: <Branding /> },
+      { path: "services/patient-engagement", element: <PatientEngagement /> },
+      { path: "about", element: <AboutUs /> },
+      { path: "contact", element: <Contact /> },
+      { path: "case-studies", element: <CaseStudies /> },
+      { path: "careers", element: <Careers /> },
+      { path: "blog", element: <Blog /> },
+      { path: "faq", element: <FAQ /> },
+      { path: "specialties", element: <Specialties /> },
+      { path: "cities", element: <Cities /> },
+
+      // Medical specialty landing pages (prerendered)
+      ...specialties.map((specialty) => ({
+        path: specialty.slug,
+        element: <SpecialtyPage />,
+      })),
+
+      // City landing pages (prerendered)
+      ...cities.map((city) => ({
+        path: city.slug,
+        element: <CityPage />,
+      })),
+
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+];

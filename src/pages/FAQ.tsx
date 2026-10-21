@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -47,7 +47,7 @@ const faqs = [
       },
       {
         question: "Can I choose individual services or do I need the complete package?",
-        answer: "You can choose individual services based on your needs and budget. However, we often recommend a combination of services for the best results, as digital marketing works best as an integrated strategy. We'll help you prioritize based on your goals.",
+        answer: "You can choose individual services based on your needs and budget. However, we often recommend a combination of services, as digital marketing tends to work well as an integrated strategy. We'll help you prioritize based on your goals.",
         relatedService: "services"
       },
       {
@@ -57,12 +57,12 @@ const faqs = [
       },
       {
         question: "How does your SEO service work?",
-        answer: "Our SEO service includes local SEO optimization, technical SEO audits, keyword research specific to medical terms, content optimization, link building from healthcare websites, and monthly performance reporting. We focus on ranking for terms that bring in actual patients.",
+        answer: "Our SEO service includes local SEO optimization, technical SEO audits, keyword research specific to medical terms, content optimization, link building from healthcare websites, and monthly performance reporting. We focus on improving visibility for the search terms patients actually use.",
         relatedService: "seo"
       },
       {
         question: "What kind of videos do you produce?",
-        answer: "We produce doctor introduction videos, procedure explainers, patient education content, testimonial videos, facility tours, and short-form content for social media. All videos are shot professionally and optimized for the platforms where they'll be shared.",
+        answer: "We produce doctor introduction videos, procedure explainers, patient education content, facility tours, and short-form content for social media. All videos are shot professionally and optimized for the platforms where they'll be shared.",
         relatedService: "video-production"
       }
     ]
@@ -111,13 +111,13 @@ const faqs = [
     category: "Compliance",
     questions: [
       {
-        question: "Do you ensure compliance with medical advertising regulations?",
-        answer: "Absolutely. We're well-versed in healthcare advertising guidelines and ensure all content complies with relevant regulations. We never make unsubstantiated claims and always prioritize patient safety and trust in our messaging.",
+        question: "Do you ensure compliance with NMC medical advertising guidelines?",
+        answer: "Yes. All our work follows the NMC Guidelines on Ethical Advertising and Public Communication (2026). We do not use patient testimonials, reviews, ratings, before/after images, superlative or comparative claims (like '#1' or 'best'), or guaranteed-outcome promises. Every piece of content is factual, verifiable, and non-promotional in a way that keeps you within professional ethics.",
         relatedService: null
       },
       {
-        question: "How do you handle patient privacy and HIPAA compliance?",
-        answer: "Patient privacy is paramount. We never access patient data directly. Any testimonials or case studies are obtained with proper consent. Our website solutions are built with security best practices, and we can integrate HIPAA-compliant forms if needed.",
+        question: "How do you handle patient privacy and data protection?",
+        answer: "Patient privacy is paramount. We never access patient data directly, and we do not create patient testimonials or share identifiable patient information. Our website solutions are built with security best practices and aligned with India's Digital Personal Data Protection (DPDP) Act, 2023.",
         relatedService: "website-design"
       }
     ]
@@ -127,9 +127,9 @@ const faqs = [
 const FAQ = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
+      <Head>
         <title>Medical Marketing FAQ | Pricing, Process & Compliance Questions | Transess</title>
-        <meta name="description" content="Get answers to all your medical marketing questions! Learn about pricing, timeline, process, HIPAA compliance & ROI. Free consultation available for doctors & hospitals." />
+        <meta name="description" content="Get answers to common medical marketing questions. Learn about pricing, timeline, process and advertising compliance. Free consultation available for doctors & hospitals." />
         <meta name="keywords" content="medical marketing FAQ, healthcare marketing pricing, doctor marketing questions, hospital SEO cost, medical advertising compliance, marketing timeline" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/faq`} />
         <meta property="og:title" content="Medical Marketing FAQ | Transess" />
@@ -156,7 +156,7 @@ const FAQ = () => {
             )
           })}
         </script>
-      </Helmet>
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "FAQ" }]} />
       
@@ -231,11 +231,11 @@ const FAQ = () => {
               </span>
             </Link>
             
-            <Link to="/testimonials" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
-              <h3 className="text-lg font-semibold text-foreground mb-2">Testimonials</h3>
-              <p className="text-sm text-muted-foreground mb-3">Hear from clients</p>
+            <Link to="/case-studies" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-lg font-semibold text-foreground mb-2">Our Work</h3>
+              <p className="text-sm text-muted-foreground mb-3">See our projects</p>
               <span className="inline-flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
-                Read <ArrowRight className="w-4 h-4 ml-1" />
+                View <ArrowRight className="w-4 h-4 ml-1" />
               </span>
             </Link>
             

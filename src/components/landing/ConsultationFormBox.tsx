@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Phone, Mail, User, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { submitLead } from "@/lib/submitLead";
 
 const ConsultationFormBox = () => {
   const { toast } = useToast();
@@ -11,6 +12,7 @@ const ConsultationFormBox = () => {
     name: "",
     email: "",
     phone: "",
+    botcheck: "", // honeypot — hidden from humans, bots fill it
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,15 +32,24 @@ const ConsultationFormBox = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Thank you!",
-      description: "We'll contact you within 24 hours for your free consultation.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "" });
-    setIsSubmitting(false);
+    try {
+      await submitLead({ ...formData, source: "Consultation Form" });
+      toast({
+        title: "Thank you!",
+        description: "We'll contact you within 24 hours for your free consultation.",
+      });
+      setFormData({ name: "", email: "", phone: "", botcheck: "" });
+    } catch (error) {
+      console.error("Lead submission failed:", error);
+      toast({
+        title: "Something went wrong",
+        description:
+          error instanceof Error ? error.message : "Please try again, or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -53,12 +64,12 @@ const ConsultationFormBox = () => {
                   Get Your Free Consultation
                 </h3>
                 <p className="text-primary-foreground/80 mb-6">
-                  Discover how we can transform your practice's digital presence.
+                  See how an ethical, NMC-compliant digital presence can help your practice.
                 </p>
                 <div className="space-y-3">
                   {[
                     "Free 30-minute strategy call",
-                    "Custom growth plan",
+                    "Custom, NMC-compliant plan",
                     "No commitment required",
                     "Response within 24 hours",
                   ].map((benefit, index) => (
@@ -71,13 +82,13 @@ const ConsultationFormBox = () => {
                 <div className="mt-6 pt-6 border-t border-primary-foreground/20">
                   <div className="flex items-center gap-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold">500+</div>
-                      <div className="text-xs text-primary-foreground/70">Doctors</div>
+                      <div className="text-base font-bold">NMC-Compliant</div>
+                      <div className="text-xs text-primary-foreground/70">Ethical advertising</div>
                     </div>
                     <div className="w-px h-10 bg-primary-foreground/20" />
                     <div className="text-center">
-                      <div className="text-2xl font-bold">98%</div>
-                      <div className="text-xs text-primary-foreground/70">Satisfaction</div>
+                      <div className="text-base font-bold">Factual</div>
+                      <div className="text-xs text-primary-foreground/70">No testimonials or ratings</div>
                     </div>
                   </div>
                 </div>
@@ -86,6 +97,16 @@ const ConsultationFormBox = () => {
               {/* Right - Form */}
               <div className="p-6 md:p-8">
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    name="botcheck"
+                    value={formData.botcheck}
+                    onChange={handleChange}
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                     <Input

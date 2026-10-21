@@ -1,91 +1,61 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
 import ConsultationFormBox from "@/components/landing/ConsultationFormBox";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Users, Eye, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroCasestudies from "@/assets/hero-casestudies.jpg";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const caseStudies = [
   {
-    title: "Dr. Sharma's Cardiology Practice",
+    title: "Cardiology Practice",
     category: "Cardiology",
-    challenge: "Low online visibility despite 20+ years of experience. Patients choosing younger doctors with better digital presence.",
-    solution: "Complete 360° digital makeover including website redesign, social media management, and YouTube channel creation.",
-    results: [
-      { metric: "300%", label: "Increase in patient inquiries" },
-      { metric: "1st", label: "Page ranking for 'cardiologist Mumbai'" },
-      { metric: "50K", label: "YouTube subscribers in 6 months" }
-    ],
+    challenge: "An established cardiologist wanted a clearer, more accessible online presence to help patients find reliable information about the practice.",
+    solution: "We redesigned the website, organised factual educational content across social media, and set up a YouTube channel for condition explainers.",
     services: ["website-design", "social-media", "youtube-management"],
     image: "bg-gradient-to-br from-primary/20 to-secondary/20"
   },
   {
-    title: "Smile Dental Clinic Chain",
+    title: "Multi-Location Dental Clinic",
     category: "Dental",
-    challenge: "Multi-location dental chain struggling to maintain consistent branding and patient flow across locations.",
-    solution: "Unified branding, location-specific SEO, patient engagement system, and video content for each treatment.",
-    results: [
-      { metric: "150%", label: "Increase in bookings" },
-      { metric: "45%", label: "Reduction in no-shows" },
-      { metric: "4.8/5", label: "Average Google rating" }
-    ],
+    challenge: "A multi-location dental group needed consistent branding and clear, accurate information across all of its sites.",
+    solution: "We developed unified branding, location-specific information pages, a patient communication system, and educational treatment videos.",
     services: ["branding", "seo", "patient-engagement"],
     image: "bg-gradient-to-br from-accent/20 to-primary/20"
   },
   {
-    title: "HealthFirst Multispecialty Hospital",
+    title: "Multispecialty Hospital",
     category: "Hospital",
-    challenge: "New hospital facing stiff competition from established names. Needed to build brand awareness and trust quickly.",
-    solution: "Comprehensive digital strategy including department-specific content, doctor profiles, and patient testimonial videos.",
-    results: [
-      { metric: "10x", label: "Website traffic growth" },
-      { metric: "500+", label: "Video testimonials" },
-      { metric: "40%", label: "Increase in OPD footfall" }
-    ],
+    challenge: "A new hospital needed to introduce itself and provide clear, factual information about its departments and doctors.",
+    solution: "We built a department-wise website, factual doctor profiles, and public health education videos explaining services and procedures.",
     services: ["website-design", "video-production", "social-media"],
     image: "bg-gradient-to-br from-secondary/20 to-accent/20"
   },
   {
-    title: "Dr. Patel's Dermatology & Aesthetics",
+    title: "Dermatology Clinic",
     category: "Dermatology",
-    challenge: "Premium dermatology practice unable to convey expertise and justify premium pricing through generic marketing.",
-    solution: "High-end branding, before-after case documentation, educational video series, and influencer collaborations.",
-    results: [
-      { metric: "200%", label: "Increase in procedure revenue" },
-      { metric: "100K+", label: "Instagram followers" },
-      { metric: "60%", label: "Patients from social media" }
-    ],
+    challenge: "A dermatology practice wanted to communicate its areas of expertise accurately and professionally.",
+    solution: "We created clear branding and an educational video series explaining common skin conditions and preventive care.",
     services: ["branding", "video-production", "social-media"],
     image: "bg-gradient-to-br from-purple-500/20 to-primary/20"
   },
   {
-    title: "OrthoCare Sports Medicine",
+    title: "Sports Medicine Practice",
     category: "Orthopedics",
-    challenge: "Sports medicine practice wanted to attract athletes and younger demographic who prefer digital-first interactions.",
-    solution: "Athletic-focused branding, YouTube fitness content, TikTok presence, and athlete testimonial campaigns.",
-    results: [
-      { metric: "400%", label: "Increase in young patient segment" },
-      { metric: "2M+", label: "Views on athlete content" },
-      { metric: "35", label: "Professional athlete endorsements" }
-    ],
+    challenge: "A sports medicine practice wanted to share injury-prevention and recovery information with a digital-first audience.",
+    solution: "We produced factual YouTube and short-form content on injury prevention and rehabilitation, supported by clear branding.",
     services: ["youtube-management", "social-media", "branding"],
     image: "bg-gradient-to-br from-green-500/20 to-primary/20"
   },
   {
-    title: "MindWell Psychiatry Clinic",
+    title: "Psychiatry Clinic",
     category: "Psychiatry",
-    challenge: "Mental health practice needed to destigmatize services and reach patients who might be hesitant to seek help.",
-    solution: "Thoughtful content strategy focusing on education, anonymous success stories, and accessible mental health tips.",
-    results: [
-      { metric: "180%", label: "Increase in first-time consultations" },
-      { metric: "5M+", label: "Mental health content reach" },
-      { metric: "92%", label: "Patient retention rate" }
-    ],
+    challenge: "A mental health practice wanted to share accurate information and reduce stigma for patients who may hesitate to seek help.",
+    solution: "We shaped an education-focused content strategy with accessible, factual mental health information and patient communication tools.",
     services: ["social-media", "video-production", "patient-engagement"],
     image: "bg-gradient-to-br from-orange-500/20 to-secondary/20"
   }
@@ -104,50 +74,30 @@ const serviceLabels: Record<string, string> = {
 const CaseStudies = () => {
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Marketing Case Studies | 300%+ Growth Results | Transess India</title>
-        <meta name="description" content="Real case studies: 300% patient growth, first-page rankings, 100K+ YouTube subscribers. See how cardiologists, dentists & hospitals grew with Transess digital marketing." />
-        <meta name="keywords" content="medical marketing case studies, healthcare success stories, doctor marketing results, hospital digital marketing ROI, patient growth case study" />
+      <Head>
+        <title>Medical Marketing Case Studies | Our Work | Transess India</title>
+        <meta name="description" content="Examples of our work with cardiologists, dentists, hospitals and clinics: websites, factual educational content, video production and patient communication." />
+        <meta name="keywords" content="medical marketing case studies, healthcare marketing examples, doctor digital marketing, hospital website design, medical content production" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/case-studies`} />
         <meta property="og:title" content="Medical Marketing Case Studies | Transess" />
-        <meta property="og:description" content="Real results: 300%+ patient growth. See how doctors transformed their practice." />
+        <meta property="og:description" content="Examples of our work across medical specialties and healthcare organisations." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/case-studies`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Case Studies | Transess Medical Marketing" />
-        <meta name="twitter:description" content="Real healthcare marketing results - 300%+ growth!" />
-      </Helmet>
+        <meta name="twitter:description" content="Examples of our work across medical specialties." />
+      </Head>
       <Navbar />
       <Breadcrumbs items={[{ label: "Case Studies" }]} />
       
       <PageHero
-        badge="Case Studies"
-        title="Real Results for Real Medical Practices"
-        description="Explore how we've helped healthcare professionals across specialties grow their practices through strategic digital marketing."
+        badge="Our Work"
+        title="Our Work with Medical Practices"
+        description="Examples of how we've worked with healthcare professionals across specialties on websites, factual educational content, and patient communication."
         backgroundImage={heroCasestudies}
-        primaryCta={{ text: "Get Similar Results", link: "/contact" }}
-        secondaryCta={{ text: "Read Testimonials", link: "/testimonials" }}
+        primaryCta={{ text: "Start a Conversation", link: "/contact" }}
       />
-
-      {/* Stats Bar */}
-      <section className="py-12 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { icon: Users, value: "500+", label: "Clients Served" },
-              { icon: TrendingUp, value: "250%", label: "Average Growth" },
-              { icon: Eye, value: "50M+", label: "Patient Impressions" },
-              { value: "98%", label: "Client Satisfaction" }
-            ].map((stat, index) => (
-              <div key={index} className="text-primary-foreground">
-                <div className="text-3xl md:text-4xl font-bold mb-1">{stat.value}</div>
-                <div className="text-primary-foreground/80 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Case Studies Grid */}
       <section className="py-20 bg-background">
@@ -174,24 +124,15 @@ const CaseStudies = () => {
                     <p className="text-muted-foreground text-sm">{study.solution}</p>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2">
                     {study.services.map((service, i) => (
-                      <Link 
+                      <Link
                         key={i}
                         to={`/services/${service}`}
                         className="inline-block px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium hover:bg-muted/80 transition-colors"
                       >
                         {serviceLabels[service]}
                       </Link>
-                    ))}
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 p-4 bg-muted/30 rounded-xl">
-                    {study.results.map((result, i) => (
-                      <div key={i} className="text-center">
-                        <div className="text-2xl font-bold text-primary">{result.metric}</div>
-                        <div className="text-xs text-muted-foreground">{result.label}</div>
-                      </div>
                     ))}
                   </div>
                 </div>
@@ -219,11 +160,11 @@ const CaseStudies = () => {
               </span>
             </Link>
             
-            <Link to="/testimonials" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
-              <h3 className="text-xl font-semibold text-foreground mb-2">Client Testimonials</h3>
-              <p className="text-muted-foreground mb-4">Hear from our satisfied clients.</p>
+            <Link to="/case-studies" className="group p-6 bg-background rounded-xl border border-border hover:shadow-lg transition-all hover:-translate-y-1 text-center">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Our Work</h3>
+              <p className="text-muted-foreground mb-4">Explore examples of our work across specialties.</p>
               <span className="inline-flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                Read Testimonials <ArrowRight className="w-4 h-4 ml-1" />
+                View Our Work <ArrowRight className="w-4 h-4 ml-1" />
               </span>
             </Link>
             
@@ -244,10 +185,10 @@ const CaseStudies = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Be Our Next Success Story?
+            Let's Work Together
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can achieve similar results for your practice.
+            Let's discuss how we can support your practice with compliant, factual digital marketing.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link to="/contact">

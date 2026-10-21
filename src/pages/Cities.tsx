@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import PageHero from "@/components/landing/PageHero";
@@ -20,35 +20,35 @@ const Cities = () => {
 
   return (
     <main className="min-h-screen">
-      <Helmet>
-        <title>Medical Marketing in 200+ Indian Cities | Find Your City | Transess</title>
-        <meta name="description" content="Medical digital marketing services in 200+ Indian cities. From Mumbai to Noida, Delhi to Bangalore - find healthcare SEO, social media & branding for doctors in your city!" />
+      <Head>
+        <title>Medical Marketing Across Indian Cities | Find Your City | Transess</title>
+        <meta name="description" content="Medical digital marketing services across Indian cities. From Mumbai to Noida, Delhi to Bangalore - find healthcare SEO, social media & branding for doctors in your city." />
         <meta name="keywords" content="medical marketing India cities, healthcare marketing by location, doctor marketing Mumbai, hospital marketing Delhi, clinic marketing Bangalore, medical SEO by city" />
         <link rel="canonical" href={`${SITE_CONFIG.BASE_URL}/cities`} />
-        
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Medical Marketing in 200+ Indian Cities | Transess" />
-        <meta property="og:description" content="Healthcare marketing across 200+ cities. Find services in your location!" />
+        <meta property="og:title" content="Medical Marketing Across Indian Cities | Transess" />
+        <meta property="og:description" content="Healthcare marketing across Indian cities. Find services in your location." />
         <meta property="og:url" content={`${SITE_CONFIG.BASE_URL}/cities`} />
         <meta property="og:site_name" content="Transess - Medical Digital Marketing" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:image" content={`${SITE_CONFIG.BASE_URL}/og-image.png`} />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medical Marketing in 200+ Indian Cities" />
+        <meta name="twitter:title" content="Medical Marketing Across Indian Cities" />
         <meta name="twitter:description" content="Healthcare marketing across India. SEO, social media & branding." />
-        
+
         <meta name="robots" content="index, follow" />
-      </Helmet>
-      
+      </Head>
+
       <Navbar />
       <Breadcrumbs items={[{ label: "Cities" }]} />
       <PageHero
-        badge="200+ Cities"
+        badge={`${cities.length} Cities`}
         title="Medical Digital Marketing Across India"
-        description="From metros to emerging cities, we help healthcare providers build powerful digital presence and attract more patients."
+        description="From metros to emerging cities, we help healthcare providers build a clear, factual digital presence for the patients searching for them."
         backgroundImage={heroDoctor}
         primaryCta={{ text: "Get Free Consultation", link: "/contact" }}
         secondaryCta={{ text: "View Services", link: "/services" }}
@@ -68,10 +68,10 @@ const Cities = () => {
               Specialized medical marketing for India's largest metropolitan areas
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {tier1Cities.slice(0, 8).map((city) => (
-              <Link 
+              <Link
                 key={city.id}
                 to={`/${city.slug}`}
                 className="group p-6 bg-card rounded-xl border border-border hover:shadow-xl hover:border-primary/30 transition-all hover:-translate-y-1"
@@ -127,7 +127,7 @@ const Cities = () => {
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {tier1Cities.map((city) => (
-                      <Link 
+                      <Link
                         key={city.id}
                         to={`/${city.slug}`}
                         className="group p-4 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all"
@@ -153,7 +153,7 @@ const Cities = () => {
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {tier2Cities.map((city) => (
-                      <Link 
+                      <Link
                         key={city.id}
                         to={`/${city.slug}`}
                         className="group p-4 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all"
@@ -179,7 +179,7 @@ const Cities = () => {
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {tier3Cities.map((city) => (
-                      <Link 
+                      <Link
                         key={city.id}
                         to={`/${city.slug}`}
                         className="group p-4 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all"
@@ -212,7 +212,7 @@ const Cities = () => {
                       </div>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {stateCities.map((city) => (
-                          <Link 
+                          <Link
                             key={city.id}
                             to={`/${city.slug}`}
                             className="group p-4 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all"
@@ -237,7 +237,7 @@ const Cities = () => {
             <TabsContent value="all">
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[...cities].sort((a, b) => a.name.localeCompare(b.name)).map((city) => (
-                  <Link 
+                  <Link
                     key={city.id}
                     to={`/${city.slug}`}
                     className="group p-4 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all"
@@ -260,22 +260,14 @@ const Cities = () => {
       {/* Stats */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{cities.length}+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{cities.length}</div>
               <div className="text-primary-foreground/80">Cities Covered</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{states.length}+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{states.length}</div>
               <div className="text-primary-foreground/80">States & UTs</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
-              <div className="text-primary-foreground/80">Healthcare Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">8+</div>
-              <div className="text-primary-foreground/80">Years Experience</div>
             </div>
           </div>
         </div>
@@ -290,7 +282,7 @@ const Cities = () => {
             Ready to Grow Your Healthcare Practice?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            No matter which city you're in, we have the expertise to help you attract more patients.
+            No matter which city you're in, we can help you share accurate information with the patients searching for your services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="xl" asChild>
